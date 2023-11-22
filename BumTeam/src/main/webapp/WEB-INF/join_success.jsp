@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
@@ -48,3 +49,5 @@
 	</body>
 </html>
 
+=======
+>>>>>>> branch 'master' of https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo.git

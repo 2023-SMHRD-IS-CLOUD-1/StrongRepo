@@ -35,6 +35,7 @@ public class UpdateService implements Command {
 		// 3. 데이터를 하나로 묶어주기
 		// ** 반드시 새로운 자료형을 만들언서 하나로 묶어주자!!**
 		MemberVO vo = new MemberVO();
+		vo.setEmail(email);
 		vo.setPw(pw);
 		vo.setName(name);
 		vo.setNick(nick);

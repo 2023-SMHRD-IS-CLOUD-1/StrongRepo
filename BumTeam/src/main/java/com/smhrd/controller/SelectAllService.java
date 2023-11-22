@@ -22,6 +22,8 @@ public class SelectAllService implements Command {
 		request.setAttribute("result", result);
 
 		return "select";
+		
+		
 
 	}
 

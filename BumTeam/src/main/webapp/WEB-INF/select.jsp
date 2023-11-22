@@ -24,15 +24,26 @@
 							<caption><h2>회원관리페이지</h2></caption>
 							<tr>
 								<td>Email</td>
-								<td>Tel</td>
-								<td>Address</td>							
+								<td>pw</td>
+								<td>name</td>							
+								<td>nick</td>							
+								<td>birthdate</td>							
+								<td>gender</td>							
+								<td>role</td>							
+								<td>joined_at</td>							
 							</tr>
 							
-							<c:forEach items="${resultList}" var="member" >
+							<c:forEach items="${result}" var="member" >
 								<tr>
 									<td>${member.email}</td>
-									<td>${member.tel}</td>
-									<td>${member.address}</td>
+									<td>${member.pw}</td>
+									<td>${member.name}</td>
+									<td>${member.nick}</td>
+									<td>${member.birthdate}</td>
+									<td>${member.gender}</td>
+									<td>${member.role}</td>
+									<td>${member.joined_at}</td>
+									<td>${member.name}</td>
 								</tr>
 							</c:forEach>
 							<!-- 2.모든 회원의 이메일(email),전화번호(tel),주소(address)를 출력하시오. -->

@@ -21,6 +21,25 @@ public class MemberVO {
 
 	// 사용자 성별 사용자 성별
 	private String gender;
+	
+	private String joined_at;
+	private String role;
+
+	public String getJoined_at() {
+		return joined_at;
+	}
+
+	public void setJoined_at(String joined_at) {
+		this.joined_at = joined_at;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 	public String getEmail() {
 		return email;

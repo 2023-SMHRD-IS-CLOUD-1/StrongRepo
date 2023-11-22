@@ -22,11 +22,11 @@
 			<a href="#menu">로그인</a>
 		</C:if> <C:if test="${result!=null}">
 
-			<C:if test="${result.email!='admin'}">
+			<C:if test="${result.email!='smhrd'}">
 				<a href="Goupdate.do">개인정보수정</a>
 				<a href="Logout.do">로그아웃</a>
 			</C:if>
-			<C:if test="${result.email=='admin'}">
+			<C:if test="${result.email=='smhrd'}">
 				<a href="SelectAll.do">전체회원조회</a>
 				<a href="Logout.do">로그아웃</a>
 			</C:if>
@@ -193,7 +193,7 @@
 
 				<span> <C:if test="${result==null}">
 					</C:if> <C:if test="${result!=null}">
-								${result.tel}
+								${result.email}
 								
 						</C:if>
 				</span>
@@ -207,7 +207,7 @@
 
 				<span> <C:if test="${result==null}">
 					</C:if> <C:if test="${result!=null}">
-								${result.address}
+								${result.email}
 								
 						</C:if>
 				</span>
