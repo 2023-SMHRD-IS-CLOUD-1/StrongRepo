@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 1) mapper namespace란? : mapper파일이 여러개였을때, 해당 파일을 식별할 수 있는 식별자 : 이름을 
+	정해줄때, 해당하는 mapper파일과 연결되어야하는 DAO클래스 이름일치시키는 것을 원칙으로 함. -->
+
+
+<mapper namespace="com.smhrd.model.CommentDAO">
+
+	<!--  댓글 추가  -->
+	<insert id="insertComment" parameterType="com.smhrd.model.CommentMemberVO" >
+		INSERT INTO D_COMMENT(B_NUM, CMT_CONTENT, EMAIL)
+		VALUES(#{B_NUM}, #{CMT_CONTENT}, #{EMAIL})
+	</insert>
+	
+	<select id="CommentselectAll" resultType="com.smhrd.model.CommentMemberVO">
+		SELECT CMT_CONTENT, COMMENTED_AT, CMT_LIKES, EMAIL
+		FROM D_COMMENT
+	</select>
+   
+	 
+	
+	
+
+	  
+
+
+	
+   
+	
+	
+	
+	
+</mapper>

@@ -15,8 +15,8 @@ public class LoginService implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String email = request.getParameter("loginEmail");
-		String pw = request.getParameter("loginPw");
+		String email = request.getParameter("email");
+		String pw = request.getParameter("pw");
 
 		MemberVO vo = new MemberVO();
 		vo.setEmail(email);
@@ -31,7 +31,8 @@ public class LoginService implements Command {
 			HttpSession session = request.getSession();
 
 			session.setAttribute("result", result);
-
+			return "redirect:/Gomain.do";
+			
 		}
 
 		return "redirect:/Gomain.do";

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 1) mapper namespace란? : mapper파일이 여러개였을때, 해당 파일을 식별할 수 있는 식별자 : 이름을 
+	정해줄때, 해당하는 mapper파일과 연결되어야하는 DAO클래스 이름일치시키는 것을 원칙으로 함. -->
+
+
+<mapper namespace="com.smhrd.model.UserBoardDAO">
+
+	
+	<select id = "selectBoard" resultType="com.smhrd.model.UserBoardMemberVO">
+		SELECT B_TITLE, EMAIL, B_NUM, CREATED_AT FROM D_BOARD
+	</select>
+	
+	
+	
+	<select id = "selectView" resultType="com.smhrd.model.UserBoardMemberVO">
+		SELECT B_TITLE, B_CONTENT,CREATED_AT, EMAIL, B_NUM
+		FROM D_BOARD 
+		WHERE B_NUM=#{B_NUM}
+	</select>
+	
+	
+
+	  
+
+
+	<!--  
+>>>>>>> branch 'master' of https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo.git
+	<resultMap type="com.smhrd.model.UserBoardMemberVO" id="die">
+      <result property="B_TITLE" column="B_TITLE" />
+      <result property="B_CONTENT" column="B_CONTENT" />
+ 
+   </resultMap>
+
+   -->
+   
+	
+	
+	<!-- 
+	
+	resultType 동작원리
+	
+	>> 나만의 자료형을 resultType으로 명시해놓았다면
+	>> (1) 기본 생성자를 호출해서 객체 생성 (mybatis가 알아서)
+	>> (2) 조회한 테이블의 컬럼과 일치하는 필드가 있는지 확인
+	>> (3) 해당하는 필드의 setter 메소드를 호출해서 값을 채우는 구조
+	★ setter 메소드가 없거나, 기본 생성자가 사라져버린 경우 문제가 발생하기도 함
+	
+	
+	알아두면 좋은 tip
+	>> resultType 쪽에는 java에 기본적으로 존재하는 자료형은 굳이 명시하지 않아도 된다
+
+	-->
+	
+</mapper>
