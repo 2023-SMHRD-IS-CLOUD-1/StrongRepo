@@ -26,9 +26,9 @@ public class CommentViewService implements Command {
 		System.out.println("--------------checkPoint1--------------");
 	
 		 int postNum = 0;
-		// String number = "88";
+		
 		String id = request.getParameter("id");
-		// postNum = Integer.parseInt(id);
+		
 		System.out.println("------------------checkPoint2------------");
 		postNum = Integer.parseInt(id);
 		System.out.println(postNum + "33");

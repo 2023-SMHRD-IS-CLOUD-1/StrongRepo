@@ -18,10 +18,16 @@ public class UserBoardService implements Command {
 
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
+		
+		 HttpSession session = request.getSession();
+		  
+		  
+	     MemberVO result = (MemberVO)session.getAttribute("result");
+	     String email = result.getEmail();
 
 		MemberVO vo = new MemberVO();
 		UserBoardMemberVO usvo = new UserBoardMemberVO();
-		String email = "j";
+		
 		System.out.println(title);
 		System.out.println(content);
 		vo.setTitle(title);

@@ -182,7 +182,7 @@
                       <input type="password" name="pw" class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
-                      <label for="pword2">PW 재확인</label>
+                      <label for="pword2">새로운 비밀번호 입력</label>
                       <input type="password" name="repw" class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">

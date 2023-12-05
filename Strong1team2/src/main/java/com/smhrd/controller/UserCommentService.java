@@ -31,10 +31,11 @@ public class UserCommentService implements Command {
 	
 		  HttpSession session = request.getSession();
 		  
-		  String email = "j";
-	      // String result = (String) session.getAttribute("result");
+		  // String email = "j";
+	      MemberVO result = (MemberVO)session.getAttribute("result");
+	      String email = result.getEmail();
 		  
-		postNum = Integer.parseInt(id);
+		 postNum = Integer.parseInt(id);
 		 CommentMemberVO vo = new CommentMemberVO();
 		 UserCommentDAO dao = new UserCommentDAO();
 		 

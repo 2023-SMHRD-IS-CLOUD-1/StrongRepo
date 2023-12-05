@@ -730,17 +730,32 @@
                     <div class="board_write">
                         <div class="title">
                             <ul>
-                                <dt>제목</dt>
+                            <C:if test="${result!=null}">
+                            <dt>제목</dt>
                                 <dd><input type="text" name="title" placeholder="제목 입력" style="width: 100%;"></dd>
                             </ul>
                         </div>
                         <div class="cont">
-                            <textarea name="content" placeholder="내용 입력"></textarea>
+                            <textarea  name="content" placeholder="내용 입력"></textarea>
                         </div>
                     </div>
                     <div class="bt_wrap">
                       <input type="submit" value="등록" class="btn btn-primary btn-lg px-5">
+                      </div>
+					    </C:if>
+					     <C:if test="${result==null}">
+                                <dt>제목</dt>
+                                <dd><input type="text" disabled="disabled" name="title" placeholder="제목 입력" style="width: 100%;"></dd>
+                            </ul>
+                        </div>
+                        <div class="cont">
+                            <textarea  disabled="disabled" name="content" placeholder="로그인 시 이용 가능합니다."></textarea>
+                        </div>
+                    </div>
+                    <div class="bt_wrap">
+                      <input type="submit" disabled="disabled" value="등록" class="btn btn-primary btn-lg px-5">
                 </div>
+                 </C:if>
 			  </form>
 
 

@@ -42,11 +42,12 @@ public class UpdateService implements Command {
         	System.out.println("-------------------------------중간점검2------------------------------");
         	// 4. DAO 생성하기
         	DAO dao = new DAO();
+        	
         	int row = dao.update(vo);
         	
         	if (row > 0) {
         		session.setAttribute("result", vo);
-        		System.out.println("-------------------------------중간점검3------------------------------");
+        		
         	
         	
         	

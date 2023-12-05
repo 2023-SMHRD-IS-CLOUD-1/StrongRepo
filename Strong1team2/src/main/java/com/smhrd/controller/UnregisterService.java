@@ -42,7 +42,7 @@ public class UnregisterService implements Command {
 			System.out.println("실패");
 			// redirect:/ >> 우리의 약속 기호!!
 			// >> redirect 방식으로 이동해라 !! 를 FC에게 알려주는 역할!!
-			return "redirect:/Gomain.do";
+			return "redirect:/Gomodify.do";
 			
 		}
 		
