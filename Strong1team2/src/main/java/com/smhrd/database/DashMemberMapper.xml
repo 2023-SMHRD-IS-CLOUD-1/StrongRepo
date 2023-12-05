@@ -16,6 +16,16 @@
 	
 	<select id="temp2" parameterType="com.smhrd.model.DashBoardMemberVO" resultType="com.smhrd.model.DashBoardMemberVO">
 	<!--  d_region에서 r_region_group, sum(r_num) 받아오기-->
-	select r_region_group,sum(r_num) as r_num from d_region group by r_region_group order by r_num
+	select r_region_group,sum(r_num) as r_num from d_region group by r_region_group order by r_num desc
+	</select>
+	
+	<select id="temp3" parameterType="com.smhrd.model.DashBoardMemberVO" resultType="com.smhrd.model.DashBoardMemberVO">
+	<!--  d_region에서 r_region_group, sum(r_num) 받아오기-->
+	select j_job_group,sum(j_num) as j_num from d_job group by j_job_group order by j_num desc
+	</select>
+	
+	<select id="temp4" parameterType="com.smhrd.model.DashBoardMemberVO" resultType="com.smhrd.model.DashBoardMemberVO">
+	<!--  d_region에서 r_region_group, sum(r_num) 받아오기-->
+	select a_age_group,sum(a_num) as a_num from d_age group by a_age_group order by a_age_group desc
 	</select>
 </mapper>
