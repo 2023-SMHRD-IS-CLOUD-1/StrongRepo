@@ -18,7 +18,6 @@ public class UserBoardService implements Command {
 
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
-		String category = "마약";
 
 		MemberVO vo = new MemberVO();
 		UserBoardMemberVO usvo = new UserBoardMemberVO();
@@ -27,7 +26,6 @@ public class UserBoardService implements Command {
 		System.out.println(content);
 		vo.setTitle(title);
 		vo.setContent(content);
-		vo.setCategory(category);
 		vo.setEmail(email);
 		
 		
@@ -41,12 +39,12 @@ public class UserBoardService implements Command {
     		request.setAttribute("member2", usvo);
 			request.setAttribute("member", vo);
 			// return "join_success"; 어디로 이동해야할지 모르겠어서 일단 main으로 둠 -원제-
-			return "redirect:/Gomain.do";
+			return "redirect:/Goknowledge_Board.do#board";
 		} else {
 			System.out.println("실패");
 			// redirect:/ >> 우리의 약속 기호!!
 			// >> redirect 방식으로 이동해라 !! 를 FC에게 알려주는 역할!!
-			return "redirect:/Gomain.do";
+			return "redirect:/Goknowledge_Board.do#board";
 		}
 		
 		

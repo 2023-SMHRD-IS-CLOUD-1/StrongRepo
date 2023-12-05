@@ -53,7 +53,7 @@
     <mapper resource="com/smhrd/database/UserBoardMapper.xml"/>
     <mapper resource="com/smhrd/database/MemberMapper.xml"/>
     <mapper resource="com/smhrd/database/DashMemberMapper.xml"/>
-    <mapper resource="com/smhrd/database/CommentMapper.xml"/>
+    <mapper resource="com/smhrd/database/UserCommentMapper.xml"/>
   </mappers>
 </configuration>
 

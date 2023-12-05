@@ -474,7 +474,7 @@
     }
 
     function closePopup() {
-        window.location.href = 'index.html';
+        window.location.href = 'Gomain.do';
     }
 
     document.addEventListener('animationend', function (event) {

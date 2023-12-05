@@ -31,7 +31,30 @@
 
   <link rel="stylesheet" href="assets/css/style.css">
 
+<style>
+    #imageInput{
+      font-size: 20px;
+      font-weight: bold;
+      width: 100px;
+      border: none;
 
+    }
+    .imageContainer{
+      width: 500px; 
+      height: 500px; 
+      margin: 10px;
+      border: 2px solid black;
+      background-color: rgb(151, 150, 150, 0.3);
+    }
+    #uploadForm > button{
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 20px;
+      border: none;
+      width: 100px;
+      height: 38px;
+    }
+  </style>
 
 </head>
 
@@ -51,56 +74,44 @@
 
 
 <!-- 원래 코드  -->
-
+<!-- 맨 위에 코드!! -->
     <div class="py-2 bg-light">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-9 d-none d-lg-block">
-            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 신고 : 검찰청1301/ 경찰청112/ 관세청125</a> 
-            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 중독재활센터 1899-0893</a> 
-          </div>
-        <div class="col-lg-3 text-right">
-      
-            <a href="Gologin.do" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
-            <a href="Goregister.do" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
-          </div>
-        </div>
-      </div>
-    </div>
-     <!-- 
-    
+	          <div class="col-lg-9 d-none d-lg-block">
+	            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 검찰청1301/ 경찰청112/ 관세청125</a> 
+	            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 중독재활센터 1899-0893</a> 
+	          </div>
+    		  <div class="row align-items-center">
 					<C:if test="${result!=null}">
-					    ${result.getEmail()}님 환영합니다.
+					   <a class="small mr-3" style="float: right;"><span> ${result.getEmail()}님 환영합니다.</span></a>
 					</C:if> 
 					<C:if test="${result==null}">
 						<a href="Gologin.do" class="small mr-3"><span class="icon-unlock-alt"></span> log in</a>
 					</C:if>
 						
 						<!-- 누르면 페이지 이동 -->
-		<!-- 				
+	 				
 					<C:if test="${result!=null}">
-					<a href="Gomodify.do" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> 개인정보수정</a>
+					<a href="Gomodify.do" class="small mr-3" ><span class="icon-unlock-alt"></span> 개인정보수정</a>
 					</C:if> 
 					<C:if test="${result==null}">
 					<a href="Goregister.do" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
 					</C:if> </a>
 					
-					<div class="logout">
 					<C:if test="${result!=null}">
-					<a href="Logout.do">로그아웃</a>
+					<a href="Logout.do" class="small mr-3" style="text-align: right;"><span class="icon-unlock-alt"></span>로그아웃</a>
 					</C:if>
 					<C:if test="${result==null}">
 					</C:if>
-						</div>
 						
-
+				</div>
 
 					</div>
 				</div>
 			</div>
 		</div>
     
-    -->  
     
     
     
@@ -132,7 +143,7 @@
                   <a href="Goknowledge_Board.do#board" class="nav-link text-left">게시판</a>
                 </li>
                 <li>
-                  <a href="GOquiz.do" class="nav-link text-left">사례퀴즈</a>
+                  <a href="Goquiz.do" class="nav-link text-left">사례퀴즈</a>
                 </li>
               </ul>                                                                                                                                                                                                                                                                                          </ul>
             </nav>
@@ -155,33 +166,39 @@
 
    
   <!--    <div class="hero-slide owl-carousel site-blocks-cover">-->
-      <div class="intro-section">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-12 mx-auto text-center">
-            
-              <h1>마약 필터</h1>
-                       <div style="display: flex; justify-content: center; align-items: center; text-align: center;">
-		    <div id="image_container" style="width: 500px; height: 500px; margin: 10px;border: 2px solid black;">
-		        <!-- Display uploaded image here -->
-		    </div>
-		    <div id="resultImageContainer" style="width: 500px; height: 500px; margin: 10px; border: 2px solid black; text-align: center;">
-		        <!-- Display transformed image here -->
-		    </div>
-		</div>
-		<div style="display: flex; justify-content: center; align-items: center; text-align: center;">
-			<form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
-			    <input type="file" name="image" id="imageInput" onchange="setThumbnail(event);">
-			   
-			    <button type="button" onclick="uploadImage()"> Upload </button>
-			</form>
-		</div>
-         </div>
-          </div>
-        </div>
-      </div>
+	<div class="intro-section">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-12 mx-auto text-center">
 
-  <!--   </div> -->
+					<h1 style="font-size: 100px; margin-bottom: 35px;">마약 필터</h1>
+					<div
+						style="display: flex; justify-content: center; align-items: center; text-align: center;">
+						<div id="image_container" class="imageContainer">
+							<!-- Display uploaded image here -->
+						</div>
+						<div style="font-size: 50px; margin: 0 20px;">▶</div>
+						<div id="resultImageContainer" class="imageContainer">
+							<!-- Display transformed image here -->
+						</div>
+					</div>
+					<div
+						style="display: flex; justify-content: left; margin-left: 20px;">
+						<form id="uploadForm" action="/upload" method="post"
+							enctype="multipart/form-data">
+							<!-- 파일 선택 버튼 -->
+							<input type="file" name="image" id="imageInput"
+								onchange="setThumbnail(event);">
+							<!-- upload 버튼 -->
+							<button type="button" onclick="uploadImage()">Filter</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--   </div> -->
     
 
     <div></div>
@@ -490,89 +507,10 @@
 
   <script src="assets/js/main.js"></script>
   
-  <script>
-		// 로그인 페이지 이동
-		document
-				.addEventListener(
-						"DOMContentLoaded",
-						function() {
-							const linkElement = document
-									.querySelector('body > div.site-wrap > div.py-2.bg-light > div > div > div.col-lg-3.text-right > a.small.mr-3');
 
-							if (linkElement) {
-								linkElement.addEventListener("click", function(
-										event) {
-									event.preventDefault();
-									const link = linkElement
-											.getAttribute('href');
-									window.location.href = link;
-								});
-							}
-						});
-	</script>
 
-	<script>
-		// 회원가입 페이지 이동
-		document
-				.addEventListener(
-						"DOMContentLoaded",
-						function() {
-							const linkElement = document
-									.querySelector('body > div.site-wrap > div.py-2.bg-light > div > div > div.col-lg-3.text-right > a.small.btn.btn-primary.px-4.py-2.rounded-0');
 
-							if (linkElement) {
-								linkElement.addEventListener("click", function(
-										event) {
-									event.preventDefault();
-									const link = linkElement
-											.getAttribute('href');
-									window.location.href = link;
-								});
-							}
-						});
-	</script>
 
-	<script>
-		// 메인 페이지(로고) 이동
-		document
-				.addEventListener(
-						"DOMContentLoaded",
-						function() {
-							const linkElement = document
-									.querySelector('#sticky-wrapper > header > div > div > div.site-logo > a > img');
-
-							if (linkElement) {
-								linkElement.addEventListener("click", function(
-										event) {
-									event.preventDefault();
-									const link = linkElement
-											.getAttribute('href');
-									window.location.href = link;
-								});
-							}
-						});
-	</script>
-
-	<script>
-		// 메인 페이지 이동
-		document
-				.addEventListener(
-						"DOMContentLoaded",
-						function() {
-							const linkElement = document
-									.querySelector('#sticky-wrapper > header > div > div > div.mr-auto > nav > ul > li:nth-child(1) > a');
-
-							if (linkElement) {
-								linkElement.addEventListener("click", function(
-										event) {
-									event.preventDefault();
-									const link = linkElement
-											.getAttribute('href');
-									window.location.href = link;
-								});
-							}
-						});
-	</script>
 <script>
 		function uploadImage() {
 		    var formData = new FormData(document.getElementById('uploadForm'));
@@ -633,6 +571,9 @@
 			};
 			
 			reader.readAsDataURL(event.target.files[0]);
+			
+			
+			
 		}
 	</script>
 </body>

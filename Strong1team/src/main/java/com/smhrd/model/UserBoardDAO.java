@@ -19,7 +19,7 @@ public class UserBoardDAO {
 		
 		SqlSession sqlSession = factory.openSession();
 		
-		List<UserBoardMemberVO> result= sqlSession.selectList("selectBoard");
+		List<UserBoardMemberVO> result= sqlSession.selectList("selectList");
 		
 		
 		sqlSession.close();

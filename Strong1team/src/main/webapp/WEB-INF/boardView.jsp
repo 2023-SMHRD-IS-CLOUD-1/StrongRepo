@@ -53,18 +53,41 @@
     <div class="py-2 bg-light">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-9 d-none d-lg-block">
-            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 신고 : 검찰청1301/ 경찰청112/ 관세청125</a> 
-            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 중독재활센터 1899-0893</a> 
-          </div>
-          <div class="col-lg-3 text-right">
-            <a href="Gologin.do" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
-            <a href="Goregister.do" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span>
-              Register</a>
-          </div>
-        </div>
-      </div>
-    </div>
+	          <div class="col-lg-9 d-none d-lg-block">
+	            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 검찰청1301/ 경찰청112/ 관세청125</a> 
+	            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 중독재활센터 1899-0893</a> 
+	          </div>
+    		  <div class="row align-items-center">
+					<C:if test="${result!=null}">
+					   <a class="small mr-3" style="float: right;"><span> ${result.getEmail()}님 환영합니다.</span></a>
+					</C:if> 
+					<C:if test="${result==null}">
+						<a href="Gologin.do" class="small mr-3"><span class="icon-unlock-alt"></span> log in</a>
+					</C:if>
+						
+						<!-- 누르면 페이지 이동 -->
+	 				
+					<C:if test="${result!=null}">
+					<a href="Gomodify.do" class="small mr-3" ><span class="icon-unlock-alt"></span> 개인정보수정</a>
+					</C:if> 
+					<C:if test="${result==null}">
+					<a href="Goregister.do" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
+					</C:if> </a>
+					
+					<C:if test="${result!=null}">
+					<a href="Logout.do" class="small mr-3" style="text-align: right;"><span class="icon-unlock-alt"></span>로그아웃</a>
+					</C:if>
+					<C:if test="${result==null}">
+					</C:if>
+						
+				</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
 
       <div class="container">
@@ -131,7 +154,7 @@
 
         <div class="board_wrap">
           <div class="board_title">
-            <strong>공지사항</strong>
+            <strong>게시글</strong>
             <p>공지사항을 빠르고 정확하게 안내해드립니다.</p>
           </div>
           <div class="board_view_wrap">
@@ -191,48 +214,49 @@
               <div class="board_list_wrap">
                   <div class="cmt_board_list">
                       <div>
-                          <!-- <div class="num">1</div> -->
+                       
                           <div class="title">글이 얼마나 길게 들어가니느니ㅏ두보여주ㅜㅏㅓ아직더들어가야되네</div><br>
                           <div class="writer">김이름</div>
                           <div class="date">2021.1.15</div>
                       </div>
-                      <div>
-                          <!-- <div class="num">2</div> -->
+  	<!--                    <div>
                           <div class="title">댓글 내용</div><br>
                           <div class="writer">김이름</div>
                           <div class="date">2021.1.15</div>
                       </div>
                       <div>
-                          <!-- <div class="num">3</div> -->
                           <div class="title">댓글 내용</div><br>
                           <div class="writer">김이름</div>
                           <div class="date">2021.1.15</div>
                       </div>
                       <div>
-                          <!-- <div class="num">4</div> -->
                           <div class="title">댓글 내용</div><br>
                           <div class="writer">김이름</div>
                           <div class="date">2021.1.15</div>
                       </div>
                       <div>
-                          <!-- <div class="num">5</div> -->
                           <div class="title">댓글 내용</div><br>
                           <div class="writer">김d</div>
                           <div class="date">2021.1.15</div>
-                      </div>
+                      </div> -->
                   </div>
                   <div id="boardStart" class="board_write_wrap">
                     <div class="cmt_board_write">
+                    
+                    
+                    <form action="UserComment.do">
                         <div class="cmt_title">
                             <ul>
-                                <dd><input type="text" placeholder="댓글 입력" style="width: 100%; height: 50px;"></dd>
+                                <dd><input type="text" name="comment" placeholder="댓글 입력" style="width: 100%; height: 50px;"></dd>
                             </ul>
                         </div>
                     </div>
                     <div class="bt_wrap">
-                      <a href="#write" class="on">등록</a>
+                    <input type="hidden" class="postNumber" name="postNumber">
+                      <input type="submit" value="등록" class="btn btn-primary btn-lg px-5">
                   </div>
                 </div>
+                </form>
 
                        
               </div>
@@ -347,6 +371,203 @@
 
 
   <script src="assets/js/main.js"></script>
+
+
+<script type="text/javascript">
+  let postId;
+  const urlParams = new URLSearchParams(window.location.search);
+  postId = urlParams.get("id");
+  
+  console.log(postId + "ddk")
+  var postNumber = document.getElementsByClassName('postNumber');
+for (var i = 0; i < postNumber.length; i++) {
+    postNumber[i].value = postId;
+}
+
+  console.log(postId);
+
+  
+  
+
+  $.ajax({
+	    url: 'View.do',
+	    method: 'GET',
+	    data: {
+	      id: postId // URLSearchParams로부터 가져온 postId 값을 전달합니다.
+	    },
+	    success: function(response) {
+	    	console.log("성공1");
+	      // 서버 응답에서 title과 content 값을 가져옴
+	      const data = response[0]; // 배열의 첫 번째 요소에 있는 객체를 data로 사용합니다.
+	      const titleValue = data.B_TITLE; // data 객체의 B_TITLE 속성값을 가져와 할당
+	      const contentValue = data.B_CONTENT; // data 객체의 B_CONTENT 속성값을 가져와 할당
+	      const emailValue = data.EMAIL;
+		  const created_AT = data.CREATED_AT;
+		  const numValue = data.B_NUM;
+
+
+	      // 타이틀과 컨텐츠를 업데이트
+	      const boardTitle = document.getElementsByClassName("title")[0];
+	      const boardContent = document.getElementsByClassName("cont")[0];
+	      const boardEmail = document.querySelector(`
+	    		  body > div:nth-child(5) > div > div > div.board_view_wrap > div.board_view > div.info > dl:nth-child(2) > dd
+	    		`);
+	      const boardCreated_At = document.querySelector(`
+	    		  body > div:nth-child(5) > div > div > div.board_view_wrap > div.board_view > div.info > dl:nth-child(3) > dd
+	  		`);
+	      const boardNum = document.querySelector(`body > div:nth-child(5) > div > div > div.board_view_wrap > div.board_view > div.info > dl:nth-child(4) > dd`);
+	      
+	      
+	      
+	      boardTitle.innerText = titleValue; 
+	      boardContent.innerText = contentValue; // 컨텐츠 업데이트
+	      boardEmail.innerText = emailValue;
+	      boardCreated_At.innerText = created_AT;
+	      boardNum.innerText = numValue;
+	      
+	      console.log("성공11111111111111111111111111")
+	    },
+	    
+	    
+	    
+	    error: function(xhr, status, error) {
+	      console.error('Error:', error);
+	    }
+	  });
+	  
+  
+  $(document).ready(function(){ 
+		$.ajax({
+		    url: 'CommentView.do',
+		    method: 'GET',
+		    data: {
+		      id: postId // URLSearchParams로부터 가져온 postId 값을 전달합니다.
+		    },
+		    success: function(response) {
+		    	   console.log(response)
+		    	   const commentList = Object.values(response);
+		    	  
+		    	   var comment = document.querySelector(`body > div.comment_section > div > div > div > div.cmt_board_list`)
+		    	   
+		    	   // 여기서부터 for문 시작할듯? 
+		    		for(let i=0; i<commentList.length; i++) {
+		    			   
+		    			const newWriter = document.createElement('div');
+		    			newWriter.classList.add("writer");
+				    	   const newContent = document.createElement('div');
+				    	   newContent.classList.add("title");
+				    	
+				    	   newContent.setAttribute('name', 'contentD');
+				    	   const newDate = document.createElement('div');
+				    	   newDate.classList.add("date");
+				    	   const newD = document.createElement('div');
+				    	   const newLineBreak = document.createElement('br');
+
+				    	   const space = document.createTextNode('                 ');
+				    	   const newDiv = document.createElement('div');
+				    	   
+				    	   const newForm = document.createElement('form');
+				    	   const submitButton = document.createElement('button');
+				    	   submitButton.textContent = 'Submit'; // 버튼 텍스트 설정
+
+				    	   
+				    	   newContent.innerHTML = commentList[i].CMT_CONTENT;
+				    	   newWriter.innerHTML = commentList[i].EMAIL + " / ";
+				    	   newDate.innerHTML = commentList[i].COMMENTED_AT + " / ";
+				    	   var cmt = newContent.textContent; 
+				    	   const deleteButton = document.createElement('button');
+				    	   deleteButton.textContent = '삭제';
+				    	  
+				    	   comment.appendChild(newDiv);
+				    	   newForm.appendChild(submitButton);
+				    	   newDiv.appendChild(newContent);
+				    	   newDiv.appendChild(newLineBreak);
+				    	   newDiv.appendChild(space); // 공백 추가
+				    	   newDiv.appendChild(newWriter);
+				    	   newDiv.appendChild(space); // 공백 추가
+				    	   newDiv.appendChild(newDate);
+				    	   newDiv.appendChild(deleteButton);
+				    	   comment.appendChild(newDiv);
+				    	   
+				    	   
+				    	   newDiv.appendChild(newLineBreak);
+				    	   deleteButton.addEventListener('click', function() {
+				    		   console.log(cmt);
+				    		    $.ajax({
+				    		        url: 'DropComment.do',
+				    		        method: 'GET',
+				    		        data: {
+				    		            id: cmt // 변수 id에 postId 값을 할당하여 서버에 전달
+				    		        },
+				    		        success: function(data) {
+				    		            console.log(data); 
+				    		        },
+				    		        error: function(xhr, status, error) {
+				    		            console.error('Error:', error);
+				    		        }
+				    		    });
+				    		});
+				    	   
+		    		}
+		    },	
+		    
+		    error: function(xhr, status, error) {
+		        console.error('Error:', error);
+		      }
+		    });
+	});
+  
+  
+  
+  
+  
+  
+  
+  const buttonElement = document.querySelector(`body > div.site-wrap > div.comment_site-section > div > div > div > div.bt_wrap > a:nth-child(2)`);
+
+  buttonElement.addEventListener('click', function(event) {
+  console.log("check2222222222")
+
+  	const newURL = 'http://localhost:8081/Strong1team/GofixView.do?postNumber='+ postId
+  	
+  	
+  	window.location.href = newURL;
+  });
+
+	  
+  </script>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 

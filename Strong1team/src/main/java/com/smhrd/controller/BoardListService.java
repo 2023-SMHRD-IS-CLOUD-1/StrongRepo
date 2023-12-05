@@ -21,36 +21,22 @@ public class BoardListService implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		
-		
-		
-		
-		
 		UserBoardDAO ubDao = new UserBoardDAO(); 
-
+System.out.println("넘어와라");
 		List<UserBoardMemberVO> result = ubDao.selectList();
-
+System.out.println(result);
 		request.setAttribute("result", result);
 
-		
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
-		
 		
 		PrintWriter out = response.getWriter();
 		Gson gson = new Gson();
 		String jsonResult = gson.toJson(result);
 		out.print(jsonResult);
 		
-
 		return null; // 뷰 이름을 반환하지 않음
 		
-		
-		
-		
-		
-		
-	
 	}
 
 }

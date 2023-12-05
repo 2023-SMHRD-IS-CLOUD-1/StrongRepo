@@ -12,10 +12,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.controller.BoardListService;
-
 import com.smhrd.controller.Command;
-import com.smhrd.controller.CommentSelectAllService;
+import com.smhrd.controller.CommentViewService;
+//import com.smhrd.controller.CommentViewService;
 import com.smhrd.controller.DashBoardService;
+//import com.smhrd.controller.DropCommentService;
+//import com.smhrd.controller.DropViewService;
 import com.smhrd.controller.EmailCheckService;
 import com.smhrd.controller.JoinService;
 import com.smhrd.controller.LoginService;
@@ -24,8 +26,10 @@ import com.smhrd.controller.SelectAllService;
 import com.smhrd.controller.UnregisterService;
 import com.smhrd.controller.UpdateService;
 import com.smhrd.controller.UserBoardService;
-import com.smhrd.controller.InsertCommentService;
+import com.smhrd.controller.UserCommentService;
 import com.smhrd.controller.ViewService;
+//import com.smhrd.controller.fixViewContentService;
+//import com.smhrd.controller.fixViewService;
 
 // * -> 모든 .do로 끝나는 url은 해당하는 FC로 들어온다.
 @WebServlet("*.do")
@@ -53,12 +57,22 @@ public class FrontController extends HttpServlet {
 		map.put("Update.do", new UpdateService());
 		map.put("EmailCheck.do", new EmailCheckService());
 		map.put("Unregister.do", new UnregisterService());
+		
+		
 		map.put("DashBoard.do", new DashBoardService());
 		map.put("UserBoard.do", new UserBoardService());
 		map.put("BoardList.do", new BoardListService());
 		map.put("View.do", new ViewService());
-		map.put("InsertComment.do", new InsertCommentService());
-		map.put("CommentSelectAll.do", new CommentSelectAllService());
+		
+		
+//		map.put("fixView.do", new fixViewService());
+//		map.put("fixViewContent.do", new fixViewContentService());
+	
+//		map.put("DropView.do", new DropViewService());
+	
+		map.put("UserComment.do", new UserCommentService());
+		map.put("CommentView.do", new CommentViewService());
+//		map.put("DropComment.do", new DropCommentService());
 		
 	}
 

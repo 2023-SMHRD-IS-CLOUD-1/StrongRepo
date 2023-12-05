@@ -14,7 +14,7 @@
 
 	<insert id="join" parameterType="com.smhrd.model.MemberVO">
 		INSERT INTO D_USER(EMAIL,PW,NAME,NICK,BIRTHDATE,GENDER)
-		VALUES(#{email},#{pw},#{name},#{nick},#{birthdate},#{gender})
+		VALUES(#{email, jdbcType=VARCHAR},#{pw, jdbcType=VARCHAR},#{name, jdbcType=VARCHAR},#{nick, jdbcType=VARCHAR},#{birthdate, jdbcType=VARCHAR},#{gender, jdbcType=VARCHAR})
 	</insert>
 	
 	<!--  select 구문을 수행할때는 되돌려 줘야하는 값이 사용자 정의 자료형이라면 무조건 resultType을 지정해줘야 한다. -->
@@ -45,10 +45,10 @@
 	
 	
 	<!--  게시판 추가  -->
-	<update id="userBoard" parameterType="com.smhrd.model.MemberVO" >
-		INSERT INTO D_BOARD(B_TITLE,B_CONTENT,EMAIL,B_CATEGORY)
-		VALUES(#{title},#{content},#{email},#{category})
-	</update>
+	<insert id="userBoard" parameterType="com.smhrd.model.MemberVO" >
+		INSERT INTO D_BOARD(B_TITLE,B_CONTENT,EMAIL)
+		VALUES(#{title},#{content},#{email})
+	</insert>
 	
 	
 	

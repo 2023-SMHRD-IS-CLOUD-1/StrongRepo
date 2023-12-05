@@ -72,20 +72,43 @@
     </div>
 
 
-    <div class="py-2 bg-light">
+     <div class="py-2 bg-light">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-9 d-none d-lg-block">
-            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 신고 : 검찰청1301/ 경찰청112/ 관세청125</a> 
-            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 중독재활센터 1899-0893</a> 
-          </div>
-          <div class="col-lg-3 text-right">
-            <a href="Gologin.do" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
-            <a href="Goregister.do" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
-          </div>
-        </div>
-      </div>
-    </div>
+	          <div class="col-lg-9 d-none d-lg-block">
+	            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 검찰청1301/ 경찰청112/ 관세청125</a> 
+	            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 중독재활센터 1899-0893</a> 
+	          </div>
+    		  <div class="row align-items-center">
+					<C:if test="${result!=null}">
+					   <a class="small mr-3" style="float: right;"><span> ${result.getEmail()}님 환영합니다.</span></a>
+					</C:if> 
+					<C:if test="${result==null}">
+						<a href="Gologin.do" class="small mr-3"><span class="icon-unlock-alt"></span> log in</a>
+					</C:if>
+						
+						<!-- 누르면 페이지 이동 -->
+	 				
+					<C:if test="${result!=null}">
+					<a href="Gomodify.do" class="small mr-3" ><span class="icon-unlock-alt"></span> 개인정보수정</a>
+					</C:if> 
+					<C:if test="${result==null}">
+					<a href="Goregister.do" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
+					</C:if> </a>
+					
+					<C:if test="${result!=null}">
+					<a href="Logout.do" class="small mr-3" style="text-align: right;"><span class="icon-unlock-alt"></span>로그아웃</a>
+					</C:if>
+					<C:if test="${result==null}">
+					</C:if>
+						
+				</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
 
       <div class="container">
@@ -147,6 +170,8 @@
       </div>
     </div>
     
+
+
     <form action="Join.do" method="post">
 
     <div class="site-section">
@@ -158,38 +183,37 @@
                   <div class="row">
                     <div class="col-md-12 form-group">
                       <label for="email">EMAIL</label>
-                      <input type="text" id="email" class="form-control form-control-lg">
+                      <input type="text" name="email" id="regEmail" class="form-control form-control-lg">
+                      <ul></ul>
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="pword">PW</label>
-                      <input type="password" id="pw" class="form-control form-control-lg">
+                      <input type="password" name="pw" class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
-                      <label for="pword2">PW 재확인</label>
-                      <input type="password" id="repw" class="form-control form-control-lg">
+                      <label for="repw">PW 재확인</label>
+                      <input type="password" name="repw" class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="name">NAME</label>
-                      <input type="text" id="name" class="form-control form-control-lg">
+                      <input type="text" name="name" class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="nick">NICK</label>
-                      <input type="text" id=" nick" class="form-control form-control-lg">
+                      <input type="text" name="nick" class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="birthdate">BIRTHDATE</label>
-                      <input type="date" id="birthdate" class="form-control form-control-lg">
+                      <input type="date" name="birthdate" class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="gender">GENDER</label>
                       <br>
                       <label for="man">
-                        남자
-                        <input type="radio" name="gender" value="m">
+                        남자<input type="radio" name="gender" value="m">
                       </label>
                       <label for="woman">
-                        여자
-                        <input type="radio" name="gender" value="w">
+                        여자<input type="radio" name="gender" value="w">
                       </label>
                     </div>
                   </div>
@@ -201,11 +225,11 @@
                 </div>
             </div>
             
-
-          
         </div>
     </div>
 </form>
+
+          
     
 
     <div class="footer">
@@ -285,6 +309,56 @@
 
 
   <script src="assets/js/main.js"></script>
+  
+  <script type="text/javascript">
+		// 1. jQuery 라이브러리 로딩 되어있는 지 확인
+		// ---> 라이브러리 로드하고 있는 코드보다 아래쪽에 script 태그 열어줌
+
+		// <input type="text"  id="email" placeholder="보낼 사람 이메일"/>
+		// 2. 필요한 태그 가져오기
+		// ----> id값이 email인 input태그
+		// 3. 키보드를 눌렀을 때에 대한 이벤트 처리
+		$("#regEmail").on("keyup", function() {
+			// console.log(this.value);
+
+			// 4. input태그 안에 입력값 가져오기
+			var inputData = $(this).val();
+			// 5. 전송이 편한 객체 형식으로 만들기
+			var obj = {
+				receive_email : inputData
+			};
+			console.log(obj);
+			// 6. 비동기 통신방식으로 servlet 데이터 보내기
+			// ---> 이메일 존재하는 지 여부를 db에서 체크
+			
+			$.ajax({
+				url : "EmailCheck.do",
+				data : obj,
+				success : function(result) {
+					console.log("성공 >> " + result);
+					$("#regEmail+ul").empty();
+					if(result == "true"){
+						// 1. result값이 true라면 li태그 초록색 "일치하는 이메일입니다."
+						$("#regEmail+ul").append("<li style='color:red;'>!!!!중복불가!!!!</li>");
+						// $(".actions .special").attr("disabled","true");
+						// 버튼 활성화
+						$(".actions .special").removeAttr("disabled");
+					}else{
+						// 2. result값이 false라면 li태그 빨간색 "일치하지 않습니다."
+						$("#regEmail+ul").append("<li style='color:green;'>사용가능한 이메일입니다.</li>");
+						// 버튼 비활성화
+						$(".actions .special").attr("disabled","disabled");
+					}		
+				},
+				error : function(e) {
+					console.log(e);
+				}
+			})
+		})
+		
+		</script>
+  
+  
 
 </body>
 

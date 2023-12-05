@@ -58,17 +58,41 @@
     <div class="py-2 bg-light">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-9 d-none d-lg-block">
-            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 신고 : 검찰청1301/ 경찰청112/ 관세청125</a> 
-            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 중독재활센터 1899-0893</a> 
-          </div>
-          <div class="col-lg-3 text-right">
-            <a href="Gologin.do" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
-            <a href="Goregister.do" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
-          </div>
-        </div>
-      </div>
-    </div>
+	          <div class="col-lg-9 d-none d-lg-block">
+	            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 검찰청1301/ 경찰청112/ 관세청125</a> 
+	            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 중독재활센터 1899-0893</a> 
+	          </div>
+    		  <div class="row align-items-center">
+					<C:if test="${result!=null}">
+					   <a class="small mr-3" style="float: right;"><span> ${result.getEmail()}님 환영합니다.</span></a>
+					</C:if> 
+					<C:if test="${result==null}">
+						<a href="Gologin.do" class="small mr-3"><span class="icon-unlock-alt"></span> log in</a>
+					</C:if>
+						
+						<!-- 누르면 페이지 이동 -->
+	 				
+					<C:if test="${result!=null}">
+					<a href="Gomodify.do" class="small mr-3" ><span class="icon-unlock-alt"></span> 개인정보수정</a>
+					</C:if> 
+					<C:if test="${result==null}">
+					<a href="Goregister.do" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
+					</C:if> </a>
+					
+					<C:if test="${result!=null}">
+					<a href="Logout.do" class="small mr-3" style="text-align: right;"><span class="icon-unlock-alt"></span>로그아웃</a>
+					</C:if>
+					<C:if test="${result==null}">
+					</C:if>
+						
+				</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
 
       <div class="container">
@@ -133,17 +157,17 @@
     <div class="site-section">
         <div class="container">
 
-		<form action="login.do">
+		<form action="Login.do">
             <div class="row justify-content-center">
                 <div class="col-md-5">
                     <div class="row">
                         <div class="col-md-12 form-group">
-                            <label for="name">EMAIL</label>
-                            <input type="text" id="name" class="form-control form-control-lg">
+                            <label for="email">EMAIL</label>
+                            <input type="text" name="email" class="form-control form-control-lg">
                         </div>
                         <div class="col-md-12 form-group">
-                            <label for="pword">PW</label>
-                            <input type="text" id="pword" class="form-control form-control-lg">
+                            <label for="pw">PW</label>
+                            <input type="password" name="pw" class="form-control form-control-lg">
                         </div>
                     </div>
                     <div class="row">
@@ -153,7 +177,7 @@
                     </div>
                 </div>
             </div>
-           </form>
+         </form>
 
           
         </div>
@@ -237,65 +261,7 @@
 
   <script src="assets/js/main.js"></script>
   
-   <script>
-	// 로그인 페이지 이동
-    document.addEventListener("DOMContentLoaded", function() {
-        const linkElement = document.querySelector('body > div.site-wrap > div.py-2.bg-light > div > div > div.col-lg-3.text-right > a.small.mr-3');
-
-        if (linkElement) {
-            linkElement.addEventListener("click", function(event) {
-                event.preventDefault();
-                const link = linkElement.getAttribute('href');
-                window.location.href = link;
-            });
-        }
-    });
-</script>
-
-<script>
-	// 회원가입 페이지 이동
-    document.addEventListener("DOMContentLoaded", function() {
-        const linkElement = document.querySelector('body > div.site-wrap > div.py-2.bg-light > div > div > div.col-lg-3.text-right > a.small.btn.btn-primary.px-4.py-2.rounded-0');
-
-        if (linkElement) {
-            linkElement.addEventListener("click", function(event) {
-                event.preventDefault();
-                const link = linkElement.getAttribute('href');
-                window.location.href = link;
-            });
-        }
-    });
-</script>
-
-<script>
-	// 메인 페이지 이동
-    document.addEventListener("DOMContentLoaded", function() {
-        const linkElement = document.querySelector('#sticky-wrapper > header > div > div > div.mr-auto > nav > ul > li:nth-child(1) > a');
-
-        if (linkElement) {
-            linkElement.addEventListener("click", function(event) {
-                event.preventDefault();
-                const link = linkElement.getAttribute('href');
-                window.location.href = link;
-            });
-        }
-    });
-</script>
-
-<script>
-	// 메인(로고) 페이지 이동
-    document.addEventListener("DOMContentLoaded", function() {
-        const linkElement = document.querySelector('#sticky-wrapper > header > div > div > div.mr-auto > nav > ul > li:nth-child(1) > a');
-
-        if (linkElement) {
-            linkElement.addEventListener("click", function(event) {
-                event.preventDefault();
-                const link = linkElement.getAttribute('href');
-                window.location.href = link;
-            });
-        }
-    });
-</script>
+  
 
 </body>
 

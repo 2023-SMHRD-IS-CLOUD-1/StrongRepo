@@ -35,6 +35,8 @@ public class EmailCheckService implements Command {
 		
 		// 4. 조회된 결과가 있다면 true 응답
 		PrintWriter out = response.getWriter();
+		response.setContentType("text/html;charset=utf-8");
+		
 		if(result!=null){
 			out.print("true");
 		}

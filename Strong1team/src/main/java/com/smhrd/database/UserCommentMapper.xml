@@ -7,40 +7,32 @@
 	정해줄때, 해당하는 mapper파일과 연결되어야하는 DAO클래스 이름일치시키는 것을 원칙으로 함. -->
 
 
-<mapper namespace="com.smhrd.model.UserBoardDAO">
+<mapper namespace="com.smhrd.model.UserCommentDAO">
 
+	<insert id="uploadComment" parameterType="com.smhrd.model.CommentMemberVO">
+		INSERT INTO D_COMMENT(B_NUM,CMT_CONTENT,EMAIL)
+		VALUES(#{B_NUM},#{CMT_CONTENT},#{EMAIL})
+	</insert>
 	
-	<select id = "selectList" resultType="com.smhrd.model.UserBoardMemberVO">
-		SELECT B_TITLE, EMAIL, B_NUM, CREATED_AT FROM D_BOARD ORDER BY B_NUM DESC
+	<select id = "selectComment" resultType="com.smhrd.model.CommentMemberVO">
+		SELECT CMT_NUM, CMT_CONTENT, COMMENTED_AT, EMAIL FROM D_COMMENT 
+		WHERE B_NUM = #{B_NUM}
 	</select>
 	
 	
 	
-	<select id = "selectView" resultType="com.smhrd.model.UserBoardMemberVO">
-		SELECT B_TITLE, B_CONTENT,CREATED_AT, EMAIL, B_NUM
-		FROM D_BOARD 
-		WHERE B_NUM=#{B_NUM}
-	</select>
-	
-	<update id = "fixView" parameterType="com.smhrd.model.UserBoardMemberVO">
-		UPDATE D_BOARD SET B_CONTENT = #{B_CONTENT} WHERE B_NUM = #{B_NUM}
-	</update>
 	
 	
-	<delete id="deleteView" parameterType="com.smhrd.model.UserBoardMemberVO" >
-		DELETE FROM D_BOARD WHERE B_NUM = #{B_NUM}
-	</delete>
+	
+	
+	
 	  
-
-
-	<!--  
->>>>>>> branch 'master' of https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo.git
+	<!--   
 	<resultMap type="com.smhrd.model.UserBoardMemberVO" id="die">
       <result property="B_TITLE" column="B_TITLE" />
       <result property="B_CONTENT" column="B_CONTENT" />
  
    </resultMap>
-
    -->
    
 	

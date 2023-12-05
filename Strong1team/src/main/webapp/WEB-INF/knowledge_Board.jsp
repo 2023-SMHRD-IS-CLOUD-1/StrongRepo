@@ -142,17 +142,43 @@
     <div class="py-2 bg-light">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-9 d-none d-lg-block">
-            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 신고 : 검찰청-1301/ 경찰청112/ 관세청125</a> 
-            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 중독재활센터 1899-0893</a> 
-          </div>
-          <div class="col-lg-3 text-right">
-            <a href="Gologin.do" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
-            <a href="Goregister.do" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
-          </div>
-        </div>
-      </div>
-    </div>
+	          <div class="col-lg-9 d-none d-lg-block">
+	            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 검찰청1301/ 경찰청112/ 관세청125</a> 
+	            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 중독재활센터 1899-0893</a> 
+	          </div>
+    		  <div class="row align-items-center">
+					<C:if test="${result!=null}">
+					   <a class="small mr-3" style="float: right;"><span> ${result.getEmail()}님 환영합니다.</span></a>
+					</C:if> 
+					<C:if test="${result==null}">
+						<a href="Gologin.do" class="small mr-3"><span class="icon-unlock-alt"></span> log in</a>
+					</C:if>
+						
+						<!-- 누르면 페이지 이동 -->
+	 				
+					<C:if test="${result!=null}">
+					<a href="Gomodify.do" class="small mr-3" ><span class="icon-unlock-alt"></span> 개인정보수정</a>
+					</C:if> 
+					<C:if test="${result==null}">
+					<a href="Goregister.do" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
+					</C:if> </a>
+					
+					<C:if test="${result!=null}">
+					<a href="Logout.do" class="small mr-3" style="text-align: right;"><span class="icon-unlock-alt"></span>로그아웃</a>
+					</C:if>
+					<C:if test="${result==null}">
+					</C:if>
+						
+				</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
 
       <div class="container">
@@ -640,7 +666,8 @@
                         <div class="count">조회수</div>
                         <div class="likes">likes</div>
                     </div>
-                    <div>
+                     <!-- 
+                    <div class="boardList">
                         <div class="num">5</div>
                         <div class="title"><a href="GoboardView.do">글이 얼마나 길게 들어가니느니ㅏ두보여주ㅜㅏㅓ아직더들어가야되네</a></div>
                         <div class="writer">김이름</div>
@@ -648,6 +675,8 @@
                         <div class="count">33</div>
                         <div class="likes">0</div>
                     </div>
+                    
+                   
                     <div>
                         <div class="num">4</div>
                         <div class="title"><a href="GoboardView.do">글 제목이 들어갑니다.</a></div>
@@ -680,7 +709,9 @@
                         <div class="count">33</div>
                         <div class="likes">0</div>
                     </div>
+                     
                 </div>
+                -->
                 <div class="board_page">
                     <a href="#" class="bt first"><<</a>
                     <a href="#" class="bt prev"><</a>
@@ -693,35 +724,24 @@
                     <a href="#" class="bt last">>></a>
                 </div>
                 
-                
+                  	</div>
+                <form action="UserBoard.do">
                   <div id="boardStart" class="board_write_wrap">
                     <div class="board_write">
                         <div class="title">
                             <ul>
                                 <dt>제목</dt>
-                                <dd><input type="text" placeholder="제목 입력" style="width: 100%;"></dd>
+                                <dd><input type="text" name="title" placeholder="제목 입력" style="width: 100%;"></dd>
                             </ul>
                         </div>
-                        <!-- <div class="info">
-                            <dl>
-                                <dt>글쓴이</dt>
-                                <dd><input type="text" placeholder="글쓴이 입력"></dd>
-                            </dl>
-                            <dl>
-                                <dt>비밀번호</dt>
-                                <dd><input type="password" placeholder="비밀번호 입력"></dd>
-                            </dl>
-                        </div> -->
                         <div class="cont">
-                            <textarea placeholder="내용 입력"></textarea>
+                            <textarea name="content" placeholder="내용 입력"></textarea>
                         </div>
                     </div>
                     <div class="bt_wrap">
-                      <a href="#write" class="on">등록</a>
-                      <!--<a href="#">수정</a>-->
-                  </div>
+                      <input type="submit" value="등록" class="btn btn-primary btn-lg px-5">
                 </div>
-
+			  </form>
 
 
                 
@@ -822,6 +842,146 @@
 
 
   <script src="assets/js/main.js"></script>
+  
+  <script type="text/javascript">
+  
+ 
+  
+  
+  
+  
+$(function(){
+  $.ajax({
+	    // 데이터 요청 주소
+	    url: "BoardList.do",
+	    // 데이터 타입
+	    dataType: "json",
+	    // 성공
+	    success: function (result) {
+	    	console.log("성공했나?")
+	      displayContent(result); // displayContent 함수 호출
+	      // setPageButtons 함수 호출
+	    },
+	    // 예외
+	    error: function (xhr, status, error) {
+	    	console.log("error");
+	    }
+	  });
+})
+  
+  
+  function displayContent(data) {
+	    const boardList = document.querySelector('.board_list .top');
+	    console.log("성공1")
+	    console.log(boardList)
+	    const itemsPerPage = 5; // 페이지당 보여줄 게시물 수
+	    const totalPages = Math.ceil(data.length / itemsPerPage); // 전체 페이지 수
+	    console.log("성공2")
+	    // 페이지 번호를 클릭하면 해당 페이지의 데이터를 가져와서 표시하는 
+	    function showPage(page) {
+	    	console.log("성공3")
+	      const startIndex = (page - 1) * itemsPerPage;
+	      const endIndex = startIndex + itemsPerPage;
+	      const pageData = data.slice(startIndex, endIndex);
+
+	      pageData.forEach(post => {
+	        // 게시글 추가
+	        const postDiv = document.createElement('div');
+	        postDiv.classList.add("boardList")
+	        const postList = Object.values(post);
+	        postDiv.innerHTML ='' +
+	          '<div class="num">' + postList[2] + '</div>' +
+	          '<div class="title">' + postList[0] + '</div>' +
+	          '<div class="writer">' + postList[1] + '</div>' +
+	          '<div class="date">' + postList[3].split(" ")[0] + '</div>' +
+	          '<div class="count">1</div><div class="likes">0</div>';
+	        boardList.after(postDiv);
+	        boardList.innerHTML = '';
+	      });
+	      
+	    }
+	    
+	    const boardPage = document.querySelector('.board_page');
+	    boardPage.innerHTML = ''; // 페이지 버튼 비우기
+
+	    for (let i = 1; i <= totalPages; i++) {
+	      const pageButton = document.createElement('a');
+	      pageButton.href = '#board';
+	      pageButton.classList.add('num');
+	      pageButton.innerText = i;
+	      pageButton.addEventListener('click', () => {
+	    	const boardList1 = document.querySelector('#board > div > div > div.board_list_wrap > div > div:nth-child(2) ');
+	    	const boardList2 = document.querySelector('#board > div > div > div.board_list_wrap > div > div:nth-child(3)');
+	    	const boardList3 = document.querySelector('#board > div > div > div.board_list_wrap > div > div:nth-child(4)');
+	    	const boardList4 = document.querySelector('#board > div > div > div.board_list_wrap > div > div:nth-child(5)');
+	    	const boardList5 = document.querySelector('#board > div > div > div.board_list_wrap > div > div:nth-child(6)');
+		    boardList1.remove();
+		    boardList2.remove();
+		    boardList3.remove();
+		    boardList4.remove();
+		    boardList5.remove();
+	       
+	    	showPage(i); // 해당 페이지를 보여주도록 showPage 함수 호출
+	        addE();
+	      });
+	      boardPage.appendChild(pageButton);
+	     
+	    }
+	    
+	    
+	    
+	  showPage(1);
+	  addE();
+
+	  }
+  
+  
+function addE(){
+    var postElements = document.querySelectorAll('#board > div > div > div.board_list_wrap > div > div:not(.board_page)');
+
+    postElements.forEach(function(postElement) {
+        postElement.addEventListener('click', function() {
+        	console.log("??");
+            var postNumber = this.querySelector('.num').textContent;
+            
+            var postId = parseInt(postNumber);
+           
+            window.location.href = 'http://localhost:8081/Strong1team/GoboardView.do?id=' + postId;
+        });
+    });
+}
+  
+  
+  
+  
+  
+$('#board > div > div > div.board_list_wrap > div > div').on('click', function() {
+	   
+
+    var postNumber = $(this).find('.num').text();
+    var postId = parseInt(postNumber);
+
+    // AJAX를 사용하여 서버에 데이터를 요청
+    $.ajax({
+        url: 'View.do',
+        method: 'GET',
+        data: {
+            id: postId // 변수 id에 postId 값을 할당하여 서버에 전달
+        },
+        success: function(data) {
+            console.log(data); 
+        },
+        error: function(xhr, status, error) {
+            console.error('Error:', error);
+        }
+    });
+});
+  
+  
+  
+  </script>
+  
+  
 
 </body>
 

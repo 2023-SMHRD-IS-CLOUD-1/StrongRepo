@@ -12,13 +12,14 @@ public class DAO {
 	
 	// 1) SqlSession을 가져올 수 있는 SqlSessionFactory 생성
 	private SqlSessionFactory factory = SqlSessionManager.getFactory();
+	
 	public int join(MemberVO vo) {
 		// (1) 연결 객체 (sqlsession, connection)를 빌려오기
 		SqlSession sqlSession = factory.openSession(true);
 		
 		// (2) 연결 객체를 사용해서 어떤 sql구문을 실행
 		// --->sql구문: Mapper.xml파일 안에 있음
-		int row=sqlSession.insert("join", vo);
+		int row = sqlSession.insert("join", vo);
 		
 		// sqlSession.selectOne(null)
 		// (3) 연결 객체 반납
@@ -117,7 +118,7 @@ public class DAO {
 	public int userBoard(MemberVO vo) {
 		SqlSession sqlSession = factory.openSession(true);
 		// 2. session 사용하기 mapper에 넘길 자료가 있으면 변수 두개
-		int result=sqlSession.update("userBoard",vo);
+		int result=sqlSession.insert("userBoard",vo);
 		// 3. session 반환하기
 		sqlSession.close();
 		// 4. 결과값 반납

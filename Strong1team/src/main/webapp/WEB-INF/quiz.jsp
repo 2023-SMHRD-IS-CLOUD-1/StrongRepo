@@ -154,17 +154,41 @@
     <div class="py-2 bg-light">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-9 d-none d-lg-block">
-            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 신고 : 검찰청1301/ 경찰청112/ 관세청125</a> 
-            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 중독재활센터 1899-0893</a> 
-          </div>
-          <div class="col-lg-3 text-right">
-            <a href="Gologin.do" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
-            <a href="Goregister.do" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
-          </div>
-        </div>
-      </div>
-    </div>
+	          <div class="col-lg-9 d-none d-lg-block">
+	            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 검찰청1301/ 경찰청112/ 관세청125</a> 
+	            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 중독재활센터 1899-0893</a> 
+	          </div>
+    		  <div class="row align-items-center">
+					<C:if test="${result!=null}">
+					   <a class="small mr-3" style="float: right;"><span> ${result.getEmail()}님 환영합니다.</span></a>
+					</C:if> 
+					<C:if test="${result==null}">
+						<a href="Gologin.do" class="small mr-3"><span class="icon-unlock-alt"></span> log in</a>
+					</C:if>
+						
+						<!-- 누르면 페이지 이동 -->
+	 				
+					<C:if test="${result!=null}">
+					<a href="Gomodify.do" class="small mr-3" ><span class="icon-unlock-alt"></span> 개인정보수정</a>
+					</C:if> 
+					<C:if test="${result==null}">
+					<a href="Goregister.do" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
+					</C:if> </a>
+					
+					<C:if test="${result!=null}">
+					<a href="Logout.do" class="small mr-3" style="text-align: right;"><span class="icon-unlock-alt"></span>로그아웃</a>
+					</C:if>
+					<C:if test="${result==null}">
+					</C:if>
+						
+				</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
 
       <div class="container">

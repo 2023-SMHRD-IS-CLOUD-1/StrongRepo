@@ -24,18 +24,23 @@ public class LoginService implements Command {
 
 		DAO dao = new DAO();
 
-		MemberVO result = dao.login(vo);
+		MemberVO result = new MemberVO();
+		result = dao.login(vo);
+		System.out.println(result);
 
 		if (result != null) {
 
 			HttpSession session = request.getSession();
-
 			session.setAttribute("result", result);
 			return "redirect:/Gomain.do";
+		} 
 			
-		}
-
+			
+			
+		
 		return "redirect:/Gomain.do";
+			
+		
 
 	}
 
