@@ -9,7 +9,10 @@
   <title>Academics &mdash; Website by Colorlib</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
@@ -22,6 +25,8 @@
 
   <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
 
+
+
   <link rel="stylesheet" href="assets/css/bootstrap-datepicker.css">
 
   <link rel="stylesheet" href="assets/fonts/flaticon/font/flaticon.css">
@@ -30,6 +35,17 @@
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" href="assets/css/style.css">
+
+<link rel="icon" type="image/png" sizes="16x16"
+	href="assets/images/favicon.png">
+<title>Adminmart Template - The Ultimate Multipurpose admin
+	template</title>
+<link href="assets/extra-libs/c3/c3.min.css" rel="stylesheet">
+<link href="assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+<link href="assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css"
+	rel="stylesheet" />
+<link href="assets/dist/css/style2.css" rel="stylesheet">
+<link href="assets/libs/morris.js/morris.css" rel="stylesheet">
 
 <style>
     #imageInput{
@@ -54,6 +70,16 @@
       width: 100px;
       height: 38px;
     }
+    
+    body > header {
+    background-color: white;
+    
+    
+    }
+    
+    
+    
+    
   </style>
 
 </head>
@@ -171,7 +197,9 @@
 			<div class="row align-items-center">
 				<div class="col-lg-12 mx-auto text-center">
 
-					<h1 style="font-size: 100px; margin-bottom: 35px;">마약 필터</h1>
+					<h1 style="font-size: 100px; margin-bottom: 35px;">인생 똑바로 살아라 </h1><br><h1> 이렇게 되기 싫으면</h1><br>
+					<h4>▼ 마약은 필터 로만 하세요 ▼</h4>
+					
 					<div
 						style="display: flex; justify-content: center; align-items: center; text-align: center;">
 						<div id="image_container" class="imageContainer">
@@ -212,47 +240,228 @@
             </h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+        
+        	<div class="row" style="justify-content: center;">
+					<div class="row4">
+						<div class="card-group">
+							<div class="card border-right">
+								<div class="card-body">
+									<div class="d-flex d-lg-flex d-md-block align-items-center">
+										<div>
+											<div class="d-inline-flex align-items-center">
+												<h2 class="text-dark mb-1 font-weight-medium">20230건       </h2>
 
-            <div class="feature-1 border">
-              <div class="icon-wrapper bg-primary">
-                <span class="flaticon-mortarboard text-white"></span>
-              </div>
-              <div class="feature-1-content">
-                <h2>Personalize Learning</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
-                <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-            <div class="feature-1 border">
-              <div class="icon-wrapper bg-primary">
-                <span class="flaticon-school-material text-white"></span>
-              </div>
-              <div class="feature-1-content">
-                <h2>Trusted Courses</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
-                <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p>
-              </div>
-            </div> 
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-            <div class="feature-1 border">
-              <div class="icon-wrapper bg-primary">
-                <span class="flaticon-library text-white"></span>
-              </div>
-              <div class="feature-1-content">
-                <h2>Tools for Students</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
-                <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p>
-              </div>
-            </div> 
-          </div>
-        </div>
-      </div>
-    </div>
+												<span
+													class="badge bg-primary font-12 text-white font-weight-medium badge-pill ml-2 d-lg-block d-md-none">전년도
+													대비 + 47.58%</span>
+											</div>
+											<h6
+												class="text-muted font-weight-normal mb-0 w-100 text-truncate">
+												마약 단속현황 (2023.01-2023.9)</h6>
+										</div>
+										<div class="ml-auto mt-md-3 mt-lg-0">
+											<span class="opacity-7 text-muted"></span>
+										</div>
+										<!-- <i data-feather="user-plus"></i> -->
+									</div>
+								</div>
+							</div>
+
+							<div class="card border-right">
+								<div class="card-body">
+									<div class="d-flex d-lg-flex d-md-block align-items-center">
+										<div>
+											<div class="d-inline-flex align-items-center">
+												<h2 class="text-dark mb-1 font-weight-medium">910건       </h2>
+												<span
+													class="badge bg-primary font-12 text-white font-weight-medium badge-pill ml-2 d-md-none d-lg-block">전년도
+													대비 + 155.62%</span>
+											</div>
+											<h6
+												class="text-muted font-weight-normal mb-0 w-100 text-truncate">
+												10대 마약 단속 현황 (2023.01-2023.09)</h6>
+										</div>
+										<div class="ml-auto mt-md-3 mt-lg-0">
+											<span class="opacity-7 text-muted">
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex d-lg-flex d-md-block align-items-center">
+										<div>
+											<h2 class="text-dark mb-1 font-weight-medium">Asia</h2>
+											<h6
+												class="text-muted font-weight-normal mb-0 w-100 text-truncate">마약범죄
+												발생률 1위</h6>
+										</div>
+										<div class="ml-auto mt-md-3 mt-lg-0">
+											<span class="opacity-7 text-muted"><i data-feather="globe"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- *************************************************************** -->
+						<!-- End First Cards -->
+						<div class="row3">
+							<div class="row2">
+								<div class="row1">
+									<div class="hj" style="width: 400px; height: 450px;">
+										<div class="card" style="width: 400px; height: 450px;">
+											<div class="card-body" style="width: 400px; height: 450px;">
+												<h4 class="card-title text-black">직업별 단속내역<h6> (2014.01-2023.09)</h6></h4>
+												<div>
+													<canvas id="polar-chart" width="3000px" height="3000px"></canvas>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="hj" style="width: 460px; height: 450px;">
+										<div class="card" style="width: 460px; height: 450px;">
+											<div class="card-body" style="width: 460px; height: 450px;">
+												<h4 class="card-title text-black">연령별 단속내역<h6> (2014.01-2023.09)</h6></h4>
+												<div class="net-income mt-4 position-relative"
+													style="height: 300px;"></div>
+												<ul class="list-inline text-center mb-2" style="margin-top:20px;">
+													<li class="list-inline-item text-muted ">연령대</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="dan"
+									style="margin-top: 30px; width: 900px; height: 500px;">
+									<div class="card" style="width: 900px; height: 500px;">
+										<div class="card-body" style="width: 900px; height: 500px;">
+											<h4 class="card-title text-black">마약 단속현황<h6> (2014.01-2023.09)</h6></h4>
+											<div id="morris-line-chart"
+												style="width: 860px; height: 430px; margin-left: 10px;">
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="hj"
+								style="margin-left: 15px; width: 500px; height: 1030px">
+								<div class="card"
+									style="margin-left: 15px; width: 450px; height: 1030px">
+									<div class="card-body"
+										style="margin-left: 15px; width: 450px; height: 1030px">
+										<div style="margin-right: 40px;">
+											<h4 class="card-title mb-4 text-black">국가별 마약 단속현황</h4>
+											<div style="height: 350px">
+												<div id="visitbylocate" style="height: 100%;"></div>
+											</div>
+											<div style="margin-top: 50px;">
+
+
+												<div class="row0 mb-3 align-items-center">
+													<div class="col1-4 text-right">
+														<span class="font-14 text-black">Oceania</span>
+													</div>
+													<div class="col1-5-1">
+														<div class="progress">
+															<div class="progress-bar bg-danger" role="progressbar"
+																style="width: 0.4%" aria-valuenow="25" aria-valuemin="0"
+																aria-valuemax="100">0.4</div>
+														</div>
+													</div>
+													<div class="col1-3-1 text-right">
+														<span class="mb-0 font-14 text-black font-weight-medium">14만</span>
+													</div>
+												</div>
+												<div class="row0 mb-3 align-items-center mt-1 mt-5">
+													<div class="col1-4 text-right">
+														<span class="font-14 text-black">Africa</span>
+													</div>
+													<div class="col1-5-1">
+														<div class="progress">
+															<div class="progress-bar bg-danger" role="progressbar"
+																style="width: 4.8%" aria-valuenow="25" aria-valuemin="0"
+																aria-valuemax="100">4.8%</div>
+														</div>
+													</div>
+													<div class="col1-3-1 text-right">
+														<span class="mb-0 font-14 text-black font-weight-medium">138만</span>
+													</div>
+												</div>
+												<div class="row0 mb-3 align-items-center">
+													<div class="col1-4 text-right">
+														<span class="text-black font-14">Europe</span>
+													</div>
+													<div class="col1-5-1">
+														<div class="progress">
+															<div class="progress-bar bg-danger" role="progressbar"
+																style="width: 18.1%" aria-valuenow="25" aria-valuemin="0"
+																aria-valuemax="100">18.1%</div>
+														</div>
+													</div>
+													<div class="col1-3-1 text-right">
+														<span class="mb-0 font-14 text-black font-weight-medium">520만</span>
+													</div>
+												</div>
+												<div class="row0 mb-3 align-items-center">
+													<div class="col1-4 text-right">
+														<span class="text-black font-14">America</span>
+													</div>
+													<div class="col1-5-1">
+														<div class="progress">
+															<div class="progress-bar bg-danger" role="progressbar"
+																style="width: 16.8%" aria-valuenow="25" aria-valuemin="0"
+																aria-valuemax="100">16.8</div>
+														</div>
+													</div>
+													<div class="col1-3-1 text-right">
+														<span class="mb-0 font-14 text-black font-weight-medium">482만</span>
+													</div>
+												</div>
+												<div class="row0 mb-3 align-items-center">
+													<div class="col1-4 text-right">
+														<span class="text-black font-14">Asia</span>
+													</div>
+													<div class="col1-5-1">
+														<div class="progress">
+															<div class="progress-bar bg-danger" role="progressbar"
+																style="width: 26.5%" aria-valuenow="25" aria-valuemin="0"
+																aria-valuemax="100">26.5</div>
+														</div>
+													</div>
+													<div class="col1-3-1 text-right">
+														<span class="mb-0 font-14 text-black font-weight-medium">763만</span>
+													</div>
+												</div>
+												<div class="row0 mb-3 align-items-center">
+													<div class="col1-4 text-right">
+														<span class="text-black font-14">Global</span>
+													</div>
+													<div class="col1-5-1">
+														<div class="progress">
+															<div class="progress-bar bg-danger" role="progressbar"
+																style="width: 33.4%" aria-valuenow="25" aria-valuemin="0"
+																aria-valuemax="100">33.4</div>
+														</div>
+													</div>
+													<div class="col1-3-1 text-right">
+														<span class="mb-0 font-14 text-black font-weight-medium">960만</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        
+       
+   
 
 
 <!-- 
@@ -469,9 +678,9 @@
           <div class="col-12">
             <div class="copyright">
                 <p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                   
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> If you want sexy guy or hot girl click here ♥  <a href="https://www.spo.go.kr/site/spo/main.do" target="_blank" >s.e.x.? </a>♥
+                   
                     </p>
             </div>
           </div>
@@ -501,6 +710,37 @@
   <script src="assets/js/jquery.fancybox.min.js"></script>
   <script src="assets/js/jquery.sticky.js"></script>
   <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+
+    <script src="assets/dist/js/pages/dashboards/dashboard1.min.js"></script>
+	<!--dashboard-->
+	<script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+	<script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="assets/dist/js/app-style-switcher.js"></script>
+	<script src="assets/dist/js/feather.min.js"></script>
+	<script
+		src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+	<script src="assets/extra-libs/sparkline/sparkline.js"></script>
+	<script src="assets/dist/js/custom.min.js"></script>
+	<script src="assets/libs/jquery/dist/jquery.min.js"></script>
+	<script src="assets/dist/js/pages/chartjs/chartjs.init.js"></script>
+	<script src="assets/libs/chart.js/dist/Chart.min.js"></script>
+	<script src="assets/dist/js/pages/chartjs/chartjs.init2.js"></script>
+	<!--polar-->
+	<script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+	<script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="assets/libs/raphael/raphael.min.js"></script>
+	<script src="assets/libs/morris.js/morris.min.js"></script>
+	<script src="assets/dist/js/pages/morris/morris-data2.js"></script>
+	<!-- 차트 값-->
+	<script src="assets/extra-libs/c3/d3.min.js"></script>
+	<script src="assets/extra-libs/c3/c3.min.js"></script>
+	<script src="assets/libs/chartist/dist/chartist.min.js"></script>
+	<script
+		src="assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+	<script src="assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
+	<script
+		src="assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
+
 
 
 
