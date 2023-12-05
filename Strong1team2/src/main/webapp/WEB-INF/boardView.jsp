@@ -456,6 +456,8 @@ for (var i = 0; i < postNumber.length; i++) {
 		    			newWriter.classList.add("writer");
 				    	   const newContent = document.createElement('div');
 				    	   newContent.classList.add("title");
+				    	   newContent.style.display = "block";
+				    	   newContent.style.textAlign = "left";
 				    	
 				    	   newContent.setAttribute('name', 'contentD');
 				    	   const newDate = document.createElement('div');
@@ -481,7 +483,6 @@ for (var i = 0; i < postNumber.length; i++) {
 				    	   comment.appendChild(newDiv);
 				    	   newForm.appendChild(submitButton);
 				    	   newDiv.appendChild(newContent);
-				    	   newDiv.appendChild(newLineBreak);
 				    	   newDiv.appendChild(space); // 공백 추가
 				    	   newDiv.appendChild(newWriter);
 				    	   newDiv.appendChild(space); // 공백 추가
