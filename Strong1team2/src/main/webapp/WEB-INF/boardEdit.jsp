@@ -195,13 +195,13 @@
                     </form>
                     
                     
-                    <form action="DropView.do">
+                    <form action="DropView.do" style="display: inline-block; margin-right: 10px; margin-left: 10px;">
                     <input type="hidden" class="postNumber" name="postNumber">
                     <input type="submit" value="삭제" class="btn btn-primary btn-lg px-5">
                     </form>
                     
                     
-                    <input type="submit" value="취소" class="btn btn-primary btn-lg px-5">
+                    <input type="button" value="취소" onclick="goToAnotherPage()" class="btn btn-primary btn-lg px-5">
                     </div>
                 </div>
             </div>
@@ -372,7 +372,13 @@ for (var i = 0; i < postNumber.length; i++) {
 		  });
 	  
   
-  
+
+  // JavaScript 함수 정의
+  function goToAnotherPage() {
+      // 페이지 이동을 위해 window.location.href 사용
+      window.location.href = 'GoboardView.do?id='+postId; // 이동할 페이지 URL을 설정
+  }
+
   
   
   

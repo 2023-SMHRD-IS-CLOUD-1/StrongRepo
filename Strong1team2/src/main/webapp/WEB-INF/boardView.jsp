@@ -215,9 +215,9 @@
                   <div class="cmt_board_list">
                       <div>
                        
-                          <div class="title">글이 얼마나 길게 들어가니느니ㅏ두보여주ㅜㅏㅓ아직더들어가야되네</div><br>
-                          <div class="writer">김이름</div>
-                          <div class="date">2021.1.15</div>
+                          <div class="title">댓글이 없습니다. 작성해주시기 바랍니다.</div><br>
+                          <div class="writer"></div>
+                          <div class="date"></div>
                       </div>
   	<!--                    <div>
                           <div class="title">댓글 내용</div><br>
@@ -461,7 +461,8 @@ for (var i = 0; i < postNumber.length; i++) {
 		    success: function(response) {
 		    	   console.log(response)
 		    	   const commentList = Object.values(response);
-		    	  
+		    	  const origincmt = document.querySelector(`body > div.comment_section > div > div > div > div.cmt_board_list > div:nth-child(1)`);
+		    	  origincmt.remove();
 		    	   var comment = document.querySelector(`body > div.comment_section > div > div > div > div.cmt_board_list`)
 		    	   
 		    	   // 여기서부터 for문 시작할듯? 
