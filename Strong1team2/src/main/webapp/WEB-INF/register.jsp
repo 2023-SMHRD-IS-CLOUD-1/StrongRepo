@@ -184,7 +184,7 @@
                     <div class="col-md-12 form-group">
                       <label for="email">EMAIL</label>
                       <input type="text" name="email" id="regEmail" class="form-control form-control-lg">
-                      <ul></ul>
+                    
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="pword">PW</label>

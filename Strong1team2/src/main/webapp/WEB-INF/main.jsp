@@ -515,12 +515,12 @@
           <div class="col-lg-3">
             <h3 class="footer-heading""><span>응원의 한마디</span></h3>
             <ul class="list-unstyled" style="width: 500px;">
-                <li style="color: #000;">힘내라 빠샤빠샤빠샤빠샤빠샤빠샤빠샤빠샤</li>
-                <li style="color: #000;">힘내라 아자아자아자아자아자아자아자아자</li>
-                <li style="color: #000;">힘내라 빠샤빠샤빠샤빠샤빠샤빠샤빠샤빠샤</li>
-                <li style="color: #000;">힘내라 아자아자아자아자아자아자아자아자</li>
-                <li style="color: #000;">힘내라 빠샤빠샤빠샤빠샤빠샤빠샤빠샤빠샤</li>
-                <li style="color: #000;">힘내라 아자아자아자아자아자아자아자아자</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
             </ul>
           </div>
         </div>

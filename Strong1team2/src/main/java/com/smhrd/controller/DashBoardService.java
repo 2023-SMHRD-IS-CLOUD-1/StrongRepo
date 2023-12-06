@@ -38,16 +38,16 @@ public class DashBoardService implements Command {
 		    combinedResult.addAll(result3);
 		    
 		for (DashBoardMemberVO value : result) {
-			System.out.println(value); // toString() 메서드 호출
+			 // toString() 메서드 호출
 		}
 		for (DashBoardMemberVO value : result1) {
 			System.out.println(value); // toString() 메서드 호출
 		}
 		for (DashBoardMemberVO value : result2) {
-			System.out.println(value); // toString() 메서드 호출
+	 // toString() 메서드 호출
 		}
 		for (DashBoardMemberVO value : result3) {
-			System.out.println(value); // toString() 메서드 호출
+		 // toString() 메서드 호출
 		}
 		// 세팅이 필요한 경우에는 request.setAttribute 등을 사용할 수 있음
 

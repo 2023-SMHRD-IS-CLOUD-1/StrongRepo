@@ -25,20 +25,30 @@ public class LoginService implements Command {
 		DAO dao = new DAO();
 
 		MemberVO result = new MemberVO();
+		
 		result = dao.login(vo);
-		System.out.println(result);
+		
+//		try {
+//		}
+//		catch() {
+//			
+//		}
+		
+		
 
 		if (result != null) {
 
 			HttpSession session = request.getSession();
 			session.setAttribute("result", result);
 			return "redirect:/Gomain.do";
-		} 
+		} else {
+			return "redirect:/Gologin.do?error=invalidCredentials";
+		}
 			
 			
 			
 		
-		return "redirect:/Gomain.do";
+	
 			
 		
 
