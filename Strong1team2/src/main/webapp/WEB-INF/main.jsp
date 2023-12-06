@@ -513,8 +513,10 @@
               </ul>
           </div>
           <div class="col-lg-3">
-            <h3 class="footer-heading""><span>응원의 한마디</span></h3>
+            <h3 class="footer-heading""><span>타산지석</span></h3>
             <ul class="list-unstyled" style="width: 500px;">
+            	 <li><a href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=REFORM&headNum=1&seq=180&tpage=1">중독재활센터 안내</a></li>
+                 <li><a href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=CONSULT_2&seq=12017&tpage=1">상담 안내</a></li>
                 <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
                 <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
                 <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
@@ -530,7 +532,7 @@
             <div class="copyright">
                 <p>
                    
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> If you want sexy guy or hot girl click here ♥  <a href="https://www.spo.go.kr/site/spo/main.do" target="_blank" >s.e.x.? </a>♥
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>  ♥  <a href="https://www.spo.go.kr/site/spo/main.do" target="_blank" >????</a>♥
                    
                     </p>
             </div>

@@ -541,6 +541,7 @@ for (var i = 0; i < postNumber.length; i++) {
 				    		            postNumber: postId// 변수 id에 postId 값을 할당하여 서버에 전달
 				    		        },
 				    		        success: function(data) {
+				    		        	window.location.reload();
 				    		            console.log(data); 
 				    		        },
 				    		        error: function(xhr, status, error) {
