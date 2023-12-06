@@ -666,6 +666,7 @@
                         <div class="count">조회수</div>
                         <div class="likes">likes</div>
                     </div>
+                 
                      <!-- 
                     <div class="boardList">
                         <div class="num">5</div>
@@ -710,8 +711,9 @@
                         <div class="likes">0</div>
                     </div>
                      
-                </div>
+               
                 -->
+                    </div>
                 <div class="board_page">
                     <a href="#" class="bt first"><<</a>
                     <a href="#" class="bt prev"><</a>
@@ -904,14 +906,14 @@ $(function(){
 	        const postDiv = document.createElement('div');
 	        postDiv.classList.add("boardList")
 	        const postList = Object.values(post);
-	        postDiv.innerHTML ='' +
+	        postDiv.innerHTML =
 	          '<div class="num">' + postList[2] + '</div>' +
 	          '<div class="title">' + postList[0] + '</div>' +
 	          '<div class="writer">' + postList[1] + '</div>' +
 	          '<div class="date">' + postList[3].split(" ")[0] + '</div>' +
 	          '<div class="count">1</div><div class="likes">0</div>';
 	        boardList.after(postDiv);
-	        boardList.innerHTML = '';
+	        //boardList.innerHTML = '';
 	      });
 	      
 	    }

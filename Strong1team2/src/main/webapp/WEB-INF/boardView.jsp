@@ -245,6 +245,7 @@
                     
                     
                     <form action="UserComment.do">
+                            <C:if test="${result!=null}">
                         <div class="cmt_title">
                             <ul>
                                 <dd><input type="text" name="comment" placeholder="댓글 입력" style="width: 100%; height: 50px;"></dd>
@@ -256,6 +257,20 @@
                       <input type="submit" value="등록" class="btn btn-primary btn-lg px-5">
                   </div>
                 </div>
+                 </C:if>
+                      <C:if test="${result==null}">
+                        <div class="cmt_title">
+                            <ul>
+                                <dd><input type="text" disabled="disabled" name="comment" placeholder="로그인 시 이용 가능합니다." style="width: 100%; height: 50px;"></dd>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bt_wrap">
+                    <input type="hidden" class="postNumber" name="postNumber">
+                      <input type="submit" disabled="disabled" value="등록" class="btn btn-primary btn-lg px-5">
+                  </div>
+                </div>
+                 </C:if>
                 </form>
 
                        

@@ -41,19 +41,32 @@ public class UserBoardDAO {
 		
 		
 	}
-	// 고친거
-//	public List<UserBoardMemberVO> selectView() {
-//		SqlSession sqlSession = factory.openSession();
-//		
-//		List<UserBoardMemberVO> result= sqlSession.selectList("selectView");
-//		
-//		sqlSession.close();
-//		
-//		
-//		return result;
-//		
-//		
-//	}
+	
+	
+	public int deleteView(UserBoardMemberVO vo) {
+		// (1) 연결 객체 (sqlsession, connection)를 빌려오기
+				SqlSession sqlSession = factory.openSession(true);
+				
+				// (2) 연결 객체를 사용해서 어떤 sql구문을 실행
+				// --->sql구문: Mapper.xml파일 안에 있음
+				System.out.println("매퍼 이동");
+				int row = sqlSession.delete("deleteView", vo);
+				
+				System.out.println(row);
+				if(row>0) {
+					sqlSession.commit();
+					sqlSession.close();
+				} else {
+					sqlSession.rollback();
+				}
+				
+				
+				System.out.println("나옴");
+				return row;
+		
+	}
+
+
 
 	
 
