@@ -32,13 +32,13 @@ public class LoginService implements Command {
 
 			HttpSession session = request.getSession();
 			session.setAttribute("result", result);
-			return "redirect:/Gomain.do";
+			return "redirect:/Goknowledge_Board.do#board";
 		} 
 			
 			
 			
 		
-		return "redirect:/Gomain.do";
+		return "redirect:/Goknowledge_Board.do#board";
 			
 		
 

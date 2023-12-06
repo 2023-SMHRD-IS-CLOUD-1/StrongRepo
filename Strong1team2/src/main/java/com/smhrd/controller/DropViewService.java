@@ -37,11 +37,11 @@ public class DropViewService implements Command {
 				System.out.println("----------------------------중간점검3----------------------------");
 				
 				
-				return "redirect:/Gomain.do";
+				return "redirect:/Goknowledge_Board.do#board";
 			} else {
 				System.out.println("실패");
 				
-				return "redirect:/Gomain.do";
+				return "redirect:/Goknowledge_Board.do#board";
 				
 			}
 			

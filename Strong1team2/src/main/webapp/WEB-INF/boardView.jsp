@@ -194,7 +194,7 @@
             
             <div class="bt_wrap">
               <a href="Goknowledge_Board.do#board" class="on">목록</a>
-              <a href="GoboardEdit.do" class="on">수정</a>
+              <a class="on">수정</a>
             </div>
           </div>
         </div>
@@ -539,12 +539,12 @@ for (var i = 0; i < postNumber.length; i++) {
   
   
   
-  const buttonElement = document.querySelector(`body > div.site-wrap > div.comment_site-section > div > div > div > div.bt_wrap > a:nth-child(2)`);
+  const buttonElement = document.querySelector(`body > div:nth-child(5) > div > div > div.board_view_wrap > div.bt_wrap > a:nth-child(2)`);
 
   buttonElement.addEventListener('click', function(event) {
   console.log("check2222222222")
 
-  	const newURL = 'http://localhost:8081/Strong1team/GofixView.do?postNumber='+ postId
+  	const newURL = 'http://localhost:8081/Strong1team/GoboardEdit.do?postNumber='+ postId
   	
   	
   	window.location.href = newURL;
