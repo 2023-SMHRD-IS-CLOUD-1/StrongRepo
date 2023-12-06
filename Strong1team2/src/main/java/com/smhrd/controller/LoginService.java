@@ -28,11 +28,7 @@ public class LoginService implements Command {
 		
 		result = dao.login(vo);
 		
-//		try {
-//		}
-//		catch() {
-//			
-//		}
+
 		
 		
 

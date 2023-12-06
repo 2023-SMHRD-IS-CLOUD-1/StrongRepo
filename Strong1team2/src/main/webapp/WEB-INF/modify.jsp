@@ -175,11 +175,13 @@
                   <div class="row">
                     <div class="col-md-12 form-group">
                       <label for="email">EMAIL</label>
-                      <input type="text" name="email" class="form-control form-control-lg">
+                      <input type="text" id="email" name="email" class="form-control form-control-lg">
+                      <ul></ul>
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="pword">PW</label>
-                      <input type="password" name="pw" class="form-control form-control-lg">
+                      <input type="password" id="pw" name="pw" class="form-control form-control-lg">
+                       <ul></ul>
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="pword2">새로운 비밀번호 입력</label>
@@ -206,13 +208,22 @@
                       <label for="woman">
                         여자<input type="radio" name="gender" value="w">
                       </label>
+                      <% 
+    String error = request.getParameter("error");
+    if (error != null && error.equals("invalidCredentials")) {
+%>
+    <p style="color: red;">아이디 또는 비밀번호가 잘못되었습니다.</p>
+<% } %>
                     </div>
                   </div>
                   <div class="row">
                         <div class="col-12">
                             <input type="submit" value="수정하기" class="btn btn-primary btn-lg px-5">
+                            	
                             <a href="Gounregister.do" class="btn btn-primary btn-lg px-5">탈퇴하기</a>
-                        </div>
+                            
+                            			</div>
+                         </div>
                     </div>
                 </div>
             </div>
@@ -297,11 +308,11 @@
   <script src="assets/js/jquery.fancybox.min.js"></script>
   <script src="assets/js/jquery.sticky.js"></script>
   <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
-
-
-
-
   <script src="assets/js/main.js"></script>
+  
+  
+  
+
 
 </body>
 

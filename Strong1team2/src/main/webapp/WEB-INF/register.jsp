@@ -184,30 +184,36 @@
                     <div class="col-md-12 form-group">
                       <label for="email">EMAIL</label>
                       <input type="text" name="email" id="regEmail" class="form-control form-control-lg">
-                    
+                    <ul></ul>
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="pword">PW</label>
-                      <input type="password" name="pw" class="form-control form-control-lg">
+                      <ul></ul>
+                      <input type="password" name="pw" id="pw"class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="repw">PW 재확인</label>
-                      <input type="password" name="repw" class="form-control form-control-lg">
+                      <ul></ul>
+                      <input type="password" name="repw" id="repw" class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="name">NAME</label>
-                      <input type="text" name="name" class="form-control form-control-lg">
+                      <ul></ul>
+                      <input type="text" name="name" id="name"class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="nick">NICK</label>
-                      <input type="text" name="nick" class="form-control form-control-lg">
+                      <ul></ul>
+                      <input type="text" name="nick" id="nick"class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="birthdate">BIRTHDATE</label>
-                      <input type="date" name="birthdate" class="form-control form-control-lg">
+                      <ul></ul>
+                      <input type="date" name="birthdate" id="birthdate" class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
-                      <label for="gender">GENDER</label>
+                      <label for="gender" id="gender">GENDER</label>
+                      <ul></ul>
                       <br>
                       <label for="man">
                         남자<input type="radio" name="gender" value="m">
@@ -311,25 +317,35 @@
   <script src="assets/js/main.js"></script>
   
   <script type="text/javascript">
-		// 1. jQuery 라이브러리 로딩 되어있는 지 확인
-		// ---> 라이브러리 로드하고 있는 코드보다 아래쪽에 script 태그 열어줌
-
-		// <input type="text"  id="email" placeholder="보낼 사람 이메일"/>
-		// 2. 필요한 태그 가져오기
-		// ----> id값이 email인 input태그
-		// 3. 키보드를 눌렀을 때에 대한 이벤트 처리
+	var regEmail=document.getElementById("regEmail");
+	var pw=document.getElementById("pw");
+	var repw=document.getElementById("repw");
+	var name=document.getElementById("name");
+	var nick=document.getElementById("nick");
+	var birthdate=document.getElementById("birthdate");
+	var gender=document.getElementById("gender");
+  
+  
+  
+  
+  
 		$("#regEmail").on("keyup", function() {
-			// console.log(this.value);
-
-			// 4. input태그 안에 입력값 가져오기
+			
+		   const input = document.getElementById('regEmail');
+			
 			var inputData = $(this).val();
-			// 5. 전송이 편한 객체 형식으로 만들기
+			
 			var obj = {
 				receive_email : inputData
 			};
-			console.log(obj);
-			// 6. 비동기 통신방식으로 servlet 데이터 보내기
-			// ---> 이메일 존재하는 지 여부를 db에서 체크
+			
+			if(regEmail.value.trim() === '') {
+				
+				$("#regEmail+ul").append("<li style='color:red;'>아이디를 입력해주세요</li>");
+				$(`body > form > div > div > div > div > div:nth-child(2) > div > input`).attr("disabled","disabled");
+				
+			}
+			
 			
 			$.ajax({
 				url : "EmailCheck.do",
@@ -338,17 +354,16 @@
 					console.log("성공 >> " + result);
 					$("#regEmail+ul").empty();
 					if(result == "true"){
-						// 1. result값이 true라면 li태그 초록색 "일치하는 이메일입니다."
+						
 						$("#regEmail+ul").append("<li style='color:red;'>!!!!중복불가!!!!</li>");
-						// $(".actions .special").attr("disabled","true");
-						// 버튼 활성화
-						$(".actions .special").removeAttr("disabled");
-					}else{
-						// 2. result값이 false라면 li태그 빨간색 "일치하지 않습니다."
+						$(`body > form > div > div > div > div > div:nth-child(2) > div > input`).attr("disabled","disabled");
+						
+					}else if(result == "false"){
+						
 						$("#regEmail+ul").append("<li style='color:green;'>사용가능한 이메일입니다.</li>");
-						// 버튼 비활성화
-						$(".actions .special").attr("disabled","disabled");
-					}		
+						$(`body > form > div > div > div > div > div:nth-child(2) > div > input`).removeAttr("disabled");
+						
+					}
 				},
 				error : function(e) {
 					console.log(e);
