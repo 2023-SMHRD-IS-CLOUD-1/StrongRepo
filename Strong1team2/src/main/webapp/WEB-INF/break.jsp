@@ -230,6 +230,7 @@
 						</div>
 						<div style="font-size: 50px; margin: 0 20px;">▶</div>
 						<div id="resultImageContainer" class="imageContainer">
+						<img src="images/afterfilter.png" alt="Image" class="img-fluid" style="width: 450px; height: 500px;">
 							<!-- Display transformed image here -->
 						</div>
 					</div>

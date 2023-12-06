@@ -213,11 +213,12 @@
               </div> -->
               <div class="board_list_wrap">
                   <div class="cmt_board_list">
-                      <div>
+                      <div style="display: flex; justify-content: space-between; align-items: center;">
                        
                           <div class="title">댓글이 없습니다. 작성해주시기 바랍니다.</div><br>
-                          <div class="writer"></div>
-                          <div class="date"></div>
+                          <div class="writer">작성자</div>
+                          <div class="date">시간</div>
+                          <div><input type="button" value="삭제" style="width:70px;">  </div>
                       </div>
   	<!--                    <div>
                           <div class="title">댓글 내용</div><br>
@@ -467,64 +468,87 @@ for (var i = 0; i < postNumber.length; i++) {
 		    	   
 		    	   // 여기서부터 for문 시작할듯? 
 		    		for(let i=0; i<commentList.length; i++) {
-		    			   
+		    			// %기준은 화면 100%일때 기준으로 했음 영상 찍을때 화면100%로 해주셈!!   
 		    			const newWriter = document.createElement('div');
 		    			newWriter.classList.add("writer");
+		    			newWriter.style.marginRight = "50px";
+		    			newWriter.style.position = "absolute";
+		    			newWriter.style.right = "35%"; 
 				    	   const newContent = document.createElement('div');
 				    	   newContent.classList.add("title");
-				    	   newContent.style.display = "block";
-				    	   newContent.style.textAlign = "left";
-				    	
+				    	   newContent.style.marginRight = "50px";
+				    	   
 				    	   newContent.setAttribute('name', 'contentD');
 				    	   const newDate = document.createElement('div');
 				    	   newDate.classList.add("date");
+				    	   newDate.style.marginRight = "50px";
+				    	   newDate.style.position = "absolute";
+				    	   newDate.style.right = "22%"; 
+				    	   
 				    	   const newD = document.createElement('div');
 				    	   const newLineBreak = document.createElement('br');
 
 				    	   const space = document.createTextNode('                 ');
 				    	   const newDiv = document.createElement('div');
+				    	   newDiv.style.display = "flex";
+				    	   newDiv.style.justifyContent = "spaceBetween";
+				    	   newDiv.style.alignItems = "center";
+				    	
+				    	   
+				    	   
 				    	   
 				    	   const newForm = document.createElement('form');
+				    	   newForm.action = "DropComment.do";
 				    	   const submitButton = document.createElement('button');
-				    	   submitButton.textContent = 'Submit'; // 버튼 텍스트 설정
+				    	   submitButton.textContent = 'submit'; // 버튼 텍스트 설정
+				    	  
 
 				    	   
 				    	   newContent.innerHTML = commentList[i].CMT_CONTENT;
-				    	   newWriter.innerHTML = commentList[i].EMAIL + " / ";
-				    	   newDate.innerHTML = commentList[i].COMMENTED_AT + " / ";
+				    	   newWriter.innerHTML = commentList[i].EMAIL;
+				    	   newDate.innerHTML = commentList[i].COMMENTED_AT.split(" ")[0];
 				    	   var cmt = newContent.textContent; 
-				    	   const deleteButton = document.createElement('button');
-				    	   deleteButton.textContent = '삭제';
+				    	   const deleteButton = document.createElement('input');
+				    	   deleteButton.type = "button";
+				    	   deleteButton.value = "삭제";
+				    	   deleteButton.style.fontSize = "20px";
+				    	   deleteButton.style.width = "70px";
+				    	   deleteButton.style.height = "50px";
+				    	   deleteButton.style.position = "absolute";
+				    	   deleteButton.style.right = "20%"; 
 				    	  
 				    	   comment.appendChild(newDiv);
 				    	   newForm.appendChild(submitButton);
 				    	   newDiv.appendChild(newContent);
-				    	   newDiv.appendChild(space); // 공백 추가
+//				    	   newDiv.appendChild(space); // 공백 추가
 				    	   newDiv.appendChild(newWriter);
-				    	   newDiv.appendChild(space); // 공백 추가
+//				    	   newDiv.appendChild(space); // 공백 추가
 				    	   newDiv.appendChild(newDate);
 				    	   newDiv.appendChild(deleteButton);
 				    	   comment.appendChild(newDiv);
 				    	   
 				    	   
 				    	   newDiv.appendChild(newLineBreak);
+				    	   
 				    	   deleteButton.addEventListener('click', function() {
-				    		   console.log(cmt);
+				    		   var comD = newContent.innerHTML;
+				    		   console.log(comD);
 				    		    $.ajax({
 				    		        url: 'DropComment.do',
 				    		        method: 'GET',
 				    		        data: {
-				    		            id: cmt // 변수 id에 postId 값을 할당하여 서버에 전달
+				    		            id: comD,
+				    		            postNumber: postId// 변수 id에 postId 값을 할당하여 서버에 전달
 				    		        },
 				    		        success: function(data) {
+				    		        	window.location.reload();
 				    		            console.log(data); 
 				    		        },
 				    		        error: function(xhr, status, error) {
 				    		            console.error('Error:', error);
-				    		        }
+			    		         }
 				    		    });
 				    		});
-				    	   
 		    		}
 		    },	
 		    

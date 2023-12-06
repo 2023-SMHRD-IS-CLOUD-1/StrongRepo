@@ -21,7 +21,9 @@
 	</select>
 	
 	
-	
+	<delete id="dropComment" parameterType="com.smhrd.model.CommentMemberVO" >
+      DELETE FROM D_COMMENT WHERE CMT_CONTENT = #{CMT_CONTENT}
+   </delete>
 	
 	
 	

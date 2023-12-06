@@ -41,6 +41,24 @@ public class UserCommentDAO {
 	}
 
 	
+	public int dropComment(CommentMemberVO vo) {
+	      
+		   SqlSession sqlSession = factory.openSession(true);
+		   
+		      int row = sqlSession.delete("dropComment", vo);
+		      
+		      System.out.println(row);
+		      if(row>0) {
+		         sqlSession.commit();
+		         sqlSession.close();
+		      } else {
+		         sqlSession.rollback();
+		      }
+		      
+		      return row;
+		      
+		   }
+	
 
 
 }

@@ -184,7 +184,11 @@
                     <div class="col-md-12 form-group">
                       <label for="email">EMAIL</label>
                       <input type="text" name="email" id="regEmail" class="form-control form-control-lg">
+<<<<<<< HEAD
                     <ul></ul>
+=======
+                      <ul></ul>
+>>>>>>> branch 'master' of https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="pword">PW</label>
