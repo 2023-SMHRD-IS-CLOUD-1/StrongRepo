@@ -54,10 +54,8 @@ public class UpdateService implements Command {
         		
         	} 
         }
-        
         return "redirect:/Gomodify.do?error=invalidCredentials";
-        
-        	
 
+     
     }
 }

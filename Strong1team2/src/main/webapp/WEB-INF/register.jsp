@@ -184,11 +184,10 @@
                     <div class="col-md-12 form-group">
                       <label for="email">EMAIL</label>
                       <input type="text" name="email" id="regEmail" class="form-control form-control-lg">
-<<<<<<< HEAD
                     <ul></ul>
-=======
+
                       <ul></ul>
->>>>>>> branch 'master' of https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo
+
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="pword">PW</label>
@@ -321,18 +320,8 @@
   <script src="assets/js/main.js"></script>
   
   <script type="text/javascript">
-	var regEmail=document.getElementById("regEmail");
-	var pw=document.getElementById("pw");
-	var repw=document.getElementById("repw");
-	var name=document.getElementById("name");
-	var nick=document.getElementById("nick");
-	var birthdate=document.getElementById("birthdate");
-	var gender=document.getElementById("gender");
-  
-  
-  
-  
-  
+	
+	
 		$("#regEmail").on("keyup", function() {
 			
 		   const input = document.getElementById('regEmail');
@@ -343,12 +332,6 @@
 				receive_email : inputData
 			};
 			
-			if(regEmail.value.trim() === '') {
-				
-				$("#regEmail+ul").append("<li style='color:red;'>아이디를 입력해주세요</li>");
-				$(`body > form > div > div > div > div > div:nth-child(2) > div > input`).attr("disabled","disabled");
-				
-			}
 			
 			
 			$.ajax({
@@ -362,12 +345,14 @@
 						$("#regEmail+ul").append("<li style='color:red;'>!!!!중복불가!!!!</li>");
 						$(`body > form > div > div > div > div > div:nth-child(2) > div > input`).attr("disabled","disabled");
 						
-					}else if(result == "false"){
+					}else{
 						
 						$("#regEmail+ul").append("<li style='color:green;'>사용가능한 이메일입니다.</li>");
 						$(`body > form > div > div > div > div > div:nth-child(2) > div > input`).removeAttr("disabled");
-						
 					}
+					 
+					
+					
 				},
 				error : function(e) {
 					console.log(e);
@@ -376,6 +361,20 @@
 		})
 		
 		</script>
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+</script>
   
   
 
