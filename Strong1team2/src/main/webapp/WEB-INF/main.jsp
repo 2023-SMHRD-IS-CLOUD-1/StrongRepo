@@ -198,7 +198,7 @@
 				<div class="col-lg-12 mx-auto text-center">
 
 					<h1 style="font-size: 100px; margin-bottom: 35px;">인생 똑바로 살아라 </h1><br><h1> 이렇게 되기 싫으면</h1><br>
-					<h4>▼ 마약은 필터 로만 하세요 ▼</h4>
+					<h4>▼ 마약은 필터로만 하세요 ▼</h4>
 					
 					<div
 						style="display: flex; justify-content: center; align-items: center; text-align: center;">

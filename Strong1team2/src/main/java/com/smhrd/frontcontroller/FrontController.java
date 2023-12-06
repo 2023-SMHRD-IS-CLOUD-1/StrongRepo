@@ -16,7 +16,7 @@ import com.smhrd.controller.Command;
 import com.smhrd.controller.CommentViewService;
 //import com.smhrd.controller.CommentViewService;
 import com.smhrd.controller.DashBoardService;
-//import com.smhrd.controller.DropCommentService;
+import com.smhrd.controller.DropCommentService;
 import com.smhrd.controller.DropViewService;
 import com.smhrd.controller.EmailCheckService;
 import com.smhrd.controller.JoinService;
@@ -73,7 +73,7 @@ public class FrontController extends HttpServlet {
 	
 		map.put("UserComment.do", new UserCommentService());
 		map.put("CommentView.do", new CommentViewService());
-//		map.put("DropComment.do", new DropCommentService());
+		map.put("DropComment.do", new DropCommentService());
 		
 	}
 
