@@ -226,6 +226,12 @@
                       </label>
                     </div>
                   </div>
+                  						<% 
+    String error = request.getParameter("error");
+    if (error != null && error.equals("OtherException")) {
+%>
+    <p style="color: red;">모든 정보를 입력해주기 바랍니다.</p>
+<% } %>
                   <div class="row">
                         <div class="col-12"  style="text-align: center;">
                             <input type="submit" value="Register" class="btn btn-primary btn-lg px-5" style="align:center;">
