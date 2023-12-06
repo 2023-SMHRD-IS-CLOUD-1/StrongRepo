@@ -150,8 +150,8 @@ body>div.site-wrap>div:nth-child(6)>div>div>div>div:nth-child(2)>div {
 		<div class="container">
 			<div class="row align-items-end">
 				<div class="col-lg-7">
-					<h2 class="mb-0">회원 탈퇴 페이지 입니닷!!!!!!!</h2>
-					<p>여기도 고쳐야됨!!!!</p>
+					<h2 class="mb-0">회원 탈퇴</h2>
+					<p>마약없는 우리사회, 건강가득 행복가득.</p>
 				</div>
 			</div>
 		</div>
@@ -193,7 +193,7 @@ body>div.site-wrap>div:nth-child(6)>div>div>div>div:nth-child(2)>div {
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-12">
+							<div class="col-12" style="text-align: center;">
 								<input type="submit" value="탈퇴하기"
 									class="btn btn-primary btn-lg px-5">
 							</div>
@@ -209,81 +209,71 @@ body>div.site-wrap>div:nth-child(6)>div>div>div>div:nth-child(2)>div {
 
 
 
-	<div class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3" style="margin-bottom: 15px;">
-					<p class="mb-4">
-						<img src="images/logosmall.png" alt="Image" class="img-fluid">
-					</p>
-					<p style="margin-left: 50px; font-size: 19px; font-weight: bold;">강력
-						1팀</p>
-					<p style="margin-left: 15px; font-size: 17px;">: 약하지 않은 사람들</p>
-					<p style="margin-left: 25px;">박범석 조원제 임혜지</p>
-					<p style="margin-left: 25px;">하동철 한명훈 함수연</p>
-				</div>
-				<div class="col-lg-3">
-					<h3 class="footer-heading">
-						<span>한국중독관리센터협회</span>
-					</h3>
-					<ul class="list-unstyled">
-						<li><a href="http://www.kaacc.co.kr/03_sub/page3_2.php">전국
-								센터 안내</a></li>
-						<li><a href="http://www.kaacc.co.kr/03_sub/page3_3.php">관련
-								기관 안내</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-3">
-					<h3 class="footer-heading">
-						<span>중독재활센터</span>
-					</h3>
-					<ul class="list-unstyled">
-						<li><a
-							href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=REFORM&headNum=1&seq=180&tpage=1">중독재활센터
-								안내</a></li>
-						<li><a
-							href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=CONSULT_2&seq=12017&tpage=1">상담
-								안내</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-3">
-					<h3 class="footer-heading"">
-						<span>응원의 한마디</span>
-					</h3>
-					<ul class="list-unstyled" style="width: 500px;">
-						<li style="color: #000;">힘내라 빠샤빠샤빠샤빠샤빠샤빠샤빠샤빠샤</li>
-						<li style="color: #000;">힘내라 아자아자아자아자아자아자아자아자</li>
-						<li style="color: #000;">힘내라 빠샤빠샤빠샤빠샤빠샤빠샤빠샤빠샤</li>
-						<li style="color: #000;">힘내라 아자아자아자아자아자아자아자아자</li>
-						<li style="color: #000;">힘내라 빠샤빠샤빠샤빠샤빠샤빠샤빠샤빠샤</li>
-						<li style="color: #000;">힘내라 아자아자아자아자아자아자아자아자</li>
-					</ul>
-				</div>
-			</div>
+  
 
-			<div class="row">
-				<div class="col-12">
-					<div class="copyright">
-						<p>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							Copyright &copy;
-							<script>
-								document.write(new Date().getFullYear());
-							</script>
-							All rights reserved | This template is made with <i
-								class="icon-heart" aria-hidden="true"></i> by <a
-								href="https://colorlib.com" target="_blank">Colorlib</a>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="footer">
+      <div class="container" style="margin-top:60px;">
+        <div class="row">
+          <div class="col-lg-3" style="margin-bottom: 15px;">
+            <p class="mb-4"><img src="images/logosmall.png" alt="Image" class="img-fluid"></p>
+            <p style="margin-left: 50px; font-size: 19px; font-weight: bold;">강력 1팀</p> 
+            <p style="margin-left: 15px; font-size: 17px;"> : 약하지 않은 사람들</p> 
+            <p style="margin-left: 25px;">박범석 조원제 임혜지</p>  
+            <p style="margin-left: 25px;">하동철 한명훈 함수연</p>  
+          </div>
+          <div class="col-lg-3">
+           <p class="mb-4"></p>
+            <h3 class="footer-heading" style="margin-top:80px;"><span>한국중독관리센터협회</span></h3>
+            <ul class="list-unstyled">
+                <li><a href="http://www.kaacc.co.kr/03_sub/page3_2.php">전국 센터 안내</a></li>
+                <li><a href="http://www.kaacc.co.kr/03_sub/page3_3.php">관련 기관 안내</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+          <p class="mb-4"></p>
+              <h3 class="footer-heading" style="margin-top:80px;"><span>중독재활센터</span></h3>
+              <ul class="list-unstyled">
+                  <li><a href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=REFORM&headNum=1&seq=180&tpage=1">중독재활센터 안내</a></li>
+                  <li><a href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=CONSULT_2&seq=12017&tpage=1">상담 안내</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-3">
+          <p class="mb-4"></p>
+            <h3 class="footer-heading" style="margin-top:80px;"><span>타산지석</span></h3>
+            <ul class="list-unstyled" style="width: 500px;">
+            	 <li><a href="https://youtu.be/n-ZmBnnadBU?si=wbOmKsLZYgqUw7xs">마약중독자들의 현상태</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=0_JfysDMFT4">마약을 끊지 못하는 이유</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=oNxq_FD2ph8">20대 마약중독자 인터뷰</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=JjO14D9fEwA">유명인 마약 중독 고백</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=pB91VeZD2wE">마약중독자 가족이 겪는 고통</a></li>
+<!--               
+				<li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li> 
+-->
+            </ul>
+          </div>
+        </div>
 
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+                <p>
+                   
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>  ♥  <a href="https://www.spo.go.kr/site/spo/main.do" target="_blank" >마약 팔아요</a>♥
+                   
+                    </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
 
-	</div>
-	<!-- .site-wrap -->
+  </div>
 
 	<!-- loader -->
 	<div id="loader" class="show fullscreen">

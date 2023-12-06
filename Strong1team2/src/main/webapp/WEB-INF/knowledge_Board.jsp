@@ -120,6 +120,10 @@
    .icon-close{
     color: rgb(196, 29, 0);
    }
+   
+   .mb-3>.icon-close{
+   font-size: 15px;
+   }
 
   </style>
 
@@ -224,7 +228,7 @@
           <div class="row align-items-end">
             <div class="col-lg-7">
               <h2 class="mb-0">지식채널 / 게시판</h2>
-              <p>순간의 마약복용 영원한 인생포기</p>
+              <p>약은 약사에게, 마약은 장의사에게</p>
             </div>
           </div>
         </div>
@@ -245,56 +249,57 @@
               <div class="col-lg-4 col-md-6 mb-4">
                   <div class="course-1-item">
                       <figure class="thumnail">
-                      <a href=""><img src="images/psilocybin.jpg" alt="Image" class="img-fluid" style="width: 100%; height: 100%;"></a>
-                      <!-- <div class="price">가격대</div> -->
-                      <div class="category"><h3>실로시빈 버섯 </h3></div>  
-                      </figure>
-                      <div class="course-1-content pb-4"  style="height: 650px;">
-                      <h2>실로시빈 또는 실로사이빈은 진균독이자, 환각제이다.</h2>
-                      <div class="rating text-left mb-3">
-                          <span class="icon-close" >은어 : 매직버섯, 파터타이머 등</span>
-                          <span class="icon-close">가격 :$20-25</span>
-                          <span class="icon-close">복용시 :환각, 정신 착란 등</span>
-                          <span class="icon-close">금단 증상 :재현 현상 등</span>
-                          <span class="icon-close">처벌:징역 30개월 등
-                                                                    </span>
-                          
-                      </div>
-                      <p class="desc mb-4">공황장애 또는 정신병이 생길수도있다.</p>
-                     
-                      <div id="myModal" class="modal">
-                        <div class="modal_body">
-                            <img src="images/psilocybin1.jpg" alt="실로시빈 버섯">
-                            <h2>실로시빈 버섯</h2>
-                            <p><h4 class="drugtitle">은어</h4>
-                              <h5 class="drugcontent">매직 버섯, 파터타이머, 실로사이빈 버섯, shroom</h5>
-                               <h4 class="drugtitle">복용후</h4> <h5 class="drugcontent">시간의 흐름이 매우 느리게 늘어나고
-                                혼란되고 
-                                시각적인 왜곡이 일어나는 등
-                                LSD와 유사하다.
-                                마약의 주원료로 사용
-                                복용 시 남자일 때 성생활에 영향을 줄 수 있다.
-                                복용 시 정신이 산만해지며 성생활에 집중을 못하게 된다.</h5>
-                                <h4 class="drugtitle">금단증상</h4>
-                                <h5 class="drugcontent">메스꺼움, 구토, 근력약화, 졸음, 혼미 등 증세가 3시간 동안 지속
-                                  될 수도 있다. 실로시빈은 대량 섭취 시 공황장애 또는 정신병이
-                                  발생할 수 있다</h5>
-                                <h4 class="drugtitle">가격</h4>
-                                <h5 class="drugcontent">$20-25에 온스의 <>분의 <>을 소비합니다.</h5>
-                                  
-                            </p>
+                    <a href="course-single.html"><img src="images/fentanyl1.jpg" alt="Image" class="img-fluid" style="width: 100%; height: 235px;"></a>
+                        <!-- <div class="price">가격대</div> -->
+                        <div class="category"><h3>팬타닐 </h3></div>  
+                        </figure>
+                        <div class="course-1-content pb-4"  style="height: 650px;">
+                        <h2>펜타닐은 마약성 진통제이다. 중추신경계에서 통증의 전달을 억제함으로써 진통 효과를 나타낸다.</h2>
+                        <div class="rating text-left mb-3">
+                            <span class="icon-close"> 은어 : 중국소녀, 흰 염소 등</span>
+                            <span class="icon-close"> 가격 : 패치1매에 14724원</span>
+                            <span class="icon-close"> 복용시 : 진통, 도취감(쾌감) 등</span>
+                            <span class="icon-close"> 금단 증상 : 구토, 불면, 발작등</span>
+                            <span class="icon-close"> 처벌 : 1년이상 징역 등</span>
+                            
                         </div>
-                        <button onclick="closeModal()" class="btn-close-modul">지식페이지이동</button>
-                    </div>
+                        <p class="desc mb-4">생체 모든 경로로 투여가 가능한 물리화학적 특성을 가지고 있고 미량으로 약효를 발현할 수 있기 때문에 암시장에서 오락용 펜타닐을 불법으로 제조하는 사람들은 알약 뿐만아니라 다양한 형태의 식품으로도 만들고 있다.
+                          </p>
+                       
+                        <div id="myModal" class="modal">
+                          <div class="modal_body">
+                              <img src="images/Fentanyl2.png" alt="펜타닐">
+                              <h2>펜타닐</h2>
+                              <p><h4 class="drugtitle">은어</h4>
+                                <h5 class="drugcontent">중국소녀,하얀 중국,흰 헤로인</h5>
+                                <h4 class="drugtitle">단기 복용후</h4><h5 class="drugcontent">
+                                  혼돈상태, 어지러움, 졸음, 피로감, 두통, 변비, 구역, 구토, 무력증, 호흡억제,
+                                  부정맥, 가슴 통증, 가슴 두근거림, 불안, 우울증, 현기증, 환각, 불면, 감각이상, 복통, 식욕부진, 설사, 뇨저
+류, 떨림, 입마름, 홍반, 가려움, 발진,약물의존성, 의식장애, 아나필락시양 반응, 동공 축소, 경련 등 이있다.
+                                </h5>
+                                 <h4 class="drugtitle">과다 복용후</h4> <h5 class="drugcontent">
+                                 </h5>의식소실,절름발이,터치나 소음에 반응하지않음, 호흡이 매우 느리고 얕거나 불규칙하거나
+                                 멈춤, 질식하는 소리 또는 코골이와 같은 윙윙 거리는소리(때때로"죽음의 딸랑이"라고한다.)
+                                 ,맥박이 느리거나 불규칙하거나 전혀 없습니다, 칙칙함, 파란색/보라색 피부(밝은 피부)또는 회색/잿빛 피부(어두운 피부)</h5>
+                                  <h4 class="drugtitle">금단증상</h4>
+                                  <h5 class="drugcontent">메스꺼움, 구토, 근력약화, 졸음, 혼미 등 증세가 3시간 동안 지속
+                                    중추신경에 있는 μ-오피오이드수용체가 활성화되면 진통, 도취감(쾌감), 진정, 호흡억제, 체온 저하 등과 같은 반응이 나타나는데, 이 수용체에 대한 펜타닐의 결합력이 몰핀에 비해 약 100배 정도 강하다. 몰핀의 1회 상용량은 10mg인데 반해 펜타닐의 1회 상용량은 100~200μg이다.
+                                    적은 유효량이 장점이기도 하지만 성인 치사량 역시 2 mg 밖에 안되기 때문에 펜타닐은 매우 위험한 맹독성 약물이다.
+                                  </h5><img src="images/fentanyl.png">
+                                  <h4 class="drugtitle">가격</h4>
+                                  <h5 class="drugcontent">펜타닐 패치 가격은 1매에 14,724원이다(공시 약가). 한국얀센 펜타닐 100㎍/h 패치의 10매 가격은 불법 유통 과정에서 보통 30만원 선에 거래가 진행되고 있었다.
+                                    </h5>
+                                    
+                              </p>
+                          </div>
+                          <button onclick="closeModal()" class="btn-close-modul">지식페이지이동</button>
+                      </div>
                     
                     <div id="overlay" class="overlay"></div>
                     
                     <!-- 버튼 클릭 시 모달 열기 -->
                     <button class="btn-open-modal" onclick="openModal()">설명 더보기</button>
                     
-                    <script src="js/modalcontent.js">
-                        
-                    </script>
                       </div>
                   </div>
               </div>
@@ -302,18 +307,18 @@
               <div class="col-lg-4 col-md-6 mb-4">
                   <div class="course-1-item">
                       <figure class="thumnail">
-                              <a href=""><img src="images/hemp.jpg" alt="Image" class="img-fluid" style="width: 100%; height: 100%;"></a>
+                              <a href=""><img src="images/marimari.jpg" alt="Image" class="img-fluid" style="width: 100%; height: 100%;"></a>
                       <!-- <div class="price">가격대</div> -->
                       <div class="category"><h3>마리화나(대마초)</h3></div>  
                       </figure>
                       <div class="course-1-content pb-4">
                       <h2>마취제, 대마잎이나 꽃을 건조시켜 담배형태로 흡연</h2>
                       <div class="rating text-left mb-3">
-                          <span class="icon-close">은어 : 떨, 빵, THC 등</span>
-                          <span class="icon-close">가격 : 1온스(약30g)당 320달러</span>
-                          <span class="icon-close">복용시 :충혈된 눈, 기침 등</span>
-                          <span class="icon-close">금단증상 :불면증, 과민증 등</span>
-                          <span class="icon-close">처벌 : 기소유예,벌금형 등</span>
+                          <span class="icon-close"> 은어 : 떨, 빵, THC 등</span>
+                          <span class="icon-close"> 가격 : 0.5g당 3000원</span>
+                          <span class="icon-close"> 복용시 : 충혈된 눈, 기침 등</span>
+                          <span class="icon-close"> 금단증상 : 불면증, 과민증 등</span>
+                          <span class="icon-close"> 처벌 : 기소유예, 벌금형 등</span>
                       </div>
                       <p class="desc mb-4">기관지염, 쌕쌕거림, 기침 ,가래, 복통 및 주기성구토증후군이 생기며 사춘기때 시작할시 인지저하와 뇌의 변화가 발생할수 있다.</p>
                       <div id="myModal1" class="modal">
@@ -368,7 +373,6 @@
                     <!-- 버튼 클릭 시 모달 열기 -->
                     <button class="btn-open-modal" onclick="openModal1()">설명 더보기</button>
                     
-                    <script src="js/modalcontent.js"></script>
                       </div>
                   </div>
               </div>
@@ -376,18 +380,18 @@
               <div class="col-lg-4 col-md-6 mb-4">
                   <div class="course-1-item">
                       <figure class="thumnail">
-                              <a href=""><img src="images/methamphetamine.jpg" width="100%" alt="Image" class="img-fluid"></a>
+                              <a href=""><img src="images/methametha1.jpg" width="100%" height="250px" alt="Image" class="img-fluid"></a>
                       
-                      <div class="category"><h3>메스암페타민</h3></div>  
+                      <div class="category" ><h3>메스암페타민</h3></div>  
                       </figure>
                       <div class="course-1-content pb-4">
                       <h2>흥분제, 졸음과 피로감이 사라지고 쾌락과 행복감이 증가한다. 대마와 달리 폭력적인 성향을 띤다.</h2>
                       <div class="rating text-left mb-3">
-                          <span class="icon-close">은어 : 작대기,술,히로뽕 등 </span>
-                          <span class="icon-close">가격 : 1온스(약30g)당 560달러</span>
-                          <span class="icon-close">복용시 : 식용 상실, 노안등</span>
-                          <span class="icon-close">금단 증상 : 입 마름</span>
-                          <span class="icon-close">처벌 :징역 3년이상 등</span>
+                          <span class="icon-close"> 은어 : 작대기, 술, 히로뽕 등 </span>
+                          <span class="icon-close"> 가격 : 0.03g당 25000원</span>
+                          <span class="icon-close"> 복용시 : 식욕 상실, 노안 등</span>
+                          <span class="icon-close"> 금단 증상 : 입 마름</span>
+                          <span class="icon-close"> 처벌 : 징역 3년이상 등</span>
                       </div>
                       <p class="desc mb-4">중독성이 강해 하루에 3번 나눴던 투약량을 나중에 되면 1번에 투약해야 하는 상황이 오게 된다.
                         그렇게 되면 약물 과용으로 호흡곤란 및 심정지로 인해 죽게 되는 게 대부분의 결말이다.</p>
@@ -433,7 +437,6 @@
                       <!-- 버튼 클릭 시 모달 열기 -->
                       <button class="btn-open-modal" onclick="openModal2()">설명 더보기</button>
                       
-                      <script src="js/modalcontent.js"></script>
                       </div>
                   </div>
               </div>
@@ -449,11 +452,11 @@
                       <div class="course-1-content pb-4">
                       <h2>각성제, 코카 나무 잎에서 추출하는 알칼로이드, 현실 감각 저하, 강렬한 행복감, 흥분해서 몸을 가만히 두지 못하는 것 등이 있다.</h2>
                       <div class="rating text-left mb-3">
-                          <span class="icon-close">은어: 크랙(crack) 등</span>
-                          <span class="icon-close">가격 : 1온스당 5600달러</span>
-                          <span class="icon-close">복용시: 동공확장, 두통 등</span>
-                          <span class="icon-close">금단 증상 : 우울, 불면증 등</span>
-                          <span class="icon-close">처벌 :10년 이하의 징역형 등</span>
+                          <span class="icon-close"> 은어 : 크랙(crack) 등</span>
+                          <span class="icon-close"> 가격 : 0.01g 1000원</span>
+                          <span class="icon-close"> 복용시 : 동공확장, 두통 등</span>
+                          <span class="icon-close"> 금단 증상 : 우울, 불면증 등</span>
+                          <span class="icon-close"> 처벌 : 10년 이하의 징역형 등</span>
                       </div>
                       <p class="desc mb-4">코카인은 소량 또는 한 번의 복용할새 중독증상이 빠르게 일어날 수 있다 
                         이는 뇌를 자극하는 도파민 경로 중 하나로, 보상 자극에 대한 동기 및 욕구를 조절하여 보상에 관련된 운동 기능 학습을 촉진 시킨다. </p>
@@ -504,9 +507,7 @@
                       <!-- 버튼 클릭 시 모달 열기 -->
                       <button class="btn-open-modal" onclick="openModal3()">설명 더보기</button>
                       
-                      <script src="js/modalcontent.js">
                           
-                      </script>
                       </div>
                   </div>
               </div>
@@ -521,11 +522,11 @@
                       <div class="course-1-content pb-4">
                       <h2> 억제제 ,아편(양귀비)을 정제한 모르핀을 반 합성해 만드는 마약,극단적인 쾌락과 황홀감이 지속되며 의식이 없는 상태에서 자신이 쿠토물과 질식사할수도있다.</h2>
                       <div class="rating text-left mb-3">
-                          <span class="icon-close">은어: 히로인, 정키 등</span>
-                          <span class="icon-close">가격 :1온스당 2800달러</span>
-                          <span class="icon-close">복용시 : 자율 호흡본능 X 등</span>
-                          <span class="icon-close">금단증상 : 불안, 불쾌감 등</span>
-                          <span class="icon-close">처벌 :1년이상의 징역형 등</span>
+                          <span class="icon-close"> 은어 : 히로인, 정키 등</span>
+                          <span class="icon-close"> 가격 : 0.02g 2880원</span>
+                          <span class="icon-close"> 복용시 : 자율 호흡본능 X 등</span>
+                          <span class="icon-close"> 금단증상 : 불안, 불쾌감 등</span>
+                          <span class="icon-close"> 처벌 : 1년이상의 징역형 등</span>
                       </div>
                       <p class="desc mb-4">만약 줄일려고 할때 내성이 강한 헤로인 특성상 살짝만 줄여도 구토,설사 등 엄청난 고통을 한번에 받게된다. 그래서 대부분 어쩔수없이 다시하게된다.</p>
                       <div id="myModal4" class="modal">
@@ -575,9 +576,6 @@
                     <!-- 버튼 클릭 시 모달 열기 -->
                     <button class="btn-open-modal" onclick="openModal4()">설명 더보기</button>
                     
-                    <script src="js/modalcontent.js">
-                        
-                    </script>
                       </div>
                   </div>
               </div>
@@ -594,11 +592,11 @@
                         뇌 신경전달물질인 세로토닌과 화학구조가 유사하며,
                         백색 분말로 맛이나 냄새가 없는 것이 특징이다</h2>
                       <div class="rating text-left mb-3">
-                          <span class="icon-close ">은어 : Psyche,Delos 등</span>
-                          <span class="icon-close ">가격 :  "히트"당 $5-20</span>
-                          <span class="icon-close "> 복용시 :신체 경련, 환각 등</span>
-                          <span class="icon-close ">금단증상 : X</span> 
-                          <span class="icon-close ">처벌:10년 이하의 징역 등</span>
+                          <span class="icon-close "> 은어 : Psyche,Delos 등</span>
+                          <span class="icon-close "> 가격 : 0.0001g 2만원</span>
+                          <span class="icon-close "> 복용시 : 신체 경련, 환각 등</span>
+                          <span class="icon-close "> 금단증상 : X</span> 
+                          <span class="icon-close "> 처벌 : 10년 이하의 징역 등</span>
                       </div>
                       <p class="desc mb-4">LSD 환각을 느껴본 동물들은 고양이가 쥐를 무서워할 수도 있고 거미가 거미집을 못 만드는 경우가 생긴다.</p>
                       <div id="myModal5" class="modal">
@@ -654,7 +652,7 @@
         <div class="board_wrap">
             <div class="board_title">
                 <strong>게시판</strong>
-                <p>여기서 부터 게시판 입니다!!!!</p>
+                <p>당신은 나약하지도, 마약하지도 않습니다.</p>
             </div>
             <div class="board_list_wrap">
                 <div class="board_list">
@@ -768,6 +766,7 @@
     </div>
 </div>
 
+
     <div class="section-bg style-1" style="background-image: url('images/bg_4.jpg');">
       <div class="container">
         <div class="row">
@@ -775,24 +774,27 @@
             <span><img src="images/close.png" class="iconclose"></span>
             <h3>출구 없는 미로</h3>
             <p> 단 한번의 호기심! 이것이 마약의 유혹</p>
+            <p> 마약으로 우리 가족의 죽음을 삽니다.</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
             <span><img src="images/no-drugs.png" class="icondrug"></span>
             <h3>NO EXIT</h3>
+            <p>호기심에 손댄 마약 죽음되어 돌아온다.</p>
             <p>설마하다 중독되고 중독되면 파멸온다.</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
             <span><img src="images/close.png" class="iconclose"></span>
             <h3>절대 시작하지 마세요</h3>
             <p>마약과의 입맞춤은 죽음과의 포옹이다.</p>
+            <p>리허설이 없는 자살극, 그것이 바로 마약!</p>
           </div>
         </div>
       </div>
     </div>
-      
+
 
     <div class="footer">
-      <div class="container">
+      <div class="container" style="margin-top:60px;">
         <div class="row">
           <div class="col-lg-3" style="margin-bottom: 15px;">
             <p class="mb-4"><img src="images/logosmall.png" alt="Image" class="img-fluid"></p>
@@ -802,36 +804,58 @@
             <p style="margin-left: 25px;">하동철 한명훈 함수연</p>  
           </div>
           <div class="col-lg-3">
-            <h3 class="footer-heading"><span>한국중독관리센터협회</span></h3>
+           <p class="mb-4"></p>
+            <h3 class="footer-heading" style="margin-top:80px;"><span>한국중독관리센터협회</span></h3>
             <ul class="list-unstyled">
                 <li><a href="http://www.kaacc.co.kr/03_sub/page3_2.php">전국 센터 안내</a></li>
                 <li><a href="http://www.kaacc.co.kr/03_sub/page3_3.php">관련 기관 안내</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
-              <h3 class="footer-heading"><span>중독재활센터</span></h3>
+          <p class="mb-4"></p>
+              <h3 class="footer-heading" style="margin-top:80px;"><span>중독재활센터</span></h3>
               <ul class="list-unstyled">
                   <li><a href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=REFORM&headNum=1&seq=180&tpage=1">중독재활센터 안내</a></li>
                   <li><a href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=CONSULT_2&seq=12017&tpage=1">상담 안내</a></li>
               </ul>
           </div>
           <div class="col-lg-3">
-            <h3 class="footer-heading""><span>응원의 한마디</span></h3>
+          <p class="mb-4"></p>
+            <h3 class="footer-heading" style="margin-top:80px;"><span>타산지석</span></h3>
             <ul class="list-unstyled" style="width: 500px;">
-                <li style="color: #000;">힘내라 빠샤빠샤빠샤빠샤빠샤빠샤빠샤빠샤</li>
-                <li style="color: #000;">힘내라 아자아자아자아자아자아자아자아자</li>
-                <li style="color: #000;">힘내라 빠샤빠샤빠샤빠샤빠샤빠샤빠샤빠샤</li>
-                <li style="color: #000;">힘내라 아자아자아자아자아자아자아자아자</li>
-                <li style="color: #000;">힘내라 빠샤빠샤빠샤빠샤빠샤빠샤빠샤빠샤</li>
-                <li style="color: #000;">힘내라 아자아자아자아자아자아자아자아자</li>
+            	 <li><a href="https://youtu.be/n-ZmBnnadBU?si=wbOmKsLZYgqUw7xs">마약중독자들의 현상태</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=0_JfysDMFT4">마약을 끊지 못하는 이유</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=oNxq_FD2ph8">20대 마약중독자 인터뷰</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=JjO14D9fEwA">유명인 마약 중독 고백</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=pB91VeZD2wE">마약중독자 가족이 겪는 고통</a></li>
+<!--               
+				<li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li> 
+-->
             </ul>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+                <p>
+                   
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>  ♥  <a href="https://www.spo.go.kr/site/spo/main.do" target="_blank" >마약 팔아요</a>♥
+                   
+                    </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
 
   </div>
-
-
 
 
   <!-- .site-wrap -->
