@@ -17,6 +17,7 @@
 	<select id = "selectComment" resultType="com.smhrd.model.CommentMemberVO">
 		SELECT CMT_NUM, CMT_CONTENT, COMMENTED_AT, EMAIL FROM D_COMMENT 
 		WHERE B_NUM = #{B_NUM}
+		ORDER BY COMMENTED_AT
 	</select>
 	
 	

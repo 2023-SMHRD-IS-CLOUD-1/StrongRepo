@@ -65,7 +65,27 @@ public class UserBoardDAO {
 				return row;
 		
 	}
+	
+	
+	public int fixView(UserBoardMemberVO ubVO) {
+		
+		
+		// 1. session 빌려오기
+				SqlSession sqlSession = factory.openSession(true);
+				// 2. session 사용하기 mapper에 넘길 자료가 있으면 변수 두개
+				int result= sqlSession.update("fixView",ubVO);
+				// 3. session 반환하기
+				sqlSession.close();
+				// 4. 결과값 반납
+				return result;
+		
+		
+		
+	}
 
+	
+	
+	
 
 
 	

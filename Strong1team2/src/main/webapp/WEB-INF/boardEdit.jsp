@@ -160,7 +160,7 @@
 
             <div class="board_wrap">
                 <div class="board_title">
-                    <strong>공지사항</strong>
+                    <strong>게시글 수정</strong>
                     <p>공지사항을 빠르고 정확하게 안내해드립니다.</p>
                 </div>
                 <div class="board_write_wrap">
@@ -168,7 +168,7 @@
                         <div class="title">
                             <dl>
                                 <dt>제목</dt>
-                                <dd><input type="text" placeholder="제목 입력" value="글 제목이 들어갑니다"></dd>
+                                <dd>글 제목 들어가는곳</dd>
                             </dl>
                         </div>
                         <!-- <div class="info">
@@ -182,21 +182,26 @@
                             </dl>
                         </div> -->
                         <div class="cont">
-                            <textarea placeholder="내용 입력">
-        글 내용이 들어갑니다.
-        글 내용이 들어갑니다.
-        글 내용이 들어갑니다.
-        글 내용이 들어갑니다.
-        글 내용이 들어갑니다.
-        글 내용이 들어갑니다.
-        글 내용이 들어갑니다.
-        글 내용이 들어갑니다.</textarea>
+                      
+                      
+                      
+                        <form action="fixView.do">
+                            <textarea placeholder="내용 입력" name="content" id="content"></textarea>
                         </div>
                     </div>
                     <div class="bt_wrap">
-                        <a href="GoboardView.do" class="on">수정</a>
-                        <a href="Goknowledge_Board.do#board" class="on">삭제</a>
-                        <a href="GoboardView.do" class="on">취소</a>
+                    <input type="hidden" class="postNumber" name="postNumber">
+                    <input type="submit" value="수정" class="btn btn-primary btn-lg px-5">
+                    </form>
+                    
+                    
+                    <form action="DropView.do" style="display: inline-block; margin-right: 10px; margin-left: 10px;">
+                    <input type="hidden" class="postNumber" name="postNumber">
+                    <input type="submit" value="삭제" class="btn btn-primary btn-lg px-5">
+                    </form>
+                    
+                    
+                    <input type="button" value="취소" onclick="goToAnotherPage()" class="btn btn-primary btn-lg px-5">
                     </div>
                 </div>
             </div>
@@ -304,6 +309,126 @@
 
 
   <script src="assets/js/main.js"></script>
+  
+  
+  
+  <script type="text/javascript">
+  let postId;
+  const urlParams = new URLSearchParams(window.location.search);
+  postId = urlParams.get("postNumber");
+  
+  var submitButton = document.getElementById('submitButton');
+  var post =document.querySelector("body > div.site-wrap > div.comment_site-section > div > div > div > div.board_view > div.info > dl:nth-child(1) > dd");
+  var B_NUM = postId;
+  
+  console.log(postId + "ddk")
+  var postNumber = document.getElementsByClassName('postNumber');
+for (var i = 0; i < postNumber.length; i++) {
+    postNumber[i].value = B_NUM;
+}
+
+  console.log(B_NUM);
+
+  
+  
+
+  $.ajax({
+	    url: 'View.do',
+	    method: 'GET',
+	    data: {
+	      id:B_NUM
+	    },
+	    success: function(result) {
+	   
+	      console.log(result);
+//	      const boardTitle = document.getElementsByClassName("title")[0];
+	      const boardTitle = document.querySelector(`body > div:nth-child(5) > div > div > div.board_write_wrap > div.board_write > div.title > dl > dd`);
+//	      const boardNum = document.querySelector(`body > div.site-wrap > div.comment_site-section > div > div > div > div.board_view > div.info > dl:nth-child(1) > dd`);
+//	      const boardwriter = document.querySelector(`body > div.site-wrap > div.comment_site-section > div > div > div > div.board_view > div.info > dl:nth-child(2) > dd`);
+//	      const boardCreated_At = document.querySelector(`body > div.site-wrap > div.comment_site-section > div > div > div > div.board_view > div.info > dl:nth-child(3) > dd
+//	  		`);
+//	      const boardContent = document.querySelector(`#content`)[0];
+	      const textarea = document.querySelector('#content');
+	      
+	      boardTitle.innerText = result[0].B_TITLE;
+//	      boardNum.innerText = result[0].B_NUM;
+//	      boardwriter.innerText = result[0].EMAIL;
+	      textarea.value = result[0].B_CONTENT;
+	      
+	    },
+	    
+	    error: function(xhr, status, error) {
+	      console.error('Error:', error);
+	    }
+	  });
+
+  
+  submitButton.addEventListener('click', function(event) {
+	  
+		// 폼 제출
+		document.getElementById('myForm').submit();
+		  
+		  
+		  });
+	  
+  
+
+  // JavaScript 함수 정의
+  function goToAnotherPage() {
+      // 페이지 이동을 위해 window.location.href 사용
+      window.location.href = 'GoboardView.do?id='+postId; // 이동할 페이지 URL을 설정
+  }
+
+  
+  
+  
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 </body>
 

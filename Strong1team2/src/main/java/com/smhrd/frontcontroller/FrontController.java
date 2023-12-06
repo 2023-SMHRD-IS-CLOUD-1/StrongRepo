@@ -29,7 +29,7 @@ import com.smhrd.controller.UserBoardService;
 import com.smhrd.controller.UserCommentService;
 import com.smhrd.controller.ViewService;
 //import com.smhrd.controller.fixViewContentService;
-//import com.smhrd.controller.fixViewService;
+import com.smhrd.controller.fixViewService;
 
 // * -> 모든 .do로 끝나는 url은 해당하는 FC로 들어온다.
 @WebServlet("*.do")
@@ -66,7 +66,7 @@ public class FrontController extends HttpServlet {
 		map.put("View.do", new ViewService());
 		
 		
-//		map.put("fixView.do", new fixViewService());
+		map.put("fixView.do", new fixViewService());
 //		map.put("fixViewContent.do", new fixViewContentService());
 	
 		map.put("DropView.do", new DropViewService());

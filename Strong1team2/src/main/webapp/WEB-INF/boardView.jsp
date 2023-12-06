@@ -194,7 +194,7 @@
             
             <div class="bt_wrap">
               <a href="Goknowledge_Board.do#board" class="on">목록</a>
-              <a href="GoboardEdit.do" class="on">수정</a>
+              <a class="on">수정</a>
             </div>
           </div>
         </div>
@@ -215,9 +215,9 @@
                   <div class="cmt_board_list">
                       <div>
                        
-                          <div class="title">글이 얼마나 길게 들어가니느니ㅏ두보여주ㅜㅏㅓ아직더들어가야되네</div><br>
-                          <div class="writer">김이름</div>
-                          <div class="date">2021.1.15</div>
+                          <div class="title">댓글이 없습니다. 작성해주시기 바랍니다.</div><br>
+                          <div class="writer"></div>
+                          <div class="date"></div>
                       </div>
   	<!--                    <div>
                           <div class="title">댓글 내용</div><br>
@@ -461,7 +461,8 @@ for (var i = 0; i < postNumber.length; i++) {
 		    success: function(response) {
 		    	   console.log(response)
 		    	   const commentList = Object.values(response);
-		    	  
+		    	  const origincmt = document.querySelector(`body > div.comment_section > div > div > div > div.cmt_board_list > div:nth-child(1)`);
+		    	  origincmt.remove();
 		    	   var comment = document.querySelector(`body > div.comment_section > div > div > div > div.cmt_board_list`)
 		    	   
 		    	   // 여기서부터 for문 시작할듯? 
@@ -539,12 +540,12 @@ for (var i = 0; i < postNumber.length; i++) {
   
   
   
-  const buttonElement = document.querySelector(`body > div.site-wrap > div.comment_site-section > div > div > div > div.bt_wrap > a:nth-child(2)`);
+  const buttonElement = document.querySelector(`body > div:nth-child(5) > div > div > div.board_view_wrap > div.bt_wrap > a:nth-child(2)`);
 
   buttonElement.addEventListener('click', function(event) {
   console.log("check2222222222")
 
-  	const newURL = 'http://localhost:8081/Strong1team/GofixView.do?postNumber='+ postId
+  	const newURL = 'http://localhost:8081/Strong1team/GoboardEdit.do?postNumber='+ postId
   	
   	
   	window.location.href = newURL;
