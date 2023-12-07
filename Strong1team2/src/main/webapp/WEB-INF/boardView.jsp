@@ -9,7 +9,6 @@
 <html lang="en">
 
 <head>
-<title>Academics &mdash; Website by Colorlib</title>
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -155,6 +154,7 @@
 	</div>
 
 
+
 	<div class="custom-breadcrumns border-bottom">
 		<div class="container">
 			<a href="Gomain.do">Main</a> <span
@@ -205,6 +205,8 @@
 				</div>
 			</div>
 
+             
+  
 
 
 		</div>
@@ -448,7 +450,46 @@
 
 
 
-	<script src="assets/js/main.js"></script>
+
+  <script src="assets/js/main.js"></script>
+  
+  
+  
+  
+  <script type="text/javascript">
+
+	 document.addEventListener("DOMContentLoaded", function () {
+	        $.ajax({
+	            url: 'UserBoard.do',
+	            method: 'GET',
+	            data: {
+	                // id: postId 
+	            },
+	            success: function(response) {
+	                // 성공 시 처리하는 코드를 여기에 작성
+  
+ 				    
+
+	                console.log('Successssssssssssssssssssssssssssssss',response);
+	            },
+	            error: function(xhr, status, error) {
+	                // 에러 시 처리하는 코드를 여기에 작성
+	                console.log('errrrrrrrrrrrrrrrrrrrrrrrrrr');
+	            }
+	        });
+
+	        console.log("페이지가 로드되었습니다.");
+	    });
+
+   
+</script>
+
+
+
+
+
+
+>>>>>>> branch 'master' of https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo
 
 
 	<script type="text/javascript">
@@ -478,6 +519,7 @@ for (var i = 0; i < postNumber.length; i++) {
 	    	console.log("성공1");
 	      // 서버 응답에서 title과 content 값을 가져옴
 	      const data = response[0]; // 배열의 첫 번째 요소에 있는 객체를 data로 사용합니다.
+	    	console.log("확인>>",data.B_VIEWS)
 	      const titleValue = data.B_TITLE; // data 객체의 B_TITLE 속성값을 가져와 할당
 	      const contentValue = data.B_CONTENT; // data 객체의 B_CONTENT 속성값을 가져와 할당
 	      const emailValue = data.EMAIL;
@@ -508,14 +550,14 @@ for (var i = 0; i < postNumber.length; i++) {
 	  		`);
 	      const boardNum = document.querySelector(`body > div:nth-child(5) > div > div > div.board_view_wrap > div.board_view > div.info > dl:nth-child(1) > dd`);
 	      
-	      
+	      const boardview = document.querySelector(`div.info > dl:nth-child(4) > dd`)
 	      
 	      boardTitle.innerText = titleValue; 
 	      boardContent.innerText = contentValue; // 컨텐츠 업데이트
 	      boardEmail.innerText = emailValue;
 	      boardCreated_At.innerText = created_AT;
 	      boardNum.innerText = numValue;
-	      
+	      boardview.innerText = data.B_VIEWS;
 	      console.log("성공11111111111111111111111111")
 	    },
 	    
@@ -583,6 +625,7 @@ for (var i = 0; i < postNumber.length; i++) {
 				    	   newWriter.innerHTML = commentList[i].EMAIL;
 				    	   newDate.innerHTML = commentList[i].COMMENTED_AT.split(" ")[0];
 				    	   var cmt = newContent.textContent; 
+				    	 
 				    	   const deleteButton = document.createElement('input');
 				    	   deleteButton.type = "button";
 				    	   deleteButton.value = "삭제";
@@ -654,6 +697,7 @@ for (var i = 0; i < postNumber.length; i++) {
 
 	  
   </script>
+
 
 
 

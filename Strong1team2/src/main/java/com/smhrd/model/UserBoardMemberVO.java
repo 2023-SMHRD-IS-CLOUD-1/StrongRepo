@@ -21,9 +21,18 @@ public class UserBoardMemberVO {
 	private String CREATED_AT;
 	
 	private String CATEGORY;
+	private int B_VIEWS;
 	
 	
 	
+	public int getB_VIEWS() {
+		return B_VIEWS;
+	}
+
+	public void setB_VIEWS(int b_VIEWS) {
+		B_VIEWS = b_VIEWS;
+	}
+
 	public String getB_TITLE() {
 		return B_TITLE;
 	}

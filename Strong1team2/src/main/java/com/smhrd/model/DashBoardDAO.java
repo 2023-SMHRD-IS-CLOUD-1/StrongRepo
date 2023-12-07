@@ -72,4 +72,8 @@ public class DashBoardDAO {
 		// temp1 결과값 리턴
 		return result;
 	}
+	
+	 
 }
+
+

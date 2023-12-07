@@ -22,6 +22,7 @@ public class UserBoardDAO {
 		List<UserBoardMemberVO> result= sqlSession.selectList("selectList");
 		
 		
+		
 		sqlSession.close();
 		
 		
@@ -83,7 +84,21 @@ public class UserBoardDAO {
 		
 	}
 
+	public int update(UserBoardMemberVO vo) {
+		SqlSession sqlSession = factory.openSession(true);
+		// 2. session 사용하기 mapper에 넘길 자료가 있으면 변수 두개
+		int result= sqlSession.update("upviews",vo);
+		// 3. session 반환하기
+		sqlSession.close();
+		// 4. 결과값 반납
+		return result;
+		
+	}
+
 	
+
+    
+ 
 	
 	
 
