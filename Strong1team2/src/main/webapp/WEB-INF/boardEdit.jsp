@@ -140,7 +140,7 @@
           <div class="row align-items-end">
             <div class="col-lg-7">
               <h2 class="mb-0">게시판</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              <p>마약없는 밝은 사회</p>
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@
             <div class="board_wrap">
                 <div class="board_title">
                     <strong>게시글 수정</strong>
-                    <p>공지사항을 빠르고 정확하게 안내해드립니다.</p>
+                    <p></p>
                 </div>
                 <div class="board_write_wrap">
                     <div class="board_write">
