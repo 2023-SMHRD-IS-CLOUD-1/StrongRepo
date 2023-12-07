@@ -194,6 +194,7 @@
             
             <div class="bt_wrap">
               <a href="Goknowledge_Board.do#board" class="on">목록</a>
+              
               <a class="on">수정</a>
             </div>
           </div>
@@ -409,7 +410,8 @@
   const urlParams = new URLSearchParams(window.location.search);
   postId = urlParams.get("id");
   
-  console.log(postId + "ddk")
+  const linkElement = document.querySelector('body > div:nth-child(5) > div > div > div.board_view_wrap > div.bt_wrap > a:nth-child(2)');
+  var userEmail = "${result.getEmail()}";
   var postNumber = document.getElementsByClassName('postNumber');
 for (var i = 0; i < postNumber.length; i++) {
     postNumber[i].value = postId;
@@ -436,7 +438,18 @@ for (var i = 0; i < postNumber.length; i++) {
 		  const created_AT = data.CREATED_AT;
 		  const numValue = data.B_NUM;
 
-
+		  if(userEmail === emailValue) {
+			  linkElement.style.display = 'block';
+		  } else {
+			  linkElement.style.display = 'none';
+		  }
+		  
+		  if(emailValue === 'smhrd') {
+			  linkElement.style.display = 'block';
+		  } else  {
+			  linkElement.style.display = 'none';
+		  }
+		  
 	      // 타이틀과 컨텐츠를 업데이트
 	      const boardTitle = document.getElementsByClassName("title")[0];
 	      const boardContent = document.getElementsByClassName("cont")[0];
@@ -481,6 +494,7 @@ for (var i = 0; i < postNumber.length; i++) {
 		    	  origincmt.remove();
 		    	   var comment = document.querySelector(`body > div.comment_section > div > div > div > div.cmt_board_list`)
 		    	   
+				    var cWriter = commentList[i].EMAIL;
 		    	   // 여기서부터 for문 시작할듯? 
 		    		for(let i=0; i<commentList.length; i++) {
 		    			// %기준은 화면 100%일때 기준으로 했음 영상 찍을때 화면100%로 해주셈!!   
@@ -516,8 +530,7 @@ for (var i = 0; i < postNumber.length; i++) {
 				    	   newForm.action = "DropComment.do";
 				    	   const submitButton = document.createElement('button');
 				    	   submitButton.textContent = 'submit'; // 버튼 텍스트 설정
-				    	  
-
+				    	   
 				    	   
 				    	   newContent.innerHTML = commentList[i].CMT_CONTENT;
 				    	   newWriter.innerHTML = commentList[i].EMAIL;
@@ -539,7 +552,15 @@ for (var i = 0; i < postNumber.length; i++) {
 				    	   newDiv.appendChild(newWriter);
 //				    	   newDiv.appendChild(space); // 공백 추가
 				    	   newDiv.appendChild(newDate);
-				    	   newDiv.appendChild(deleteButton);
+				    	   console.log("확인 >> ", cWriter)
+				    	   console.log("확인 >> ", userEmail)
+				    	   if (commentList[i].EMAIL === userEmail) {
+				    		    newDiv.appendChild(deleteButton);
+				    		}
+				    	   
+				    	   if(userEmail === 'smhrd'){
+				    		   newDiv.appendChild(deleteButton);
+				    	   }
 				    	   comment.appendChild(newDiv);
 				    	   
 				    	   
@@ -574,11 +595,6 @@ for (var i = 0; i < postNumber.length; i++) {
 	});
   
   
-  
-  
-  
-  
-  
   const buttonElement = document.querySelector(`body > div:nth-child(5) > div > div > div.board_view_wrap > div.bt_wrap > a:nth-child(2)`);
 
   buttonElement.addEventListener('click', function(event) {
@@ -586,42 +602,11 @@ for (var i = 0; i < postNumber.length; i++) {
 
   	const newURL = 'http://localhost:8081/Strong1team/GoboardEdit.do?postNumber='+ postId
   	
-  	
   	window.location.href = newURL;
   });
 
 	  
   </script>  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
