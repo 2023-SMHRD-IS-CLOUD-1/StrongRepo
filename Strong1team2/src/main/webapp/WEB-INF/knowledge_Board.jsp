@@ -664,6 +664,7 @@
                         <div class="count">조회수</div>
                         <div class="likes">likes</div>
                     </div>
+        
                  
                      <!-- 
                     <div class="boardList">
@@ -911,7 +912,7 @@ $(function(){
 	    dataType: "json",
 	    // 성공
 	    success: function (result) {
-	    	console.log("성공했나?")
+	    	console.log("성공했나?" + result)
 	      displayContent(result); // displayContent 함수 호출
 	      // setPageButtons 함수 호출
 	    },
@@ -938,18 +939,25 @@ $(function(){
 	      const pageData = data.slice(startIndex, endIndex);
 
 	      pageData.forEach(post => {
+	    	///////////////////////////////////////////////////////////////
 	        // 게시글 추가
 	        const postDiv = document.createElement('div');
 	        postDiv.classList.add("boardList")
 	        const postList = Object.values(post);
+	        
+	       console.log("postList:", postList);
+	        const b_views = postList[4]||0; 
+	        	
+	        
 	        postDiv.innerHTML =
 	          '<div class="num">' + postList[2] + '</div>' +
 	          '<div class="title">' + postList[0] + '</div>' +
 	          '<div class="writer">' + postList[1] + '</div>' +
 	          '<div class="date">' + postList[3].split(" ")[0] + '</div>' +
-	          '<div class="count">1</div><div class="likes">0</div>';
+	          '<div class="count">'+ b_views +'</div><div class="likes">0</div>';
 	        boardList.after(postDiv);
 	        //boardList.innerHTML = '';
+	        ///////////////////////////////////////////////////////////////
 	      });
 	      
 	    }
