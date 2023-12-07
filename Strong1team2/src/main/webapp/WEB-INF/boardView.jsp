@@ -194,7 +194,19 @@
             
             <div class="bt_wrap">
               <a href="Goknowledge_Board.do#board" class="on">목록</a>
+              
+              
+               <C:if test="${result.email=='smhrd'||result.email == member.email}"> 
+               
               <a class="on">수정</a>
+              </C:if >
+            <!-- <C:if test ="${}"> 
+              <a class="on">수정</a>
+              </C:if>
+            
+            
+            -->  
+             
             </div>
           </div>
         </div>
@@ -387,6 +399,47 @@
 
 
   <script src="assets/js/main.js"></script>
+  
+  
+  {
+  "message": "성공적인 응답 데이터"
+}
+  
+  
+<script type="text/javascript">
+
+	 document.addEventListener("DOMContentLoaded", function () {
+	        $.ajax({
+	            url: 'UserBoard.do',
+	            method: 'GET',
+	            data: {
+	                // id: postId 
+	            },
+	            success: function(response) {
+	                // 성공 시 처리하는 코드를 여기에 작성
+	                console.log('Successssssssssssssssssssssssssssssss',response.message);
+	            },
+	            error: function(xhr, status, error) {
+	                // 에러 시 처리하는 코드를 여기에 작성
+	                console.log('errrrrrrrrrrrrrrrrrrrrrrrrrr');
+	            }
+	        });
+
+	        console.log("페이지가 로드되었습니다.");
+	    });
+
+   
+</script>
+
+
+
+
+
+
+
+
+
+
 
 
 <script type="text/javascript">
@@ -508,6 +561,7 @@ for (var i = 0; i < postNumber.length; i++) {
 				    	   newWriter.innerHTML = commentList[i].EMAIL;
 				    	   newDate.innerHTML = commentList[i].COMMENTED_AT.split(" ")[0];
 				    	   var cmt = newContent.textContent; 
+				    	  if()
 				    	   const deleteButton = document.createElement('input');
 				    	   deleteButton.type = "button";
 				    	   deleteButton.value = "삭제";
@@ -577,29 +631,6 @@ for (var i = 0; i < postNumber.length; i++) {
 
 	  
   </script>  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
