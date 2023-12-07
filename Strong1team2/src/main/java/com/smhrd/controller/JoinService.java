@@ -22,31 +22,46 @@ public class JoinService implements Command {
 		String birthdate = request.getParameter("birthdate");
 		String gender = request.getParameter("gender");
 
-
-		MemberVO vo = new MemberVO();
-		vo.setEmail(email);
-		vo.setPw(pw);
-		vo.setName(name);
-		vo.setNick(nick);
-		vo.setBirthdate(birthdate);
-		vo.setGender(gender);
-		
-		DAO dao = new DAO();
-
-		int row = dao.join(vo);
-
-		if (row > 0 && pw==repw) {
-
-			request.setAttribute("member", vo);
-			// return "join_success"; 어디로 이동해야할지 모르겠어서 일단 main으로 둠 -원제-
-			return "redirect:/Gomain.do";
-		} else {
-			System.out.println("실패");
-			// redirect:/ >> 우리의 약속 기호!!
-			// >> redirect 방식으로 이동해라 !! 를 FC에게 알려주는 역할!!
-			return "redirect:/Gomain.do";
+if(email==null || pw==null){
+	return "redirect:/Goregister.do?error=OtherException";
+}else {
+	if(repw==null || name==null) {
+		return "redirect:/Goregister.do?error=OtherException";
+	}else {
+		if(nick==null || birthdate==null) {
+			return "redirect:/Goregister.do?error=OtherException";
+		}else {
+			if(gender==null) {
+				return "redirect:/Goregister.do?error=OtherException";
+			}else {
+				MemberVO vo = new MemberVO();
+				vo.setEmail(email);
+				vo.setPw(pw);
+				vo.setName(name);
+				vo.setNick(nick);
+				vo.setBirthdate(birthdate);
+				vo.setGender(gender);
+				
+				DAO dao = new DAO();
+				
+				int row = dao.join(vo);
+				
+				if (row > 0 && pw==repw) {
+					
+					request.setAttribute("member", vo);
+					
+					return "redirect:/Gomain.do";
+				}else {
+					return "redirect:/Goregister.do?error=OtherException";
+					
+				}
+			}
 		}
-
+		
 	}
-
+	
+		
+}
+	
+}
 }

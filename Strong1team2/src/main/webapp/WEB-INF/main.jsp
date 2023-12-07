@@ -192,13 +192,16 @@
 
    
   <!--    <div class="hero-slide owl-carousel site-blocks-cover">-->
+  
 	<div class="intro-section">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-12 mx-auto text-center">
 
-					<h1 style="font-size: 100px; margin-bottom: 35px;">인생 똑바로 살아라 </h1><br><h1> 이렇게 되기 싫으면</h1><br>
-					<h4>▼ 마약은 필터로만 하세요 ▼</h4>
+					<h1 style="font-size: 80px;" >▼ 마약은 필터로만 하세요 ▼</h1><br>
+					<h4 style="color: white;">강한모습&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;약한모습</h4>
 					
 					<div
 						style="display: flex; justify-content: center; align-items: center; text-align: center;">
@@ -236,7 +239,7 @@
         <div class="row mb-5 justify-content-center text-center">
           <div class="col-lg-4 mb-5">
             <h2 class="section-title-underline mb-5">
-              <span>대시보드</span>
+              <span style="font-size: 50px; margin-top:20px;">대시보드</span>
             </h2>
           </div>
         </div>
@@ -472,16 +475,19 @@
             <span><img src="images/close.png" class="iconclose"></span>
             <h3>출구 없는 미로</h3>
             <p> 단 한번의 호기심! 이것이 마약의 유혹</p>
+            <p> 마약으로 우리 가족의 죽음을 삽니다.</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
             <span><img src="images/no-drugs.png" class="icondrug"></span>
             <h3>NO EXIT</h3>
+            <p>호기심에 손댄 마약 죽음되어 돌아온다.</p>
             <p>설마하다 중독되고 중독되면 파멸온다.</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
             <span><img src="images/close.png" class="iconclose"></span>
             <h3>절대 시작하지 마세요</h3>
             <p>마약과의 입맞춤은 죽음과의 포옹이다.</p>
+            <p>리허설이 없는 자살극, 그것이 바로 마약!</p>
           </div>
         </div>
       </div>
@@ -489,7 +495,7 @@
 
 
     <div class="footer">
-      <div class="container">
+      <div class="container" style="margin-top:60px;">
         <div class="row">
           <div class="col-lg-3" style="margin-bottom: 15px;">
             <p class="mb-4"><img src="images/logosmall.png" alt="Image" class="img-fluid"></p>
@@ -499,30 +505,38 @@
             <p style="margin-left: 25px;">하동철 한명훈 함수연</p>  
           </div>
           <div class="col-lg-3">
-            <h3 class="footer-heading"><span>한국중독관리센터협회</span></h3>
+           <p class="mb-4"></p>
+            <h3 class="footer-heading" style="margin-top:80px;"><span>한국중독관리센터협회</span></h3>
             <ul class="list-unstyled">
                 <li><a href="http://www.kaacc.co.kr/03_sub/page3_2.php">전국 센터 안내</a></li>
                 <li><a href="http://www.kaacc.co.kr/03_sub/page3_3.php">관련 기관 안내</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
-              <h3 class="footer-heading"><span>중독재활센터</span></h3>
+          <p class="mb-4"></p>
+              <h3 class="footer-heading" style="margin-top:80px;"><span>중독재활센터</span></h3>
               <ul class="list-unstyled">
                   <li><a href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=REFORM&headNum=1&seq=180&tpage=1">중독재활센터 안내</a></li>
                   <li><a href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=CONSULT_2&seq=12017&tpage=1">상담 안내</a></li>
               </ul>
           </div>
           <div class="col-lg-3">
-            <h3 class="footer-heading""><span>타산지석</span></h3>
+          <p class="mb-4"></p>
+            <h3 class="footer-heading" style="margin-top:80px;"><span>타산지석</span></h3>
             <ul class="list-unstyled" style="width: 500px;">
-            	 <li><a href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=REFORM&headNum=1&seq=180&tpage=1">중독재활센터 안내</a></li>
-                 <li><a href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=CONSULT_2&seq=12017&tpage=1">상담 안내</a></li>
+            	 <li><a href="https://youtu.be/n-ZmBnnadBU?si=wbOmKsLZYgqUw7xs">마약중독자들의 현상태</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=0_JfysDMFT4">마약을 끊지 못하는 이유</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=oNxq_FD2ph8">20대 마약중독자 인터뷰</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=JjO14D9fEwA">유명인 마약 중독 고백</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=pB91VeZD2wE">마약중독자 가족이 겪는 고통</a></li>
+<!--               
+				<li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
                 <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
                 <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
                 <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
                 <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li> 
+-->
             </ul>
           </div>
         </div>
@@ -532,7 +546,7 @@
             <div class="copyright">
                 <p>
                    
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>  ♥  <a href="https://www.spo.go.kr/site/spo/main.do" target="_blank" >????</a>♥
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>  ♥  <a href="https://www.spo.go.kr/site/spo/main.do" target="_blank" >마약 팔아요</a>♥
                    
                     </p>
             </div>

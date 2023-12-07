@@ -155,7 +155,7 @@
           <div class="row align-items-end">
             <div class="col-lg-7">
               <h2 class="mb-0">회원가입</h2>
-              <p>여기 고쳐야됨!!!!</p>
+              <p>마약으로 우리 가족의 죽음을 삽니다.</p>
             </div>
           </div>
         </div>
@@ -184,31 +184,40 @@
                     <div class="col-md-12 form-group">
                       <label for="email">EMAIL</label>
                       <input type="text" name="email" id="regEmail" class="form-control form-control-lg">
-                      <ul></ul>
+
+                    <ul></ul>
+
+
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="pword">PW</label>
-                      <input type="password" name="pw" class="form-control form-control-lg">
+                      <ul></ul>
+                      <input type="password" name="pw" id="pw"class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="repw">PW 재확인</label>
-                      <input type="password" name="repw" class="form-control form-control-lg">
+                      <ul></ul>
+                      <input type="password" name="repw" id="repw" class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="name">NAME</label>
-                      <input type="text" name="name" class="form-control form-control-lg">
+                      <ul></ul>
+                      <input type="text" name="name" id="name"class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="nick">NICK</label>
-                      <input type="text" name="nick" class="form-control form-control-lg">
+                      <ul></ul>
+                      <input type="text" name="nick" id="nick"class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
                       <label for="birthdate">BIRTHDATE</label>
-                      <input type="date" name="birthdate" class="form-control form-control-lg">
+                      <ul></ul>
+                      <input type="date" name="birthdate" id="birthdate" class="form-control form-control-lg">
                     </div>
                     <div class="col-md-12 form-group">
-                      <label for="gender">GENDER</label>
-                      <br>
+                      <label for="gender" id="gender">GENDER</label>
+                      <ul></ul>
+                      
                       <label for="man">
                         남자<input type="radio" name="gender" value="m">
                       </label>
@@ -217,8 +226,14 @@
                       </label>
                     </div>
                   </div>
+                  						<% 
+    String error = request.getParameter("error");
+    if (error != null && error.equals("OtherException")) {
+%>
+    <p style="color: red;">모든 정보를 입력해주기 바랍니다.</p>
+<% } %>
                   <div class="row">
-                        <div class="col-12">
+                        <div class="col-12"  style="text-align: center;">
                             <input type="submit" value="Register" class="btn btn-primary btn-lg px-5" style="align:center;">
                         </div>
                     </div>
@@ -232,8 +247,11 @@
           
     
 
+ 
+
+
     <div class="footer">
-      <div class="container">
+      <div class="container" style="margin-top:60px;">
         <div class="row">
           <div class="col-lg-3" style="margin-bottom: 15px;">
             <p class="mb-4"><img src="images/logosmall.png" alt="Image" class="img-fluid"></p>
@@ -243,28 +261,38 @@
             <p style="margin-left: 25px;">하동철 한명훈 함수연</p>  
           </div>
           <div class="col-lg-3">
-            <h3 class="footer-heading"><span>한국중독관리센터협회</span></h3>
+           <p class="mb-4"></p>
+            <h3 class="footer-heading" style="margin-top:80px;"><span>한국중독관리센터협회</span></h3>
             <ul class="list-unstyled">
                 <li><a href="http://www.kaacc.co.kr/03_sub/page3_2.php">전국 센터 안내</a></li>
                 <li><a href="http://www.kaacc.co.kr/03_sub/page3_3.php">관련 기관 안내</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
-              <h3 class="footer-heading"><span>중독재활센터</span></h3>
+          <p class="mb-4"></p>
+              <h3 class="footer-heading" style="margin-top:80px;"><span>중독재활센터</span></h3>
               <ul class="list-unstyled">
                   <li><a href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=REFORM&headNum=1&seq=180&tpage=1">중독재활센터 안내</a></li>
                   <li><a href="https://www.drugfree.or.kr/counsel/index.html?contentsNum=5&category=CONSULT_2&seq=12017&tpage=1">상담 안내</a></li>
               </ul>
           </div>
           <div class="col-lg-3">
-            <h3 class="footer-heading""><span>응원의 한마디</span></h3>
+          <p class="mb-4"></p>
+            <h3 class="footer-heading" style="margin-top:80px;"><span>타산지석</span></h3>
             <ul class="list-unstyled" style="width: 500px;">
-                <li style="color: #000;">힘내라 빠샤빠샤빠샤빠샤빠샤빠샤빠샤빠샤</li>
-                <li style="color: #000;">힘내라 아자아자아자아자아자아자아자아자</li>
-                <li style="color: #000;">힘내라 빠샤빠샤빠샤빠샤빠샤빠샤빠샤빠샤</li>
-                <li style="color: #000;">힘내라 아자아자아자아자아자아자아자아자</li>
-                <li style="color: #000;">힘내라 빠샤빠샤빠샤빠샤빠샤빠샤빠샤빠샤</li>
-                <li style="color: #000;">힘내라 아자아자아자아자아자아자아자아자</li>
+            	 <li><a href="https://youtu.be/n-ZmBnnadBU?si=wbOmKsLZYgqUw7xs">마약중독자들의 현상태</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=0_JfysDMFT4">마약을 끊지 못하는 이유</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=oNxq_FD2ph8">20대 마약중독자 인터뷰</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=JjO14D9fEwA">유명인 마약 중독 고백</a></li>
+                 <li><a href="https://www.youtube.com/watch?v=pB91VeZD2wE">마약중독자 가족이 겪는 고통</a></li>
+<!--               
+				<li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
+                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li> 
+-->
             </ul>
           </div>
         </div>
@@ -273,9 +301,9 @@
           <div class="col-12">
             <div class="copyright">
                 <p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                   
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>  ♥  <a href="https://www.spo.go.kr/site/spo/main.do" target="_blank" >마약 팔아요</a>♥
+                   
                     </p>
             </div>
           </div>
@@ -311,25 +339,19 @@
   <script src="assets/js/main.js"></script>
   
   <script type="text/javascript">
-		// 1. jQuery 라이브러리 로딩 되어있는 지 확인
-		// ---> 라이브러리 로드하고 있는 코드보다 아래쪽에 script 태그 열어줌
-
-		// <input type="text"  id="email" placeholder="보낼 사람 이메일"/>
-		// 2. 필요한 태그 가져오기
-		// ----> id값이 email인 input태그
-		// 3. 키보드를 눌렀을 때에 대한 이벤트 처리
+	
+	
 		$("#regEmail").on("keyup", function() {
-			// console.log(this.value);
-
-			// 4. input태그 안에 입력값 가져오기
+			
+		   const input = document.getElementById('regEmail');
+			
 			var inputData = $(this).val();
-			// 5. 전송이 편한 객체 형식으로 만들기
+			
 			var obj = {
 				receive_email : inputData
 			};
-			console.log(obj);
-			// 6. 비동기 통신방식으로 servlet 데이터 보내기
-			// ---> 이메일 존재하는 지 여부를 db에서 체크
+			
+			
 			
 			$.ajax({
 				url : "EmailCheck.do",
@@ -338,17 +360,18 @@
 					console.log("성공 >> " + result);
 					$("#regEmail+ul").empty();
 					if(result == "true"){
-						// 1. result값이 true라면 li태그 초록색 "일치하는 이메일입니다."
+						
 						$("#regEmail+ul").append("<li style='color:red;'>!!!!중복불가!!!!</li>");
-						// $(".actions .special").attr("disabled","true");
-						// 버튼 활성화
-						$(".actions .special").removeAttr("disabled");
+						$(`body > form > div > div > div > div > div:nth-child(2) > div > input`).attr("disabled","disabled");
+						
 					}else{
-						// 2. result값이 false라면 li태그 빨간색 "일치하지 않습니다."
+						
 						$("#regEmail+ul").append("<li style='color:green;'>사용가능한 이메일입니다.</li>");
-						// 버튼 비활성화
-						$(".actions .special").attr("disabled","disabled");
-					}		
+						$(`body > form > div > div > div > div > div:nth-child(2) > div > input`).removeAttr("disabled");
+					}
+					 
+					
+					
 				},
 				error : function(e) {
 					console.log(e);
@@ -357,6 +380,20 @@
 		})
 		
 		</script>
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+</script>
   
   
 

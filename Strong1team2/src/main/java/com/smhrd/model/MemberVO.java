@@ -32,9 +32,6 @@ public class MemberVO {
 	
 	private String CATEGORY;
 
-	
-	
-
 	private String JOINED_AT;
 	
 	private String ROLE;

@@ -29,17 +29,20 @@ public class UpdateService implements Command {
         // 2. Session안에 있는 정보 가져오기
         HttpSession session = request.getSession();
         MemberVO mem = (MemberVO) session.getAttribute("result");
+        MemberVO vo = new MemberVO();
 
-     //   if (mem != null && email==mem.getEmail() && pw==mem.getPw()) {
-        //  	}
-        	MemberVO vo = new MemberVO();
-        	// 3. 세션에서 가져온 정보와 요청받은 데이터 비교
+        System.out.println(mem.getEmail());
+        System.out.println(mem.getPw());
+        System.out.println(email);
+        System.out.println(pw);
+        if(mem.getEmail().equals(email) && mem.getPw().equals(pw)) {
+        	System.out.println("-------------------------------중간점검2------------------------------");
+        	
         	vo.setEmail(email);
         	vo.setPw(repw);
         	vo.setName(name);
         	vo.setNick(nick);
         	vo.setBirthdate(birthdate);
-        	System.out.println("-------------------------------중간점검2------------------------------");
         	// 4. DAO 생성하기
         	DAO dao = new DAO();
         	
@@ -47,12 +50,12 @@ public class UpdateService implements Command {
         	
         	if (row > 0) {
         		session.setAttribute("result", vo);
+        		return "redirect:/Gomain.do";
         		
-        	
-        	
-        	
+        	} 
         }
+        return "redirect:/Gomodify.do?error=invalidCredentials";
 
-        return "redirect:/Gomain.do";
+     
     }
 }
