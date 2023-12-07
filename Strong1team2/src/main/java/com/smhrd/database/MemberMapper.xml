@@ -49,7 +49,11 @@
 		INSERT INTO D_BOARD(B_TITLE,B_CONTENT,EMAIL)
 		VALUES(#{title},#{content},#{email})
 	</insert>
-	
+	<update id="upviews" parameterType="com.smhrd.model.UserBoardMemberVO">
+	update D_BOARD
+	SET B_VIEWS = B_VIEWS+1
+	WHERE B_NUM = #{B_NUM} 
+	</update>
 	
 	
 	

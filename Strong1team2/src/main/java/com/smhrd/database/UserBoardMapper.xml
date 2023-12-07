@@ -11,13 +11,13 @@
 
 	
 	<select id = "selectList" resultType="com.smhrd.model.UserBoardMemberVO">
-		SELECT B_TITLE, EMAIL, B_NUM, CREATED_AT FROM D_BOARD ORDER BY B_NUM DESC
+		SELECT B_TITLE, EMAIL, B_NUM, CREATED_AT, B_VIEWS FROM D_BOARD ORDER BY B_NUM DESC
 	</select>
 	
 	
 	
 	<select id = "selectView" resultType="com.smhrd.model.UserBoardMemberVO">
-		SELECT B_TITLE, B_CONTENT,CREATED_AT, EMAIL, B_NUM
+		SELECT B_TITLE, B_CONTENT,CREATED_AT, EMAIL, B_NUM,B_VIEWS
 		FROM D_BOARD 
 		WHERE B_NUM=#{B_NUM}
 	</select>

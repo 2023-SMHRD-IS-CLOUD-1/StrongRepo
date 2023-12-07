@@ -37,6 +37,10 @@ public class ViewService implements Command {
 		System.out.println(postNum);
 		
 
+		// 조회수 업데이트 기능
+		ubDao.update(vo);
+		
+		
 		// postId를 이용하여 DB에서 해당 게시물의 정보를 조회합니다.
 		List<UserBoardMemberVO> result = ubDao.selectView(vo); 
 		System.out.println("성공2");
