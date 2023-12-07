@@ -438,17 +438,17 @@ for (var i = 0; i < postNumber.length; i++) {
 		  const created_AT = data.CREATED_AT;
 		  const numValue = data.B_NUM;
 
-		  if(userEmail === emailValue) {
-			  linkElement.style.display = 'block';
-		  } else {
+		  if(userEmail != emailValue) {
 			  linkElement.style.display = 'none';
-		  }
+		  } 
 		  
 		  if(emailValue === 'smhrd') {
 			  linkElement.style.display = 'block';
-		  } else  {
-			  linkElement.style.display = 'none';
-		  }
+		  } 
+		  
+		  if(emailValue === userEmail) {
+			  linkElement.style.display = 'block';
+		  } 
 		  
 	      // 타이틀과 컨텐츠를 업데이트
 	      const boardTitle = document.getElementsByClassName("title")[0];
@@ -459,7 +459,7 @@ for (var i = 0; i < postNumber.length; i++) {
 	      const boardCreated_At = document.querySelector(`
 	    		  body > div:nth-child(5) > div > div > div.board_view_wrap > div.board_view > div.info > dl:nth-child(3) > dd
 	  		`);
-	      const boardNum = document.querySelector(`body > div:nth-child(5) > div > div > div.board_view_wrap > div.board_view > div.info > dl:nth-child(4) > dd`);
+	      const boardNum = document.querySelector(`body > div:nth-child(5) > div > div > div.board_view_wrap > div.board_view > div.info > dl:nth-child(1) > dd`);
 	      
 	      
 	      
@@ -470,6 +470,7 @@ for (var i = 0; i < postNumber.length; i++) {
 	      boardNum.innerText = numValue;
 	      
 	      console.log("성공11111111111111111111111111")
+	      console.log(numValue);
 	    },
 	    
 	    
