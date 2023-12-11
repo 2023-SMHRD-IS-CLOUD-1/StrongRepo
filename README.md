@@ -202,12 +202,13 @@
 ## 트러블슈팅
 * 문제1<br>
   - 문제: jupyter notebook과 jsp를 flask로 연결하려 했으나, 404 오류 메시지만 계속 화면에 나타남.
-  - 연구:  jupyter notebook 커널 문제로 오류 메시지가 제대로 뜨지 않아 원인을 flask로 여겼으나, 컴퓨터를 재부팅해 커널 문제를 해결하고 오류 메시지를 확인한 결과,
-OpenCV 함수에 전달되는 이미지가 NumPy 배열이 아니었다는 간단한 문제였음.
+  - 연구:  jupyter notebook 커널 문제로 오류 메시지가 제대로 뜨지 않아 원인을 flask로 여겼으나, 컴퓨터를 재부팅해 커널 문제를 해결하고 오류 메시지를 확인한 결과, OpenCV 함수에 전달되는 이미지가 NumPy 배열이 아니었다는 간단한 문제였음.
   - 해결: 이미지를 다음과 같이 Numpy 배열로 고침.
 https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/blob/f51b476fa0b838710623dbf5f160b2de8e93e859/Strong1team2/drug_filter/face_distort%20-%20%EC%B5%9C%EC%A2%85%EB%B3%B8.ipynb#L177
 * 문제2<br>
- 문제점 설명 및 해결방안
+  - 문제: 댓글 삭제 버튼 클릭시 DropComment.do가 실행 되어서 댓글 삭제 후 페이지로 돌아와서 자동으로 댓글이 삭제된 상태로 보여져야 하는데 댓글이 DB에서는 삭제되었으나 화면에서는 F5로 새로고침 하지 않으면 그대로 보여지는 문제가 나타남.
+  - 연구: 성공시든 실패시든 return "redirect:/GoboardView.do?id="+ 해당게시글 번호; 로 되돌아 가서 다시 해당 페이지가 새로 고침 되는줄 알았으나 새로고침 되지 않았고, 비동기 통신인 $.ajax를 활용하여서 따로 redirect 주소를 잡아주는건 상관이 없었음.
+  - 해결: 비동기 통신 정보 전송 성공시 실행되는 success: 문 안쪽에 window.location.reload(); 해당 윈도우 창을 새로고침 해주는 코드를 넣어줌으로써 삭제 버튼 클릭시 삭제 된후 새로고침 되어 화면에 나오도록 해결함.
 
 ## 참고문헌
 
