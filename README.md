@@ -1,17 +1,3 @@
-# StrongRepo
-## No more durgs Dashboard Project
-Team Name : 강력1팀
-Team Member
-1. 박범석
-2. 조원제
-3. 함수연
-4. 한명훈
-5. 임혜지
-6. 하동철
-
-
-Team goal : No 싸움
-
 # Drug is Death (팀명: 강력 1팀)
 ![image](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488262/921c791e-0e8f-4e35-8c21-e23a3cdbf3f3)
 
