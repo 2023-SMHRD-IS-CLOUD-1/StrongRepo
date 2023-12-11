@@ -6,7 +6,6 @@
 <html lang="en">
 
 <head>
-  <title>Academics &mdash; Website by Colorlib</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -418,14 +417,6 @@
                  <li><a href="https://www.youtube.com/watch?v=oNxq_FD2ph8">20대 마약중독자 인터뷰</a></li>
                  <li><a href="https://www.youtube.com/watch?v=JjO14D9fEwA">유명인 마약 중독 고백</a></li>
                  <li><a href="https://www.youtube.com/watch?v=pB91VeZD2wE">마약중독자 가족이 겪는 고통</a></li>
-<!--               
-				<li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li> 
--->
             </ul>
           </div>
         </div>
@@ -493,10 +484,8 @@
 
 
 
-  <!-- .site-wrap -->
 
 
-  <!-- loader -->
   <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#51be78"/></svg></div>
 
   <script src="assets/js/jquery-3.3.1.min.js"></script>

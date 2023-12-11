@@ -8,7 +8,6 @@
 <html lang="en">
 
 <head>
-  <title>Academics &mdash; Website by Colorlib</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -226,13 +225,15 @@
                       </label>
                     </div>
                   </div>
-                  						<% 
-    String error = request.getParameter("error");
-    if (error != null && error.equals("OtherException")) {
-%>
-    <p style="color: red;">모든 정보를 입력해주기 바랍니다.</p>
-<% } %>
-                  <div class="row">
+						<%
+						String error = request.getParameter("error");
+							if (error != null && error.equals("OtherException")) {
+						%>
+						<p style="color: red;">모든 정보를 입력해주기 바랍니다.</p>
+						<%
+						}
+						%>
+						<div class="row">
                         <div class="col-12"  style="text-align: center;">
                             <input type="submit" value="Register" class="btn btn-primary btn-lg px-5" style="align:center;">
                         </div>
@@ -285,14 +286,6 @@
                  <li><a href="https://www.youtube.com/watch?v=oNxq_FD2ph8">20대 마약중독자 인터뷰</a></li>
                  <li><a href="https://www.youtube.com/watch?v=JjO14D9fEwA">유명인 마약 중독 고백</a></li>
                  <li><a href="https://www.youtube.com/watch?v=pB91VeZD2wE">마약중독자 가족이 겪는 고통</a></li>
-<!--               
-				<li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li> 
--->
             </ul>
           </div>
         </div>
@@ -357,7 +350,6 @@
 				url : "EmailCheck.do",
 				data : obj,
 				success : function(result) {
-					console.log("성공 >> " + result);
 					$("#regEmail+ul").empty();
 					if(result == "true"){
 						
@@ -374,7 +366,6 @@
 					
 				},
 				error : function(e) {
-					console.log(e);
 				}
 			})
 		})

@@ -912,13 +912,11 @@ $(function(){
 	    dataType: "json",
 	    // 성공
 	    success: function (result) {
-	    	console.log("성공했나?" + result)
 	      displayContent(result); // displayContent 함수 호출
 	      // setPageButtons 함수 호출
 	    },
 	    // 예외
 	    error: function (xhr, status, error) {
-	    	console.log("error");
 	    }
 	  });
 })
@@ -926,14 +924,10 @@ $(function(){
   
   function displayContent(data) {
 	    const boardList = document.querySelector('.board_list .top');
-	    console.log("성공1")
-	    console.log(boardList)
 	    const itemsPerPage = 5; // 페이지당 보여줄 게시물 수
 	    const totalPages = Math.ceil(data.length / itemsPerPage); // 전체 페이지 수
-	    console.log("성공2")
 	    // 페이지 번호를 클릭하면 해당 페이지의 데이터를 가져와서 표시하는 
 	    function showPage(page) {
-	    	console.log("성공3")
 	      const startIndex = (page - 1) * itemsPerPage;
 	      const endIndex = startIndex + itemsPerPage;
 	      const pageData = data.slice(startIndex, endIndex);
@@ -944,8 +938,6 @@ $(function(){
 	        const postDiv = document.createElement('div');
 	        postDiv.classList.add("boardList")
 	        const postList = Object.values(post);
-	        
-	       console.log("postList:", postList);
 	        const b_views = postList[4]||0; 
 	        	
 	        
@@ -956,8 +948,6 @@ $(function(){
 	          '<div class="date">' + postList[3].split(" ")[0] + '</div>' +
 	          '<div class="count">'+ b_views +'</div><div class="likes">0</div>';
 	        boardList.after(postDiv);
-	        //boardList.innerHTML = '';
-	        ///////////////////////////////////////////////////////////////
 	      });
 	      
 	    }
@@ -1002,7 +992,6 @@ function addE(){
 
     postElements.forEach(function(postElement) {
         postElement.addEventListener('click', function() {
-           console.log("??");
             var postNumber = this.querySelector('.num').textContent;
             
             var postId = parseInt(postNumber);
@@ -1030,10 +1019,8 @@ $('#board > div > div > div.board_list_wrap > div > div').on('click', function()
             id: postId // 변수 id에 postId 값을 할당하여 서버에 전달
         },
         success: function(data) {
-            console.log(data); 
         },
         error: function(xhr, status, error) {
-            console.error('Error:', error);
         }
     });
 });

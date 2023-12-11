@@ -6,7 +6,6 @@
 <html lang="en">
 
 <head>
-  <title>Academics &mdash; Website by Colorlib</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,8 +37,6 @@
 
 <link rel="icon" type="image/png" sizes="16x16"
 	href="assets/images/favicon.png">
-<title>Adminmart Template - The Ultimate Multipurpose admin
-	template</title>
 <link href="assets/extra-libs/c3/c3.min.css" rel="stylesheet">
 <link href="assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
 <link href="assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css"
@@ -99,8 +96,6 @@
 
 
 
-<!-- 원래 코드  -->
-<!-- 맨 위에 코드!! -->
     <div class="py-2 bg-light">
       <div class="container">
         <div class="row align-items-center">
@@ -137,14 +132,6 @@
 				</div>
 			</div>
 		</div>
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -191,7 +178,6 @@
     </header>
 
    
-  <!--    <div class="hero-slide owl-carousel site-blocks-cover">-->
   
 	<div class="intro-section">
 		<div class="container">
@@ -229,7 +215,6 @@
 		</div>
 	</div>
 
-	<!--   </div> -->
     
 
     <div></div>
@@ -308,8 +293,6 @@
 								</div>
 							</div>
 						</div>
-						<!-- *************************************************************** -->
-						<!-- End First Cards -->
 						<div class="row3">
 							<div class="row2">
 								<div class="row1">
@@ -529,14 +512,6 @@
                  <li><a href="https://www.youtube.com/watch?v=oNxq_FD2ph8">20대 마약중독자 인터뷰</a></li>
                  <li><a href="https://www.youtube.com/watch?v=JjO14D9fEwA">유명인 마약 중독 고백</a></li>
                  <li><a href="https://www.youtube.com/watch?v=pB91VeZD2wE">마약중독자 가족이 겪는 고통</a></li>
-<!--               
-				<li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li> 
--->
             </ul>
           </div>
         </div>
@@ -648,7 +623,6 @@
 		        resultImageContainer.append('<img src="' + imageUrl + '" alt="Transformed Image" style="max-width: 496px; max-height: 496px;">');
 		    })
 		    .catch(error => {
-		        console.error('Error:', error);
 		        var resultImageContainer = $('#resultImageContainer');
 		        resultImageContainer.empty();
 		        resultImageContainer.append('<p style="color: red;">Error: ' + '얼굴 인식이 되지 않았습니다. 다른 사진을 올려주세요.' + '</p>');

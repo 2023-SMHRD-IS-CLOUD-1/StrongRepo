@@ -9,7 +9,6 @@
 <html lang="en">
 
 <head>
-<title>Academics &mdash; Website by Colorlib</title>
 <meta charset="utf-8">
 <meta name="viewport"
    content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -229,26 +228,6 @@
                         <input type="button" value="삭제" style="width: 70px;">
                      </div>
                   </div>
-                  <!--                    <div>
-                          <div class="title">댓글 내용</div><br>
-                          <div class="writer">김이름</div>
-                          <div class="date">2021.1.15</div>
-                      </div>
-                      <div>
-                          <div class="title">댓글 내용</div><br>
-                          <div class="writer">김이름</div>
-                          <div class="date">2021.1.15</div>
-                      </div>
-                      <div>
-                          <div class="title">댓글 내용</div><br>
-                          <div class="writer">김이름</div>
-                          <div class="date">2021.1.15</div>
-                      </div>
-                      <div>
-                          <div class="title">댓글 내용</div><br>
-                          <div class="writer">김d</div>
-                          <div class="date">2021.1.15</div>
-                      </div> -->
                </div>
                <div id="boardStart" class="board_write_wrap">
                   <div class="cmt_board_write">
@@ -386,14 +365,7 @@
                         마약 중독 고백</a></li>
                   <li><a href="https://www.youtube.com/watch?v=pB91VeZD2wE">마약중독자
                         가족이 겪는 고통</a></li>
-                  <!--               
-            <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li> 
--->
+ 
                </ul>
             </div>
          </div>
@@ -417,9 +389,7 @@
 
 
    </div>
-   <!-- .site-wrap -->
 
-   <!-- loader -->
    <div id="loader" class="show fullscreen">
       <svg class="circular" width="48px" height="48px">
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none"
@@ -464,18 +434,12 @@
                },
                success: function(response) {
                    // 성공 시 처리하는 코드를 여기에 작성
-  
-                 
-
-                   console.log('Successssssssssssssssssssssssssssssss',response);
                },
                error: function(xhr, status, error) {
                    // 에러 시 처리하는 코드를 여기에 작성
-                   console.log('errrrrrrrrrrrrrrrrrrrrrrrrrr');
                }
            });
 
-           console.log("페이지가 로드되었습니다.");
        });
 
    
@@ -501,7 +465,6 @@ for (var i = 0; i < postNumber.length; i++) {
     postNumber[i].value = postId;
 }
 
-  console.log(postId);
 
   
   
@@ -513,17 +476,14 @@ for (var i = 0; i < postNumber.length; i++) {
          id: postId // URLSearchParams로부터 가져온 postId 값을 전달합니다.
        },
        success: function(response) {
-          console.log("성공1");
          // 서버 응답에서 title과 content 값을 가져옴
          const data = response[0]; // 배열의 첫 번째 요소에 있는 객체를 data로 사용합니다.
-          console.log("확인>>",data.B_VIEWS)
          const titleValue = data.B_TITLE; // data 객체의 B_TITLE 속성값을 가져와 할당
          const contentValue = data.B_CONTENT; // data 객체의 B_CONTENT 속성값을 가져와 할당
          const emailValue = data.EMAIL;
-        const created_AT = data.CREATED_AT;
-        const numValue = data.B_NUM;
+         const created_AT = data.CREATED_AT;
+         const numValue = data.B_NUM;
             
-              console.log("세션 이메일 확인용1 >> " + userEmail);
               // 세션 email이 smhrd 일때
             
               // 세션 email이 글쓴이와 다를 때
@@ -534,7 +494,6 @@ for (var i = 0; i < postNumber.length; i++) {
                  } 
                  
               } 
-              
               
               // 세션 email이 글쓴이와 같을 때
               if(userEmail == emailValue) {
@@ -561,14 +520,11 @@ for (var i = 0; i < postNumber.length; i++) {
          boardCreated_At.innerText = created_AT;
          boardNum.innerText = numValue;
          boardview.innerText = data.B_VIEWS;
-         console.log("성공11111111111111111111111111")
-         console.log(numValue);
        },
        
        
        
        error: function(xhr, status, error) {
-         console.error('Error:', error);
        }
      });
      
@@ -581,14 +537,12 @@ for (var i = 0; i < postNumber.length; i++) {
             id: postId // URLSearchParams로부터 가져온 postId 값을 전달합니다.
           },
           success: function(response) {
-                console.log(response)
                 const commentList = Object.values(response);
-               const origincmt = document.querySelector(`body > div.comment_section > div > div > div > div.cmt_board_list > div:nth-child(1)`);
-               origincmt.remove();
+                const origincmt = document.querySelector(`body > div.comment_section > div > div > div > div.cmt_board_list > div:nth-child(1)`);
+                origincmt.remove();
                 var comment = document.querySelector(`body > div.comment_section > div > div > div > div.cmt_board_list`)
                 
                 var cWriter = commentList[i].EMAIL;
-                // 여기서부터 for문 시작할듯? 
                 for(let i=0; i<commentList.length; i++) {
                    // %기준은 화면 100%일때 기준으로 했음 영상 찍을때 화면100%로 해주셈!!   
                    const newWriter = document.createElement('div');
@@ -642,12 +596,8 @@ for (var i = 0; i < postNumber.length; i++) {
                       comment.appendChild(newDiv);
                       newForm.appendChild(submitButton);
                       newDiv.appendChild(newContent);
-//                      newDiv.appendChild(space); // 공백 추가
                       newDiv.appendChild(newWriter);
-//                      newDiv.appendChild(space); // 공백 추가
                       newDiv.appendChild(newDate);
-                      console.log("확인 >> ", cWriter)
-                      console.log("확인 >> ", userEmail)
                       if (commentList[i].EMAIL === userEmail) {
                           newDiv.appendChild(deleteButton);
                       }
@@ -662,7 +612,6 @@ for (var i = 0; i < postNumber.length; i++) {
                       
                       deleteButton.addEventListener('click', function() {
                          var comD = newContent.innerHTML;
-                         console.log(comD);
                           $.ajax({
                               url: 'DropComment.do',
                               method: 'GET',
@@ -671,11 +620,10 @@ for (var i = 0; i < postNumber.length; i++) {
                                   postNumber: postId// 변수 id에 postId 값을 할당하여 서버에 전달
                               },
                               success: function(data) {
-                                 window.location.reload();
-                                  console.log(data); 
+                                  // 댓글 삭제시 페이지 새로고침하게 해주는 코드 
+                            	  window.location.reload();
                               },
                               error: function(xhr, status, error) {
-                                  console.error('Error:', error);
                             }
                           });
                       });
@@ -683,7 +631,6 @@ for (var i = 0; i < postNumber.length; i++) {
           },   
           
           error: function(xhr, status, error) {
-              console.error('Error:', error);
             }
           });
    });

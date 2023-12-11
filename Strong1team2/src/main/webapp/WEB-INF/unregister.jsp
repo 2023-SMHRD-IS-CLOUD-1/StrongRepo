@@ -6,7 +6,6 @@
 <html lang="en">
 
 <head>
-<title>Academics &mdash; Website by Colorlib</title>
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -246,14 +245,6 @@ body>div.site-wrap>div:nth-child(6)>div>div>div>div:nth-child(2)>div {
                  <li><a href="https://www.youtube.com/watch?v=oNxq_FD2ph8">20대 마약중독자 인터뷰</a></li>
                  <li><a href="https://www.youtube.com/watch?v=JjO14D9fEwA">유명인 마약 중독 고백</a></li>
                  <li><a href="https://www.youtube.com/watch?v=pB91VeZD2wE">마약중독자 가족이 겪는 고통</a></li>
-<!--               
-				<li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li>
-                <li style="color: #000;">시름시름시름시름시름시름시름시름시름시름</li> 
--->
             </ul>
           </div>
         </div>
