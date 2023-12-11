@@ -89,7 +89,7 @@
 <br>
 
 ## 서비스 흐름도
-![image](https://user-images.githubusercontent.com/25995055/178401048-d6484bda-a2d7-40e1-998b-2bd195cd9f89.png)
+![image](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488262/6e394952-49bf-446e-addc-b4a6566bd391)
 <br>
 
 ## ER다이어그램
