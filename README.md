@@ -1,41 +1,34 @@
-# StrongRepo
-## No more durgs Dashboard Project
-Team Name : 강력1팀
-Team Member
-1. 박범석
-2. 조원제
-3. 함수연
-4. 한명훈
-5. 임혜지
-6. 하동철
-
-
-Team goal : No 싸움
-
-# 📎 Drug is Death (팀명: 강력 1팀)
+# Drug is Death (팀명: 강력 1팀)
 ![image](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488262/921c791e-0e8f-4e35-8c21-e23a3cdbf3f3)
 
 
 
-## 👀 서비스 소개
-* 서비스명: openCV기반 10대 청소년 대상 마약 예방 교육 자료 및 체험 서비스 
-* 서비스설명:
-  
+## 서비스 소개
+* 서비스명: openCV기반 10대 청소년 대상 마약 예방 교육 자료 및 체험 서비스
 <br>
 
-## 📅 프로젝트 기간
+* 서비스 목표
+  - 마약범죄 예방을 위한 서비스를 개발, 마약 관련 범죄 발생 하락을 기대
+  - 마약사범의 저연령화 현상의 심각성에 초점을 두어 청소년을 위한 교육용 콘텐츠 개발
+  - 마약 관련 통계를 제공
+  - 마약 투약 후 변화된 사용자의 얼굴 이미지를 보여주는 참여 형식의 필터 서비스를 제공함으로써 경각심과 흥미를 유발
+  - 수집, 분석한 데이터를 다른 기관과 공유
+<br>
+
+## 프로젝트 기간
 2023.11.22 ~ 2023.12.07 (3주)
 <br>
 
-## ⭐ 주요 기능
-* 기능1
-* 기능2
-* 기능3
-* 기능4
-* 기능5
+## 주요 기능
+* 마약 필터
+* 대시보드
+* 사례 퀴즈
+* 현상 체험
+* 지식 채널
+* 게시판
 <br>
 
-## ⛏ 기술스택
+## 기술스택
 <table>
     <tr>
         <th>구분</th>
@@ -54,15 +47,16 @@ Team goal : No 싸움
         <td>라이브러리</td>
         <td>
             <img src="https://img.shields.io/badge/BootStrap-7952B3?style=for-the-badge&logo=BootStrap&logoColor=white"/>
-            <img src="https://img.shields.io/badge/KakaoMap-FFCD00?style=for-the-badge&logo=Kakao&logoColor=white"/>
+            <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=OpenCV&logoColor=white"/>
+            <img src="https://img.shields.io/badge/dlib-008000?style=for-the-badge&logo=Dlib&logoColor=white"/>
+            <img src="https://img.shields.io/badge/flask-000000?style=for-the-badge&logo=Flask&logoColor=white"/>
         </td>
     </tr>
     <tr>
         <td>개발도구</td>
         <td>
             <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=Eclipse&logoColor=white"/>
-            <img src="https://img.shields.io/badge/RaskpberryPi-A22846?style=for-the-badge&logo=RaskpberryPi&logoColor=white"/>
-            <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=Jupyter&logoColor=white"/>
             <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/>
         </td>
     </tr>
@@ -75,7 +69,6 @@ Team goal : No 싸움
     <tr>
         <td>데이터베이스</td>
         <td>
-            <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=white"/>
             <img src="https://img.shields.io/badge/Oracle 11g-F80000?style=for-the-badge&logo=Oracle&logoColor=white"/>
         </td>
     </tr>
@@ -91,23 +84,19 @@ Team goal : No 싸움
 
 <br>
 
-## ⚙ 시스템 아키텍처(구조) 예시 
-![서비스 아키텍처](https://user-images.githubusercontent.com/25995055/169925538-15867bd9-aa0b-42fc-a39b-88981e926e51.png)
+## 시스템 아키텍처(구조) 
+![image](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488262/f334cf23-22f0-481e-9894-9811c1af3715)
 <br>
 
-## 📌 SW유스케이스
-![image](https://user-images.githubusercontent.com/25995055/178401023-9a015e66-aa6e-4d74-8564-9b1f9d306649.png)
-<br>
-
-## 📌 서비스 흐름도
+## 서비스 흐름도
 ![image](https://user-images.githubusercontent.com/25995055/178401048-d6484bda-a2d7-40e1-998b-2bd195cd9f89.png)
 <br>
 
-## 📌 ER다이어그램
-![image](https://user-images.githubusercontent.com/25995055/169925318-102784c2-893f-4fd7-bec9-a54c44b669d4.png)
-<br>
+## ER다이어그램
+![image](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488262/7a109e35-a5b8-4cb1-b73b-f17f5521b1ed)
 
-## 🖥 화면 구성
+
+## 화면 구성
 
 ### 로그인/회원가입/회원괸리/회원수정/회원탈퇴
 ![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
@@ -121,7 +110,7 @@ Team goal : No 싸움
 ![image](https://user-images.githubusercontent.com/25995055/178401150-861f0e93-0f40-4fae-98c1-2099bf513c8d.png)
 <br>
 
-## 👨‍👩‍👦‍👦 팀원 역할
+##  팀원 역할
 <table>
   <tr>
     <td align="center"><img src="https://item.kakaocdn.net/do/fd49574de6581aa2a91d82ff6adb6c0115b3f4e3c2033bfd702a321ec6eda72c" width="100" height="100"/></td>
@@ -129,20 +118,23 @@ Team goal : No 싸움
     <td align="center"><img src="https://mblogthumb-phinf.pstatic.net/20160127_177/krazymouse_1453865104404DjQIi_PNG/%C4%AB%C4%AB%BF%C0%C7%C1%B7%BB%C1%EE_%B6%F3%C0%CC%BE%F0.png?type=w2" width="100" height="100"/></td>
     <td align="center"><img src="https://i.pinimg.com/236x/ed/bb/53/edbb53d4f6dd710431c1140551404af9.jpg" width="100" height="100"/></td>
     <td align="center"><img src="https://pbs.twimg.com/media/B-n6uPYUUAAZSUx.png" width="100" height="100"/></td>
+    <td align="center"><img src="https://pbs.twimg.com/media/B-n6uPYUUAAZSUx.png" width="100" height="100"/></td>
   </tr>
   <tr>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
+    <td align="center"><strong>박범석</strong></td>
+    <td align="center"><strong>조원제</strong></td>
+    <td align="center"><strong>함수연</strong></td>
+    <td align="center"><strong>한명훈</strong></td>
+    <td align="center"><strong>임혜지</strong></td>
+    <td align="center"><strong>하동철</strong></td>
   </tr>
   <tr>
+    <td align="center"><b>Project Manager</b></td>
+    <td align="center"><b>Backend</b></td>
     <td align="center"><b>Frontend</b></td>
+    <td align="center"><b>Modelling</b></td>
     <td align="center"><b>Frontend</b></td>
     <td align="center"><b>Backend</b></td>
-    <td align="center"><b>Backend</b></td>
-    <td align="center"><b>Deep Learning</b></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
@@ -153,7 +145,7 @@ Team goal : No 싸움
   </tr>
 </table>
 
-## 🤾‍♂️ 트러블슈팅
+## 트러블슈팅
 개념: 문제 해결을 위해 문제의 원인을 논리적이고 체계적으로 찾는 일이며 제품이나 프로세스의 운영을 재개
 프로젝트 진행하는 동안 발생했던 이슈 중 가장 기억에 남았던 문제와 해결 프로세스 나열(2~5가지 정도)
   
