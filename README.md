@@ -98,7 +98,7 @@ Team goal : No 싸움
 
 <br>
 
-## 시스템 아키텍처(구조) 예시 
+## 시스템 아키텍처(구조) 
 ![image](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488262/f334cf23-22f0-481e-9894-9811c1af3715)
 <br>
 
