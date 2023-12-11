@@ -1,8 +1,5 @@
 package com.smhrd.model;
 
-// 댓글 테이블 데이터를 저장할 수 있도록 나만의 자료형
-// 댓글 테이블 관련!!!!!
-// 범석
 public class CommentMemberVO {
    // 댓글 번호
    private Integer CMT_NUM;

@@ -15,9 +15,9 @@ public class UnregisterService implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		// 회원탈퇴
 		HttpSession session = request.getSession();
 		MemberVO mem = (MemberVO) session.getAttribute("result");
-		System.out.println("----------------------------중간점검1----------------------------");
 		String email = request.getParameter("email");
 		String pw = request.getParameter("pw");
 
@@ -30,17 +30,12 @@ public class UnregisterService implements Command {
 
 		if (mem.getEmail().equals(email) && mem.getPw().equals(pw)) {
 			int row = dao.delete(vo);
-
 			if (row > 0) {
-			
 				session.invalidate();
 				return "redirect:/Gomain.do";
 			}
-
 		}
-
 		return "redirect:/Gounregister.do?error=invalidCredentials";
-
 	}
 
 }

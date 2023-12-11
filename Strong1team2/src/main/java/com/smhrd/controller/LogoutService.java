@@ -11,6 +11,7 @@ public class LogoutService implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		// 로그아웃
 		HttpSession session = request.getSession();
 
 		session.invalidate();

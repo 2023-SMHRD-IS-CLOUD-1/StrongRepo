@@ -19,41 +19,38 @@ public class UserCommentService implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		
-		
-		 int postNum=0;
-		 String D_COMMENT = request.getParameter("comment");
-		 String id = request.getParameter("postNumber");
-		 postNum = Integer.parseInt(id);
-		
-		 
-		 if(D_COMMENT==null|| D_COMMENT.isEmpty()) {
-			 return "redirect:/GoboardView.do?id="+ postNum;
-		 } else {
-				
-			  HttpSession session = request.getSession();
-			  
-			  // String email = "j";
-		      MemberVO result = (MemberVO)session.getAttribute("result");
-		      String email = result.getEmail();
-			  
-			 postNum = Integer.parseInt(id);
-			 CommentMemberVO vo = new CommentMemberVO();
-			 UserCommentDAO dao = new UserCommentDAO();
-			 
-			 vo.setEMAIL(email);
-			 vo.setB_NUM(postNum);
-			 vo.setCMT_CONTENT(D_COMMENT);
-			 int row = dao.uploadComment(vo);
-			 if(row>0) {
-				 return "redirect:/GoboardView.do?id="+ postNum;
-			 } else {
-				 return "redirect:/GoboardView.do?id="+ postNum;
-					
-			 }
-			
-		 }
-		
+		// 댓글 입력
+
+		int postNum = 0;
+		String D_COMMENT = request.getParameter("comment");
+		String id = request.getParameter("postNumber");
+		postNum = Integer.parseInt(id);
+
+		if (D_COMMENT == null || D_COMMENT.isEmpty()) {
+			return "redirect:/GoboardView.do?id=" + postNum;
+		} else {
+
+			HttpSession session = request.getSession();
+
+			MemberVO result = (MemberVO) session.getAttribute("result");
+			String email = result.getEmail();
+
+			postNum = Integer.parseInt(id);
+			CommentMemberVO vo = new CommentMemberVO();
+			UserCommentDAO dao = new UserCommentDAO();
+
+			vo.setEMAIL(email);
+			vo.setB_NUM(postNum);
+			vo.setCMT_CONTENT(D_COMMENT);
+			int row = dao.uploadComment(vo);
+			if (row > 0) {
+				return "redirect:/GoboardView.do?id=" + postNum;
+			} else {
+				return "redirect:/GoboardView.do?id=" + postNum;
+			}
+
+		}
+
 	}
 
 }

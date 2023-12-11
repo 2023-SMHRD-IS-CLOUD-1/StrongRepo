@@ -15,6 +15,7 @@ public class SelectAllService implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		// 전체회원조회
 		DAO dao = new DAO();
 
 		List<MemberVO> result = dao.selectAll();

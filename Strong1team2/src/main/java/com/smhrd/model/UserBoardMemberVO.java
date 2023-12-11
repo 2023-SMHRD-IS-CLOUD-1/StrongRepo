@@ -1,10 +1,6 @@
 package com.smhrd.model;
 
-// 회원 데이터를 저장할 수 있도록 나만의 자료형
-//사용자 사용자
 public class UserBoardMemberVO {
-
-
 	// 게시판 제목
 	private String B_TITLE;
 	

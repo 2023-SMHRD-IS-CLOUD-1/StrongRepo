@@ -15,21 +15,15 @@ public class UserBoardService implements Command {
 
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		
-		
-		
+		// 게시글 입력
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
 
-	
-
-		
-		if(title==null || content==null || title.isEmpty() || content.isEmpty()) {
+		if (title == null || content == null || title.isEmpty() || content.isEmpty()) {
 			return "redirect:/Goknowledge_Board.do?error=invalidCredentials";
-		}  else {
-			
-			 HttpSession session = request.getSession();
+		} else {
+
+			HttpSession session = request.getSession();
 			MemberVO result = (MemberVO) session.getAttribute("result");
 			String email = result.getEmail();
 
@@ -39,7 +33,7 @@ public class UserBoardService implements Command {
 			vo.setTitle(title);
 			vo.setContent(content);
 			vo.setEmail(email);
-			
+
 			DAO dao = new DAO();
 			int row = dao.userBoard(vo);
 
@@ -50,27 +44,7 @@ public class UserBoardService implements Command {
 				return "redirect:/Goknowledge_Board.do#board";
 			}
 
-		
-    	
-    	
-    	
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-
-		
-	}
+		}
 
 	}
 }

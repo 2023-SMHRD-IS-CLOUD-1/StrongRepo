@@ -9,56 +9,32 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import com.smhrd.database.SqlSessionManager;
 
 public class UserCommentDAO {
-	
-	// 1) SqlSession을 가져올 수 있는 SqlSessionFactory 생성
-	private SqlSessionFactory factory = SqlSessionManager.getFactory();
-	
-	public List<CommentMemberVO> selectComment(CommentMemberVO vo) {
-		
-		SqlSession sqlSession = factory.openSession();
-		
-		List<CommentMemberVO> result= sqlSession.selectList("selectComment", vo);
-		
-		
-		sqlSession.close();
-		
-		
-		return result;
-	
 
+	private SqlSessionFactory factory = SqlSessionManager.getFactory();
+
+	public List<CommentMemberVO> selectComment(CommentMemberVO vo) {
+		SqlSession sqlSession = factory.openSession();
+		List<CommentMemberVO> result = sqlSession.selectList("selectComment", vo);
+		sqlSession.close();
+		return result;
 	}
 
 	public int uploadComment(CommentMemberVO vo) {
-		
 		SqlSession sqlSession = factory.openSession(true);
-		
-		
-		int row=sqlSession.insert("uploadComment", vo);
-		
-	
+		int row = sqlSession.insert("uploadComment", vo);
 		sqlSession.close();
 		return row;
 	}
 
-	
 	public int dropComment(CommentMemberVO vo) {
-	      
-		   SqlSession sqlSession = factory.openSession(true);
-		   
-		      int row = sqlSession.delete("dropComment", vo);
-		      
-		      System.out.println(row);
-		      if(row>0) {
-		         sqlSession.commit();
-		         sqlSession.close();
-		      } else {
-		         sqlSession.rollback();
-		      }
-		      
-		      return row;
-		      
-		   }
-	
-
-
+		SqlSession sqlSession = factory.openSession(true);
+		int row = sqlSession.delete("dropComment", vo);
+		if (row > 0) {
+			sqlSession.commit();
+			sqlSession.close();
+		} else {
+			sqlSession.rollback();
+		}
+		return row;
+	}
 }

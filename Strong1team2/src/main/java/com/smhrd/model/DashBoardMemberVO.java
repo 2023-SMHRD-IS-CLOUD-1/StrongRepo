@@ -1,7 +1,5 @@
 package com.smhrd.model;
 
-// 회원 데이터를 저장할 수 있도록 나만의 자료형
-//사용자 사용자
 public class DashBoardMemberVO {
 
 	// 마약류 마약류
@@ -27,7 +25,7 @@ public class DashBoardMemberVO {
 
 	// 건수 건수
 	private Integer j_num;
-	
+
 	// 나이
 	private String a_age_group;
 

@@ -16,37 +16,24 @@ public class DropViewService implements Command {
 
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("----------------------------1------------------------");
-		 int postNum=0;
-		 String B_NUM = request.getParameter("postNumber");
-		 System.out.println("----------------------------2------------------------");
-		 System.out.println(B_NUM);
-		 
-		 postNum = Integer.parseInt(B_NUM);
-		
-		 System.out.println("----------------------------3------------------------");
-			UserBoardMemberVO vo = new UserBoardMemberVO();
-			vo.setB_NUM(postNum);
-			
-			UserBoardDAO dao = new UserBoardDAO();
-			
-			int row = dao.deleteView(vo);
-			
+		// 게시글 삭제
+		int postNum = 0;
+		String B_NUM = request.getParameter("postNumber");
 
-			if (row > 0) {
-				System.out.println("----------------------------중간점검3----------------------------");
-				
-				
-				return "redirect:/Goknowledge_Board.do#board";
-			} else {
-				System.out.println("실패");
-				
-				return "redirect:/Goknowledge_Board.do#board";
-				
-			}
-			
-		
-		
+		postNum = Integer.parseInt(B_NUM);
+
+		UserBoardMemberVO vo = new UserBoardMemberVO();
+		vo.setB_NUM(postNum);
+
+		UserBoardDAO dao = new UserBoardDAO();
+
+		int row = dao.deleteView(vo);
+
+		if (row > 0) {
+			return "redirect:/Goknowledge_Board.do#board";
+		} else {
+			return "redirect:/Goknowledge_Board.do#board";
+		}
 
 	}
 }
