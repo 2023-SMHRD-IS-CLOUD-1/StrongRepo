@@ -185,7 +185,7 @@
     <td align="center"><b>Project Manager</b></td>
     <td align="center"><b>Backend</b></td>
     <td align="center"><b>Frontend</b></td>
-    <td align="center"><b>Modelling</b></td>
+    <td align="center"><b>Backend</b></td>
     <td align="center"><b>Frontend</b></td>
     <td align="center"><b>Backend</b></td>
   </tr>
