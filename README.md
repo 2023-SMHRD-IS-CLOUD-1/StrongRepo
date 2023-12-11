@@ -84,6 +84,18 @@
 
 <br>
 
+## 사전 작업
+
+- 이 링크(http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)를 통해 받은 압축파일을 풀어 shape_predictor_68_face_landmarks.dat를 model 폴더에 설치하세요.
+
+- 다음과 같은 프로그램의 설치가 필요합니다.
+
+- Microsoft Visual C++ Build Tools(https://visualstudio.microsoft.com/ko/downloads/)
+
+- CMake(https://cmake.org/download/)
+
+<br>
+
 ## 시스템 아키텍처(구조) 
 ![image](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488262/f334cf23-22f0-481e-9894-9811c1af3715)
 <br>
