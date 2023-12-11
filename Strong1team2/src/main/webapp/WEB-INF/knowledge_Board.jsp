@@ -737,11 +737,22 @@
                             </ul>
                         </div>
                         <div class="cont">
-                            <textarea  name="content" placeholder="내용 입력"></textarea>
+                            <textarea  name="content" placeholder="내용 입력"></textarea>              
+ 
                         </div>
+                        <% 
+                    String error = request.getParameter("error");
+                       
+                    if (error != null) {
+                %>
+                    <p style="color: red;">모든 항목을 작성해주세요.</p>
+                <% } %>
                     </div>
+                        
+                  
                     <div class="bt_wrap">
                       <input type="submit" value="등록" class="btn btn-primary btn-lg px-5">
+                      
                       </div>
 					    </C:if>
 					     <C:if test="${result==null}">
@@ -758,6 +769,7 @@
                 </div>
                  </C:if>
 			  </form>
+     
 
 
                 
@@ -990,7 +1002,7 @@ function addE(){
 
     postElements.forEach(function(postElement) {
         postElement.addEventListener('click', function() {
-        	console.log("??");
+           console.log("??");
             var postNumber = this.querySelector('.num').textContent;
             
             var postId = parseInt(postNumber);

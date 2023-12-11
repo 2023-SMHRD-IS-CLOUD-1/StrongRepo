@@ -15,51 +15,46 @@ public class UserBoardService implements Command {
 
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("---------------checkPoint11-------------------");
-		HttpSession session = request.getSession();
-		MemberVO result = (MemberVO)session.getAttribute("result");
-		String email = result.getEmail();
-		MemberVO vo = new MemberVO();
-		vo.setEmail(email);
-		session.setAttribute("member", vo);
-		System.out.println(vo.getEmail());
-		
-		System.out.println("---------------checkPoint22-------------------");
 		
 		
 		
 		
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
-		
-		vo.setTitle(title);
-		vo.setContent(content);
-		  
 
-		//UserBoardMemberVO usvo = new UserBoardMemberVO();
+	
+
 		
-		System.out.println(title);
-		System.out.println(content);
+		if(title==null || content==null || title.isEmpty() || content.isEmpty()) {
+			return "redirect:/Goknowledge_Board.do?error=invalidCredentials";
+		}  else {
+			
+			 HttpSession session = request.getSession();
+			MemberVO result = (MemberVO) session.getAttribute("result");
+			String email = result.getEmail();
+
+			MemberVO vo = new MemberVO();
+			UserBoardMemberVO usvo = new UserBoardMemberVO();
+
+			vo.setTitle(title);
+			vo.setContent(content);
+			vo.setEmail(email);
+			
+			DAO dao = new DAO();
+			int row = dao.userBoard(vo);
+
+			if (row > 0) {
+				request.setAttribute("member", vo);
+				return "redirect:/Goknowledge_Board.do#board";
+			} else {
+				return "redirect:/Goknowledge_Board.do#board";
+			}
+
 		
-		
-		UserBoardMemberVO ubDao = new UserBoardMemberVO();
-		DAO dao = new DAO();
-    	int row = dao.userBoard(vo);
     	
     	
-    	if (row > 0) {
-    		
-    		//request.setAttribute("member2", usvo);
-    		request.setAttribute("member", vo);
-			System.out.println("vo확인"+vo.getEmail());
-			// return "join_success"; 어디로 이동해야할지 모르겠어서 일단 main으로 둠 -원제-
-			return "redirect:/Goknowledge_Board.do#board";
-		} else {
-			System.out.println("실패");
-			// redirect:/ >> 우리의 약속 기호!!
-			// >> redirect 방식으로 이동해라 !! 를 FC에게 알려주는 역할!!
-			return "redirect:/Goknowledge_Board.do#board";
-		}
+    	
+
 		
 		
 		
@@ -67,7 +62,15 @@ public class UserBoardService implements Command {
 		
 		
 		
+		
+		
+		
+		
+		
+
+
 		
 	}
 
+	}
 }

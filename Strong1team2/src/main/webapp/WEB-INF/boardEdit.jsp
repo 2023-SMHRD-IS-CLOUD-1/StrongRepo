@@ -189,18 +189,14 @@
                             <textarea placeholder="내용 입력" name="content" id="content"></textarea>
                         </div>
                     </div>
-                    <C:if test="${result.email=='smhrd'|| result.email == member.email}">
                     <div class="bt_wrap">
                     <input type="hidden" class="postNumber" name="postNumber">
                     <input type="submit" value="수정" class="btn btn-primary btn-lg px-5">
                     </form>
-                    </C:if>
-                    <C:if test="${result.email=='smhrd'|| result.email == member.email}">
                     <form id="deleteForm" action="DropView.do" method="post" style="display: inline-block; margin-right: 10px; margin-left: 10px;">
                     <input type="hidden" class="postNumber" name="postNumber">
                     <input type="submit" value="삭제" class="btn btn-primary btn-lg px-5">
                     </form>
-                    </C:if>
                     
                     <input type="button" value="취소" onclick="goToAnotherPage()" class="btn btn-primary btn-lg px-5">
                     </div>
