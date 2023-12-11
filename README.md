@@ -86,7 +86,7 @@
 
 ## 사전 작업
 
-- 이 링크(http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2/)를 통해 받은 압축파일을 풀어 shape_predictor_68_face_landmarks.dat를 model 폴더에 설치하세요.
+- 이 링크(http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2 )를 통해 받은 압축파일을 풀어 shape_predictor_68_face_landmarks.dat를 model 폴더에 설치하세요.
 
 - 다음과 같은 프로그램의 설치가 필요합니다.
 
