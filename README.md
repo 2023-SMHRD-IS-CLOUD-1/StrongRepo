@@ -190,12 +190,12 @@
     <td align="center"><b>Backend</b></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/bumseokk/bumseok" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/jaewon07/jowonjae" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/ahhasueyon/hamsuyeon" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/hanmyeonghun/hanmyeonghun4" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/Limmaji/hyeji" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/hadongcher/dongchul1" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/bumseokk/sample" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/jaewon07/sample" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/ahhasueyon/sample" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/hanmyeonghun/sample" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/Limmaji/sample" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/hadongcher/sample" target='_blank'>github</a></td>
   </tr>
 </table>
 
