@@ -21,46 +21,46 @@
 
 ## 주요 기능
 * 마약 필터
-<details>
-- upload_and_receive 함수:
-
-  - 역할: 클라이언트로부터 이미지를 업로드 받고, 해당 이미지를 변형한 후 변형된 이미지를 응답으로 전송합니다.
-  - 동작 순서:
-    - 클라이언트에서 POST 요청으로 이미지를 전송합니다.
-    - 전송된 이미지를 받아 transform_image 함수를 호출하여 이미지를 변형합니다.
-    - 변형된 이미지를 저장하고 클라이언트에게 응답으로 전송합니다.
-    - https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/blob/6653d60388746d631272d773d24645387017eda9/Strong1team2/drug_filter/face_distort%20-%20%EC%B5%9C%EC%A2%85%EB%B3%B8.ipynb#L141
-- transform_image 함수:
-
-  - 역할: 이미지를 얼굴 변형 함수를 통해 변형하고, 변형된 이미지를 반환합니다.
-  - 동작 순서:
-    - 클라이언트로부터 받은 이미지를 face_thin 함수를 사용하여 얼굴을 얇게 만듭니다.
-    - face_morph 함수를 사용하여 얼굴을 변형하고, 최종적으로 merge_img 함수를 사용하여 이미지를 합성합니다.
-    - 합성된 이미지를 반환합니다.
-    - https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/blob/6653d60388746d631272d773d24645387017eda9/Strong1team2/drug_filter/face_distort%20-%20%EC%B5%9C%EC%A2%85%EB%B3%B8.ipynb#L166
-- face_thin 함수:
-
-  - 역할: 얼굴을 얇게 만드는 함수입니다.
-  - 동작 순서:
-    - get_face_68_landmarks 함수를 사용하여 이미지의 얼굴 Landmark를 얻습니다.
-    - local_translation_warp 함수를 사용하여 지역적으로 이미지를 변형합니다.
-    - https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/blob/6653d60388746d631272d773d24645387017eda9/Strong1team2/drug_filter/face_distort%20-%20%EC%B5%9C%EC%A2%85%EB%B3%B8.ipynb#L312
-- face_morph 함수:
-
-  - 역할: 두 이미지의 얼굴을 혼합하는 함수입니다.
-  - 동작 순서:
-    - affine_transform_and_change_shape 함수를 사용하여 두 얼굴의 형태를 일치시킵니다.
-    - triangle_face_morph 함수를 사용하여 삼각형 단위로 얼굴을 혼합합니다.
-    - merge_img 함수를 사용하여 최종 이미지를 생성합니다.
-    - https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/blob/6653d60388746d631272d773d24645387017eda9/Strong1team2/drug_filter/face_distort%20-%20%EC%B5%9C%EC%A2%85%EB%B3%B8.ipynb#L545
-- 기타 함수들 (local_translation_warp, BilinearInsert, detect_face_and_cut 등):
-
-    - 다양한 기능을 수행하는 보조 함수들입니다. 주로 이미지 변형에 사용됩니다.
-- Flask 관련 설정:
-
-    - app.run을 통해 Flask 애플리케이션을 실행합니다.
-    - 서버는 127.0.0.1 주소와 9000 포트에서 실행되며, 디버그 모드를 사용하고 자동 리로딩을 비활성화합니다.
-</details>
+  <details>
+  - upload_and_receive 함수:
+  
+    - 역할: 클라이언트로부터 이미지를 업로드 받고, 해당 이미지를 변형한 후 변형된 이미지를 응답으로 전송합니다.
+    - 동작 순서:
+      - 클라이언트에서 POST 요청으로 이미지를 전송합니다.
+      - 전송된 이미지를 받아 transform_image 함수를 호출하여 이미지를 변형합니다.
+      - 변형된 이미지를 저장하고 클라이언트에게 응답으로 전송합니다.
+      - https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/blob/6653d60388746d631272d773d24645387017eda9/Strong1team2/drug_filter/face_distort%20-%20%EC%B5%9C%EC%A2%85%EB%B3%B8.ipynb#L141
+  - transform_image 함수:
+  
+    - 역할: 이미지를 얼굴 변형 함수를 통해 변형하고, 변형된 이미지를 반환합니다.
+    - 동작 순서:
+      - 클라이언트로부터 받은 이미지를 face_thin 함수를 사용하여 얼굴을 얇게 만듭니다.
+      - face_morph 함수를 사용하여 얼굴을 변형하고, 최종적으로 merge_img 함수를 사용하여 이미지를 합성합니다.
+      - 합성된 이미지를 반환합니다.
+      - https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/blob/6653d60388746d631272d773d24645387017eda9/Strong1team2/drug_filter/face_distort%20-%20%EC%B5%9C%EC%A2%85%EB%B3%B8.ipynb#L166
+  - face_thin 함수:
+  
+    - 역할: 얼굴을 얇게 만드는 함수입니다.
+    - 동작 순서:
+      - get_face_68_landmarks 함수를 사용하여 이미지의 얼굴 Landmark를 얻습니다.
+      - local_translation_warp 함수를 사용하여 지역적으로 이미지를 변형합니다.
+      - https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/blob/6653d60388746d631272d773d24645387017eda9/Strong1team2/drug_filter/face_distort%20-%20%EC%B5%9C%EC%A2%85%EB%B3%B8.ipynb#L312
+  - face_morph 함수:
+  
+    - 역할: 두 이미지의 얼굴을 혼합하는 함수입니다.
+    - 동작 순서:
+      - affine_transform_and_change_shape 함수를 사용하여 두 얼굴의 형태를 일치시킵니다.
+      - triangle_face_morph 함수를 사용하여 삼각형 단위로 얼굴을 혼합합니다.
+      - merge_img 함수를 사용하여 최종 이미지를 생성합니다.
+      - https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/blob/6653d60388746d631272d773d24645387017eda9/Strong1team2/drug_filter/face_distort%20-%20%EC%B5%9C%EC%A2%85%EB%B3%B8.ipynb#L545
+  - 기타 함수들 (local_translation_warp, BilinearInsert, detect_face_and_cut 등):
+  
+      - 다양한 기능을 수행하는 보조 함수들입니다. 주로 이미지 변형에 사용됩니다.
+  - Flask 관련 설정:
+  
+      - app.run을 통해 Flask 애플리케이션을 실행합니다.
+      - 서버는 127.0.0.1 주소와 9000 포트에서 실행되며, 디버그 모드를 사용하고 자동 리로딩을 비활성화합니다.
+  </details>
 * 대시보드
 * 사례 퀴즈
 * 현상 체험
