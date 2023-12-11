@@ -92,11 +92,7 @@ Team goal : No 싸움
 <br>
 
 ## 시스템 아키텍처(구조) 예시 
-![서비스 아키텍처](https://user-images.githubusercontent.com/25995055/169925538-15867bd9-aa0b-42fc-a39b-88981e926e51.png)
-<br>
-
-## SW유스케이스
-![image](https://user-images.githubusercontent.com/25995055/178401023-9a015e66-aa6e-4d74-8564-9b1f9d306649.png)
+![image](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488262/f334cf23-22f0-481e-9894-9811c1af3715)
 <br>
 
 ## 서비스 흐름도
@@ -104,8 +100,8 @@ Team goal : No 싸움
 <br>
 
 ## ER다이어그램
-![image](https://user-images.githubusercontent.com/25995055/169925318-102784c2-893f-4fd7-bec9-a54c44b669d4.png)
-<br>
+![image](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488262/7a109e35-a5b8-4cb1-b73b-f17f5521b1ed)
+
 
 ## 화면 구성
 
