@@ -156,3 +156,8 @@ https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/blob/f51b476fa0b838710623dbf
  
 * 문제2<br>
  문제점 설명 및 해결방안
+
+## 참고문헌
+
+![image](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488262/aee16021-513d-46ad-97db-7c3dcc0f27d1)
+
