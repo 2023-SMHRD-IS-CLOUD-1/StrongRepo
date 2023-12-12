@@ -206,10 +206,9 @@
   - 해결: 이미지를 다음과 같이 Numpy 배열로 고침.
 https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/blob/f51b476fa0b838710623dbf5f160b2de8e93e859/Strong1team2/drug_filter/face_distort%20-%20%EC%B5%9C%EC%A2%85%EB%B3%B8.ipynb#L177
 * 문제2<br>
-  - 문제: 댓글 삭제 버튼 클릭시 DropComment.do가 실행 되어서 댓글 삭제 후 페이지로 돌아와서 자동으로 댓글이 삭제된 상태로 보여져야 하는데 댓글이 DB에서는 삭제되었으나 화면에서는 F5로 새로고침 하지 않으면 그대로 보여지는 문제가 나타남.
-  - 연구: 성공시든 실패시든 return "redirect:/GoboardView.do?id="+ 해당게시글 번호; 로 되돌아 가서 다시 해당 페이지가 새로 고침 되는줄 알았으나 새로고침 되지 않았고, 비동기 통신인 $.ajax를 활용하여서 따로 redirect 주소를 잡아주는건 상관이 없었음.
-  - 해결: 비동기 통신 정보 전송 성공시 실행되는 success: 문 안쪽에 window.location.reload(); 해당 윈도우 창을 새로고침 해주는 코드를 넣어줌으로써 삭제 버튼 클릭시 삭제 된후 새로고침 되어 화면에 나오도록 해결함.
-
+  - 문제: 댓글 삭제 버튼 클릭 시 DropComment.do가 실행되어서 댓글 삭제 후 페이지로 돌아와서 자동으로 댓글이 삭제된 상태로 보여야 하는데 댓글이 DB에서는 삭제되었으나 화면에서는 F5로 새로고침 하지 않으면 그대로 보이는 문제가 나타남.
+  - 연구: 성공 시든 실패 시든 return ＂redirect:/GoboardView.do?id=＂+ 해당 게시글 번호; 로 되돌아가서 다시 해당 페이지가 새로 고침 되는 줄 알았으나 새로고침 되지 않았고, 비동기 통신인 $.ajax를 활용하여서 따로 redirect 주소를 잡아주는 건 상관이 없었음.
+  - 해결: 비동기 통신 정보 전송 성공 시 실행되는 success: 문 안쪽에 window.location.reload(); 해당 실행되어서 창을 새로고침 해주는 코드를 넣어줌으로써 삭제 버튼 클릭 시 삭제 된 후 새로고침 되어 화면에 나오도록 해결함.
 ## 참고문헌
 
 ![image](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488262/aee16021-513d-46ad-97db-7c3dcc0f27d1)
