@@ -151,16 +151,26 @@
 
 ## 화면 구성
 
-### 로그인/회원가입/회원괸리/회원수정/회원탈퇴
-![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
+### 로그인/회원가입/회원수정/회원탈퇴
+![제목을 입력해주세요_-001](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488105/1581b26c-2a14-4444-a211-cac71a304e8f)
+
 <br>
 
-### 옷 정보/코디 추천(날씨, 팁, 오늘의 코디, 참고할 수 있는 코디)
-![image](https://user-images.githubusercontent.com/25995055/178401127-287e6de2-4396-49fc-a107-59c4d5cd55c7.png)
+### 게시판
+![제목을 입력해주세요_-001 (1)](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488105/c09a3e48-7c8b-46d5-8774-cf5f09bba857)
+
 <br>
 
-### 일정/고객센터
-![image](https://user-images.githubusercontent.com/25995055/178401150-861f0e93-0f40-4fae-98c1-2099bf513c8d.png)
+### 지식채널/사례퀴즈
+![제목을 입력해주세요_-001 (2)](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488105/096627c4-6073-4d9c-8ad4-e2a3ed11839a)
+
+<br>
+
+### 마약필터/대시보드/현상체험
+![제목을 입력해주세요_-001 (4)](https://github.com/2023-SMHRD-IS-CLOUD-1/StrongRepo/assets/142488105/e89fd4cd-8a62-47fc-adc6-4723b57787f0)
+
+
+
 <br>
 
 ##  팀원 역할
